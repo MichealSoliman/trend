@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="شركة تريند للدعاية والإعلان - نقدم خدمات احترافية في إدارة وسائل التواصل الاجتماعي، تصميم المواقع، إنتاج الفيديوهات، والهويات التجارية">
+    <meta name="keywords" content="دعاية وإعلان, تسويق, سوشيال ميديا, تصميم مواقع, إنتاج فيديو">
+    <title>تريند - Trend | شركة الدعاية والإعلان</title>
+    
+    <!-- TailwindCSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts - Cairo for Arabic -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    <!--  -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+    <!-- TailwindCSS Custom Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1e3a8a', // كحلي
+                        secondary: '#1e40af', // أزرق غامق
+                        accent: '#d97706', // ذهبي
+                        dark: '#1f2937',
+                        light: '#f9fafb'
+                    },
+                    fontFamily: {
+                        'cairo': ['Cairo', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-cairo bg-white text-gray-800 overflow-x-hidden">
+
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 bg-white shadow-lg z-50 transition-all duration-300">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                
+                <!-- Logo & Brand -->
+                <div class="flex items-center space-x-3 space-x-reverse">
+                    <div class="w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center">
+                        <span class="text-white text-2xl font-bold">T</span>
+                    </div>
+                    <div>
+                        <h1 class="text-2xl font-bold text-primary">تريند</h1>
+                        <p class="text-xs text-gray-500">Trend Agency</p>
+                    </div>
+                </div>
+
+                <!-- Desktop Menu -->
+                <ul class="hidden lg:flex items-center space-x-8 space-x-reverse">
+                    <li><a href="#home" class="nav-link text-gray-700 hover:text-primary transition-colors duration-300 font-semibold">الرئيسية</a></li>
+                    
+                    <!-- Services Dropdown -->
+                    <li class="relative group">
+                        <a href="#services" class="nav-link text-gray-700 hover:text-primary transition-colors duration-300 font-semibold flex items-center">
+                            خدماتنا
+                            <i class="fas fa-chevron-down mr-2 text-xs"></i>
+                        </a>
+                        <ul class="absolute top-full right-0 bg-white shadow-2xl rounded-lg mt-2 py-3 w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform group-hover:translate-y-0 translate-y-2">
+                            <li><a href="#service-social" class="block px-6 py-3 hover:bg-gray-50 hover:text-primary transition-colors duration-200"><i class="fas fa-hashtag ml-3 text-primary"></i>إدارة وسائل التواصل الاجتماعي</a></li>
+                            <li><a href="#service-web" class="block px-6 py-3 hover:bg-gray-50 hover:text-primary transition-colors duration-200"><i class="fas fa-laptop-code ml-3 text-primary"></i>تصميم واستضافة المواقع</a></li>
+                            <li><a href="#service-video" class="block px-6 py-3 hover:bg-gray-50 hover:text-primary transition-colors duration-200"><i class="fas fa-video ml-3 text-primary"></i>إنتاج الفيديوهات</a></li>
+                            <li><a href="#service-ads" class="block px-6 py-3 hover:bg-gray-50 hover:text-primary transition-colors duration-200"><i class="fab fa-google ml-3 text-primary"></i>إعلانات جوجل أدوردز</a></li>
+                            <li><a href="#service-branding" class="block px-6 py-3 hover:bg-gray-50 hover:text-primary transition-colors duration-200"><i class="fas fa-palette ml-3 text-primary"></i>تصميم الهويات التجارية</a></li>
+                            <li><a href="#service-photography" class="block px-6 py-3 hover:bg-gray-50 hover:text-primary transition-colors duration-200"><i class="fas fa-camera ml-3 text-primary"></i>تصوير المنتجات</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li><a href="#projects" class="nav-link text-gray-700 hover:text-primary transition-colors duration-300 font-semibold">مشاريعنا</a></li>
+                    <li><a href="#about" class="nav-link text-gray-700 hover:text-primary transition-colors duration-300 font-semibold">من نحن</a></li>
+                    <li><a href="#contact" class="bg-gradient-to-r from-primary to-secondary text-white px-6 py-3 rounded-full hover:shadow-xl transition-all duration-300 font-semibold hover:scale-105">تواصل معنا</a></li>
+                </ul>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="lg:hidden text-primary text-2xl focus:outline-none">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="lg:hidden hidden bg-white border-t border-gray-200">
+            <ul class="py-4">
+                <li><a href="#home" class="block px-6 py-3 hover:bg-gray-50 text-gray-700 hover:text-primary transition-colors">الرئيسية</a></li>
+                <li>
+                    <button id="mobile-services-btn" class="w-full text-right px-6 py-3 hover:bg-gray-50 text-gray-700 hover:text-primary transition-colors flex justify-between items-center">
+                        خدماتنا
+                        <i class="fas fa-chevron-down text-xs"></i>
+                    </button>
+                    <ul id="mobile-services-menu" class="hidden bg-gray-50">
+                        <li><a href="#service-social" class="block px-10 py-2 hover:bg-gray-100 text-sm text-gray-600 hover:text-primary">إدارة وسائل التواصل الاجتماعي</a></li>
+                        <li><a href="#service-web" class="block px-10 py-2 hover:bg-gray-100 text-sm text-gray-600 hover:text-primary">تصميم واستضافة المواقع</a></li>
+                        <li><a href="#service-video" class="block px-10 py-2 hover:bg-gray-100 text-sm text-gray-600 hover:text-primary">إنتاج الفيديوهات</a></li>
+                        <li><a href="#service-ads" class="block px-10 py-2 hover:bg-gray-100 text-sm text-gray-600 hover:text-primary">إعلانات جوجل أدوردز</a></li>
+                        <li><a href="#service-branding" class="block px-10 py-2 hover:bg-gray-100 text-sm text-gray-600 hover:text-primary">تصميم الهويات التجارية</a></li>
+                        <li><a href="#service-photography" class="block px-10 py-2 hover:bg-gray-100 text-sm text-gray-600 hover:text-primary">تصوير المنتجات</a></li>
+                    </ul>
+                </li>
+                <li><a href="#projects" class="block px-6 py-3 hover:bg-gray-50 text-gray-700 hover:text-primary transition-colors">مشاريعنا</a></li>
+                <li><a href="#about" class="block px-6 py-3 hover:bg-gray-50 text-gray-700 hover:text-primary transition-colors">من نحن</a></li>
+                <li><a href="#contact" class="block px-6 py-3 hover:bg-gray-50 text-primary font-semibold transition-colors">تواصل معنا</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+
+    <!-- Custom JavaScript -->
+    <script src="js/main.js"></script>
+
+</body>
+</html>

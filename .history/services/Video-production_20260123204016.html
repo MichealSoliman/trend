@@ -1,0 +1,1190 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="شركة تريند للدعاية والإعلان - نقدم خدمات احترافية في إدارة وسائل التواصل الاجتماعي، تصميم المواقع، إنتاج الفيديوهات، والهويات التجارية">
+    <meta name="keywords" content="دعاية وإعلان, تسويق, سوشيال ميديا, تصميم مواقع, إنتاج فيديو">
+    <title>تريند - Trend | شركة الدعاية والإعلان</title>
+    
+    <!-- TailwindCSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts - Cairo for Arabic -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    <!--  -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+    <!-- TailwindCSS Custom Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1e3a8a', // كحلي
+                        secondary: '#1e40af', // أزرق غامق
+                        accent: '#d97706', // ذهبي
+                        dark: '#1f2937',
+                        light: '#f9fafb'
+                    },
+                    fontFamily: {
+                        'cairo': ['Cairo', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+
+<!-- إضافة سكريبت للموبايل لتحسين الأداء -->
+<script>
+    // تحسين الأداء للموبايل
+    document.addEventListener('DOMContentLoaded', function() {
+        // إصلاح القائمة المتنقلة
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', function() {
+                const isHidden = mobileMenu.style.display === 'none' || mobileMenu.style.display === '';
+                mobileMenu.style.display = isHidden ? 'block' : 'none';
+                
+                // تغيير الأيقونة
+                this.querySelector('i').className = isHidden ? 'fas fa-times' : 'fas fa-bars';
+            });
+            
+            // إغلاق القائمة عند النقر على رابط
+            const mobileLinks = mobileMenu.querySelectorAll('a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    mobileMenu.style.display = 'none';
+                    mobileMenuBtn.querySelector('i').className = 'fas fa-bars';
+                });
+            });
+        }
+        
+        // إصلاح القائمة المنسدلة للخدمات في الموبايل
+        const mobileServicesBtn = document.getElementById('mobile-services-btn');
+        const mobileServicesMenu = document.getElementById('mobile-services-menu');
+        
+        if (mobileServicesBtn && mobileServicesMenu) {
+            mobileServicesBtn.addEventListener('click', function() {
+                const isHidden = mobileServicesMenu.style.display === 'none' || mobileServicesMenu.style.display === '';
+                mobileServicesMenu.style.display = isHidden ? 'block' : 'none';
+                
+                // تغيير الأيقونة
+                const icon = this.querySelector('i');
+                icon.className = isHidden ? 'fas fa-chevron-up text-xs' : 'fas fa-chevron-down text-xs';
+            });
+        }
+        
+        // تحسين الصور للتحميل السريع في الموبايل
+        if (window.innerWidth <= 768) {
+            const images = document.querySelectorAll('img');
+            images.forEach(img => {
+                if (!img.getAttribute('loading')) {
+                    img.setAttribute('loading', 'lazy');
+                }
+            });
+        }
+        
+        // إضافة تأثير تحميل للـ Lottie في الموبايل
+        const lottiePlayers = document.querySelectorAll('lottie-player');
+        if (window.innerWidth <= 768) {
+            lottiePlayers.forEach(player => {
+                player.setAttribute('speed', '0.8');
+            });
+        }
+        
+        // إصلاح ارتفاع القسم في الموبايل
+        function adjustHeroHeight() {
+            const heroSection = document.getElementById('home');
+            if (heroSection && window.innerWidth <= 768) {
+                heroSection.style.minHeight = 'auto';
+                heroSection.style.paddingTop = '4rem';
+                heroSection.style.paddingBottom = '2rem';
+            }
+        }
+        
+        // استدعاء الوظيفة عند التحميل وتغيير الحجم
+        adjustHeroHeight();
+        window.addEventListener('resize', adjustHeroHeight);
+        
+        // تحسين التمرير في الموبايل
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    // إغلاق القائمة المتنقلة إذا كانت مفتوحة
+                    if (mobileMenu && mobileMenu.style.display === 'block') {
+                        mobileMenu.style.display = 'none';
+                        if (mobileMenuBtn) {
+                            mobileMenuBtn.querySelector('i').className = 'fas fa-bars';
+                        }
+                    }
+                    
+                    // التمرير السلس مع تعديل للنافبار في الموبايل
+                    const navbarHeight = window.innerWidth <= 768 ? 80 : 100;
+                    const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    });
+</script>
+</head>
+<body class="font-cairo bg-white text-gray-800 overflow-x-hidden">
+
+  <!-- Navbar -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 bg-white shadow-lg z-50 transition-all duration-300">
+        <div class="container mx-auto px-6 md:px-12 lg:px-24 xl:px-32">
+            <div class="flex justify-between items-center h-20">
+                
+                <!-- Logo & Brand -->
+                <div class="flex items-center space-x-3 space-x-reverse">
+                    <div class="w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center">
+                          <img src="../img/logo.png" alt="">
+                    </div>
+                    <div>
+                        <h1 class="text-2xl font-bold text-primary">تريند</h1>
+                        <p class="text-xs text-gray-500">Trend Agency</p>
+                    </div>
+                </div>
+
+                <!-- Desktop Menu -->
+                <ul class="hidden lg:flex items-center space-x-8 space-x-reverse">
+                    <li><a href="../index.html" class="nav-link text-gray-700 hover:text-primary transition-colors duration-300 font-semibold">الرئيسية</a></li>
+                    
+                    <!-- Services Dropdown -->
+                    <li class="relative group">
+                        <a href="../services.html" class="nav-link text-gray-700 hover:text-primary transition-colors duration-300 font-semibold flex items-center">
+                            خدماتنا
+                            <i class="fas fa-chevron-down mr-2 text-xs"></i>
+                        </a>
+                        <ul class="absolute top-full right-0 bg-white shadow-2xl rounded-lg mt-2 py-3 w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform group-hover:translate-y-0 translate-y-2">
+                            <li><a href="./media-management.html" class="block px-6 py-3 hover:bg-gray-50 hover:text-primary transition-colors duration-200"><i class="fas fa-hashtag ml-3 text-primary"></i>إدارة وسائل التواصل الاجتماعي</a></li>
+                            <li><a href="./Website-design.html" class="block px-6 py-3 hover:bg-gray-50 hover:text-primary transition-colors duration-200"><i class="fas fa-laptop-code ml-3 text-primary"></i>تصميم واستضافة المواقع</a></li>
+                            <li><a href="#" class="block px-6 py-3 hover:bg-gray-50 hover:text-primary transition-colors duration-200"><i class="fas fa-video ml-3 text-primary"></i>إنتاج الفيديوهات</a></li>
+                            <li><a href="./Google-adwords.html" class="block px-6 py-3 hover:bg-gray-50 hover:text-primary transition-colors duration-200"><i class="fab fa-google ml-3 text-primary"></i>إعلانات جوجل أدوردز</a></li>
+                            <li><a href="./Branding.html" class="block px-6 py-3 hover:bg-gray-50 hover:text-primary transition-colors duration-200"><i class="fas fa-palette ml-3 text-primary"></i>تصميم الهويات التجارية</a></li>
+                            <li><a href="./Content-creation.html" class="block px-6 py-3 hover:bg-gray-50 hover:text-primary transition-colors duration-200"><i class="fas fa-camera ml-3 text-primary"></i> صناعة المحتوي</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li><a href="../projects.html" class="nav-link text-gray-700 hover:text-primary transition-colors duration-300 font-semibold">مشاريعنا</a></li>
+                    <li><a href="../about.html" class="nav-link text-gray-700 hover:text-primary transition-colors duration-300 font-semibold">من نحن</a></li>
+                    <li><a href="tel:01095576024" class="bg-gradient-to-r from-primary to-secondary text-white px-6 py-3 rounded-full hover:shadow-xl transition-all duration-300 font-semibold hover:scale-105">تواصل معنا</a></li>
+                </ul>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="lg:hidden text-primary text-2xl focus:outline-none">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="lg:hidden hidden bg-white border-t border-gray-200">
+            <ul class="py-4">
+                <li><a href="../index.html" class="block px-6 py-3 hover:bg-gray-50 text-gray-700 hover:text-primary transition-colors">الرئيسية</a></li>
+                <li>
+                    <button id="mobile-services-btn" class="w-full text-right px-6 py-3 hover:bg-gray-50 text-gray-700 hover:text-primary transition-colors flex justify-between items-center">
+                        خدماتنا
+                        <i class="fas fa-chevron-down text-xs"></i>
+                    </button>
+                    <ul id="mobile-services-menu" class="hidden bg-gray-50">
+                        <li><a href="./media-management.html" class="block px-10 py-2 hover:bg-gray-100 text-sm text-gray-600 hover:text-primary">إدارة وسائل التواصل الاجتماعي</a></li>
+                        <li><a href="./Website-design.html" class="block px-10 py-2 hover:bg-gray-100 text-sm text-gray-600 hover:text-primary">تصميم واستضافة المواقع</a></li>
+                        <li><a href="#" class="block px-10 py-2 hover:bg-gray-100 text-sm text-gray-600 hover:text-primary">إنتاج الفيديوهات</a></li>
+                        <li><a href="./Google-adwords.html" class="block px-10 py-2 hover:bg-gray-100 text-sm text-gray-600 hover:text-primary">إعلانات جوجل أدوردز</a></li>
+                        <li><a href="./Branding.html" class="block px-10 py-2 hover:bg-gray-100 text-sm text-gray-600 hover:text-primary">تصميم الهويات التجارية</a></li>
+                        <li><a href="./Content-creation.html" class="block px-10 py-2 hover:bg-gray-100 text-sm text-gray-600 hover:text-primary"> صناعة المحتوي </a></li>
+                    </ul>
+                </li>
+                <li><a href="../projects.html" class="block px-6 py-3 hover:bg-gray-50 text-gray-700 hover:text-primary transition-colors">مشاريعنا</a></li>
+                <li><a href="../about.html" class="block px-6 py-3 hover:bg-gray-50 text-gray-700 hover:text-primary transition-colors">من نحن</a></li>
+                <li><a href="tel:01095576024" class="block px-6 py-3 hover:bg-gray-50 text-primary font-semibold transition-colors">تواصل معنا</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+<!-- Motion Graphics Section -->
+<section id="motion-graphics" class="bg-white pt-16 md:pt-20 lg:pt-24 pb-8 md:pb-12 lg:pb-16 overflow-hidden">
+ <!-- Animated Hero Header -->
+<div class="relative pt-12 md:pt-16 lg:pt-20 pb-8 md:pb-12 lg:pb-16 mb-8 md:mb-12 lg:mb-16 overflow-hidden">
+    <!-- Geometric Background Pattern -->
+    <div class="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5 opacity-50">
+        <div class="absolute top-0 left-0 w-64 h-64 bg-primary/10 rounded-full -translate-x-1/2 -translate-y-1/2"></div>
+        <div class="absolute bottom-0 right-0 w-80 h-80 bg-secondary/10 rounded-full translate-x-1/3 translate-y-1/3"></div>
+        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-accent/5 rounded-full"></div>
+    </div>
+    
+    <div class="container relative mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+            <!-- Animated Title -->
+            <div class="inline-block relative mb-4 md:mb-6">
+                <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 mb-2">
+                    <span class="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent animate-gradient-x">
+                        فيديوهات موشن جرافيك
+                    </span>
+                </h1>
+                <div class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-32 sm:w-40 md:w-48 h-1 bg-gradient-to-r from-primary via-accent to-secondary"></div>
+            </div>
+            
+            <p class="text-gray-600 text-sm sm:text-base md:text-lg lg:text-xl max-w-3xl xl:max-w-4xl mx-auto mb-4 md:mb-6 lg:mb-8 px-4 leading-relaxed">
+                نصنع فيديوهات موشن جرافيك إبداعية تحكي قصتك بأسلوب بصري جذاب، وتوصل رسالتك بشكل سريع ومؤثر
+            </p>
+            
+            <!-- Animated Tags -->
+            <div class="flex flex-wrap justify-center gap-2 md:gap-3 mt-6 md:mt-8">
+                <span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-xs md:text-sm font-medium animate-pulse">
+                    موشن جرافيك احترافي
+                </span>
+                <span class="px-3 py-1 bg-secondary/10 text-secondary rounded-full text-xs md:text-sm font-medium animate-pulse" style="animation-delay: 0.2s">
+                    تحريك إبداعي
+                </span>
+                <span class="px-3 py-1 bg-accent/10 text-accent rounded-full text-xs md:text-sm font-medium animate-pulse" style="animation-delay: 0.4s">
+                    سيناريو وتصميم صوتي
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <div class="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
+        <!-- Main Content Section -->
+        <div class="grid lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12 items-center mb-8 md:mb-12 lg:mb-16">
+            <!-- Left Content -->
+            <div class="space-y-4 md:space-y-6">
+                <h2 class="text-xl sm:text-2xl md:text-3xl font-bold text-primary mb-2 md:mb-3">
+                    نحن هنا لمساعدتك في تصميم فيديوهات الرسوم المتحركة التي تحقق أهدافك
+                </h2>
+                <p class="text-gray-600 leading-relaxed text-sm sm:text-base md:text-lg">
+                    بغض النظر عن مجال عملك، مع أكثر من عشر سنوات من الخبرة في هذا المجال، 
+                    نضمن لك نتائج متميزة من خلال عملية منظمة واحترافية.
+                </p>
+                
+                <!-- Process Steps -->
+                <div class="space-y-4 md:space-y-6 pt-2 md:pt-4">
+                    <!-- Step 1 -->
+                    <div class="flex items-start space-x-3 md:space-x-4 space-x-reverse">
+                        <div class="flex-shrink-0 ml-4">
+                            <div class="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 bg-primary/10 rounded-full flex items-center justify-center">
+                                <span class="text-primary font-bold text-sm md:text-base">1</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800 mb-1 text-sm sm:text-base md:text-lg">إعداد سيناريو متكامل</h4>
+                            <p class="text-gray-600 text-xs sm:text-sm">
+                                نبدأ بإعداد سيناريو متكامل يلبي احتياجاتك ورؤيتك بدقة
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 2 -->
+                    <div class="flex items-start space-x-3 md:space-x-4 space-x-reverse">
+                        <div class="flex-shrink-0 ml-4">
+                            <div class="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 bg-primary/10 rounded-full flex items-center justify-center">
+                                <span class="text-primary font-bold text-sm md:text-base">2</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800 mb-1 text-sm sm:text-base md:text-lg">المؤثرات الصوتية والتسجيل</h4>
+                            <p class="text-gray-600 text-xs sm:text-sm">
+                                نسجل المؤثرات الصوتية في استوديوهات مجهزة بأحدث المعدات
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 3 -->
+                    <div class="flex items-start space-x-3 md:space-x-4 space-x-reverse">
+                        <div class="flex-shrink-0 ml-4">
+                            <div class="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 bg-primary/10 rounded-full flex items-center justify-center">
+                                <span class="text-primary font-bold text-sm md:text-base">3</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800 mb-1 text-sm sm:text-base md:text-lg">مرحلة التحريك والتركيب</h4>
+                            <p class="text-gray-600 text-xs sm:text-sm">
+                                نجمع كل العناصر في فيديو احترافي بجودة عالية
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Right Image/Animation -->
+            <div class="mt-6 lg:mt-0">
+                <div class="relative">
+                    <div class="rounded-2xl p-3 md:p-4 lg:p-6">
+                        <!-- Motion Graphics Demo -->
+                        <lottie-player
+                            src="../lottie/graphic design.json"
+                            background="transparent"
+                            speed="1"
+                            loop
+                            autoplay
+                            class="w-full h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px]"
+                        ></lottie-player>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Software Tools Section -->
+        <div class="mb-8 md:mb-12 lg:mb-16">
+            <div class="bg-gradient-to-r from-gray-50 to-gray-100 rounded-xl md:rounded-2xl p-4 md:p-6 lg:p-8 border border-gray-200">
+                <div class="text-center mb-4 md:mb-6 lg:mb-8">
+                    <h3 class="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-primary mb-2 md:mb-3 lg:mb-4">
+                        نستخدم أحدث برامج إنتاج الفيديو
+                    </h3>
+                    <p class="text-gray-600 text-xs sm:text-sm md:text-base max-w-2xl md:max-w-3xl mx-auto px-2">
+                        Adobe After Effects, 3D Max و MAYA PRO لتقديم محتوى بصري جذاب ومتميز
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 lg:gap-6">
+                    <div class="bg-white p-3 md:p-4 lg:p-5 rounded-lg md:rounded-xl shadow-sm border border-gray-100 text-center transition-all duration-300 hover:scale-105 hover:shadow-md hover:border-primary/20">
+                        <div class="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg md:rounded-xl flex items-center justify-center mx-auto mb-2 md:mb-3">
+                            <i class="fab fa-adobe text-white text-lg sm:text-xl md:text-2xl"></i>
+                        </div>
+                        <h4 class="font-bold text-gray-800 mb-1 text-xs sm:text-sm md:text-base">After Effects</h4>
+                        <p class="text-gray-600 text-xs">تحريك وتأثيرات بصرية</p>
+                    </div>
+                    
+                    <div class="bg-white p-3 md:p-4 lg:p-5 rounded-lg md:rounded-xl shadow-sm border border-gray-100 text-center transition-all duration-300 hover:scale-105 hover:shadow-md hover:border-primary/20">
+                        <div class="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 bg-gradient-to-br from-green-500 to-green-600 rounded-lg md:rounded-xl flex items-center justify-center mx-auto mb-2 md:mb-3">
+                            <i class="fas fa-cube text-white text-lg sm:text-xl md:text-2xl"></i>
+                        </div>
+                        <h4 class="font-bold text-gray-800 mb-1 text-xs sm:text-sm md:text-base">3D Max</h4>
+                        <p class="text-gray-600 text-xs">النمذجة ثلاثية الأبعاد</p>
+                    </div>
+                    
+                    <div class="bg-white p-3 md:p-4 lg:p-5 rounded-lg md:rounded-xl shadow-sm border border-gray-100 text-center transition-all duration-300 hover:scale-105 hover:shadow-md hover:border-primary/20">
+                        <div class="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 bg-gradient-to-br from-purple-500 to-purple-600 rounded-lg md:rounded-xl flex items-center justify-center mx-auto mb-2 md:mb-3">
+                            <i class="fas fa-project-diagram text-white text-lg sm:text-xl md:text-2xl"></i>
+                        </div>
+                        <h4 class="font-bold text-gray-800 mb-1 text-xs sm:text-sm md:text-base">MAYA</h4>
+                        <p class="text-gray-600 text-xs">الرسوم المتحركة 3D</p>
+                    </div>
+                    
+                    <div class="bg-white p-3 md:p-4 lg:p-5 rounded-lg md:rounded-xl shadow-sm border border-gray-100 text-center transition-all duration-300 hover:scale-105 hover:shadow-md hover:border-primary/20">
+                        <div class="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 bg-gradient-to-br from-red-500 to-red-600 rounded-lg md:rounded-xl flex items-center justify-center mx-auto mb-2 md:mb-3">
+                            <i class="fas fa-video text-white text-lg sm:text-xl md:text-2xl"></i>
+                        </div>
+                        <h4 class="font-bold text-gray-800 mb-1 text-xs sm:text-sm md:text-base">Premiere Pro</h4>
+                        <p class="text-gray-600 text-xs">المونتاج والتركيب</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Statistics Section -->
+        <div class="grid lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12 items-center mb-8 md:mb-12 lg:mb-16">
+            <!-- Statistics Content -->
+            <div class="space-y-4 md:space-y-6">
+                <h2 class="text-xl sm:text-2xl md:text-3xl font-bold text-primary mb-2 md:mb-3">
+                    لماذا يجب أن تستخدم فيديوهات الرسوم المتحركة؟
+                </h2>
+                
+                <div class="space-y-4 md:space-y-6">
+                    <!-- Stat 1 -->
+                    <div>
+                        <div class="flex items-center space-x-3 md:space-x-4">
+                            <div class="flex-shrink-0 ml-4">
+                                <div class="w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 bg-primary/10 rounded-lg md:rounded-xl flex items-center justify-center">
+                                    <i class="fas fa-chart-line text-primary text-base md:text-lg"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 mb-1 text-sm sm:text-base md:text-lg">65% زيادة في التعلم</h4>
+                                <p class="text-gray-600 text-xs sm:text-sm">
+                                    يُظهر 65% من الأفراد قدرة أكبر على التعلم أو التأثر بالمحتوى المرئي
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Stat 2 -->
+                    <div>
+                        <div class="flex items-center space-x-3 md:space-x-4">
+                            <div class="flex-shrink-0 ml-4">
+                                <div class="w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 bg-primary/10 rounded-lg md:rounded-xl flex items-center justify-center">
+                                    <i class="fas fa-brain text-primary text-base md:text-lg"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 mb-1 text-sm sm:text-base md:text-lg">90% من المعلومات المرئية</h4>
+                                <p class="text-gray-600 text-xs sm:text-sm">
+                                    تشير الدراسات إلى أن حوالي 90% من المعلومات تصل إلى الدماغ على شكل رسومات متحركة
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Stat 3 -->
+                    <div>
+                        <div class="flex items-center space-x-3 md:space-x-4">
+                            <div class="flex-shrink-0 ml-4">
+                                <div class="w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 bg-primary/10 rounded-lg md:rounded-xl flex items-center justify-center">
+                                    <i class="fas fa-users text-primary text-base md:text-lg"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 mb-1 text-sm sm:text-base md:text-lg">تفاعل مضاعف</h4>
+                                <p class="text-gray-600 text-xs sm:text-sm">
+                                    يفضل الأشخاص النفاذ بنسبة تصل إلى الضعف على المواقع التي تحتوي على فيديوهات
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Statistics Visualization -->
+            <div class="mt-6 lg:mt-0">
+                <div class="relative">
+                    <div class=" rounded-xl md:rounded-2xl p-4 md:p-6 lg:p-8">
+                        <lottie-player
+                            src="../lottie/Developer 01 - Whoooa!.json"
+                            background="transparent"
+                            speed="1"
+                            loop
+                            autoplay
+                            class="w-full h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px]"
+                        ></lottie-player>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Why Choose Us -->
+        <div class="mb-8 md:mb-12 lg:mb-16">
+            <div class="bg-gradient-to-r from-primary/5 to-secondary/5 rounded-xl md:rounded-2xl p-4 md:p-6 lg:p-8 border-r-4 border-primary">
+                <div class="text-center mb-4 md:mb-6 lg:mb-8">
+                    <h3 class="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-primary mb-2 md:mb-3 lg:mb-4">
+                        لماذا تختار تريند؟
+                    </h3>
+                    <p class="text-gray-600 text-xs sm:text-sm md:text-base max-w-2xl md:max-w-3xl mx-auto px-2">
+                        نحن نؤمن بمواكبة التطورات والاتجاهات في هذا المجال لنقدم لك أفضل الحلول
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4 lg:gap-6">
+                    <div class="bg-white p-3 md:p-4 lg:p-5 rounded-lg md:rounded-xl shadow-sm border border-gray-100 transition-all duration-300 hover:scale-105 hover:shadow-md">
+                        <div class="flex items-center space-x-2 md:space-x-3 lg:space-x-4 mb-2 md:mb-3">
+                            <div class="w-8 h-8 ml-2 sm:w-9 sm:h-9 md:w-10 md:h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-lightbulb text-primary text-sm md:text-base"></i>
+                            </div>
+                            <h4 class="font-bold text-gray-800 text-sm sm:text-base md:text-lg">أبحاث ودراسات متخصصة</h4>
+                        </div>
+                        <p class="text-gray-600 text-xs sm:text-sm">نعمل على تقديم الأبحاث والدراسات التي تساعد في تحسين وجودك الرقمي</p>
+                    </div>
+                    
+                    <div class="bg-white p-3 md:p-4 lg:p-5 rounded-lg md:rounded-xl shadow-sm border border-gray-100 transition-all duration-300 hover:scale-105 hover:shadow-md">
+                        <div class="flex items-center space-x-2 md:space-x-3 lg:space-x-4 mb-2 md:mb-3">
+                            <div class="w-8 h-8 ml-2 sm:w-9 sm:h-9 md:w-10 md:h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-handshake text-primary text-sm md:text-base"></i>
+                            </div>
+                            <h4 class="font-bold text-gray-800 text-sm sm:text-base md:text-lg">دعم مستمر</h4>
+                        </div>
+                        <p class="text-gray-600 text-xs sm:text-sm">فريق دعم متكامل لمساعدتك في كل مرحلة من مراحل المشروع</p>
+                    </div>
+                    
+                    <div class="bg-white p-3 md:p-4 lg:p-5 rounded-lg md:rounded-xl shadow-sm border border-gray-100 transition-all duration-300 hover:scale-105 hover:shadow-md">
+                        <div class="flex items-center space-x-2 md:space-x-3 lg:space-x-4 mb-2 md:mb-3">
+                            <div class="w-8 h-8 ml-2 sm:w-9 sm:h-9 md:w-10 md:h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-trophy text-primary text-sm md:text-base"></i>
+                            </div>
+                            <h4 class="font-bold text-gray-800 text-sm sm:text-base md:text-lg">جودة لا مثيل لها</h4>
+                        </div>
+                        <p class="text-gray-600 text-xs sm:text-sm">نضمن لك فيديوهات بجودة عالية تحقق أهدافك التسويقية</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA Section -->
+        <div class="text-center">
+            <div class="bg-gradient-to-r from-primary to-secondary rounded-xl md:rounded-2xl p-4 md:p-6 lg:p-8 relative overflow-hidden">
+                <!-- Animated Background -->
+                <div class="absolute inset-0">
+                    <div class="absolute top-0 left-0 w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 bg-white/10 rounded-full -translate-x-12 -translate-y-12 sm:-translate-x-14 sm:-translate-y-14 md:-translate-x-16 md:-translate-y-16"></div>
+                    <div class="absolute bottom-0 right-0 w-28 h-28 sm:w-32 sm:h-32 md:w-40 md:h-40 bg-white/10 rounded-full translate-x-14 translate-y-14 sm:translate-x-16 sm:translate-y-16 md:translate-x-20 md:translate-y-20"></div>
+                </div>
+                
+                <div class="relative">
+                    <h3 class="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-white mb-2 md:mb-3 lg:mb-4">
+                        هل ترغب في إحداث تأثير حقيقي على جمهورك؟
+                    </h3>
+                    <p class="text-white/90 text-xs sm:text-sm md:text-base mb-4 md:mb-6 lg:mb-8 max-w-lg md:max-w-2xl mx-auto px-2">
+                        نحن هنا لدعمك وتحقيق رؤيتك من خلال فيديوهات الرسوم المتحركة ذات الجودة العالية
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-2 md:gap-3 lg:gap-4 justify-center">
+                        <a href="#contact" class="inline-flex items-center bg-white text-primary hover:bg-gray-100 px-4 py-2 sm:px-5 sm:py-2.5 md:px-6 md:py-3 lg:px-7 lg:py-3.5 rounded-full font-semibold hover:shadow-lg transition-all duration-300 hover:scale-105 text-xs sm:text-sm md:text-base">
+                            <i class="fas fa-phone-alt ml-1 sm:ml-1.5 md:ml-2 text-xs sm:text-sm md:text-base"></i>
+                            تواصل معنا الآن
+                        </a>
+                        <a href="#portfolio" class="inline-flex items-center border border-white text-white hover:bg-white/20 px-4 py-2 sm:px-5 sm:py-2.5 md:px-6 md:py-3 lg:px-7 lg:py-3.5 rounded-full font-semibold transition-all duration-300 text-xs sm:text-sm md:text-base">
+                            <i class="fas fa-play-circle ml-1 sm:ml-1.5 md:ml-2 text-xs sm:text-sm md:text-base"></i>
+                            شاهد أعمالنا السابقة
+                        </a>
+                    </div>
+                    <p class="text-white/80 text-xs mt-4 md:mt-6">
+                        فريق دعم متكامل جاهز لمساعدتك في أي وقت
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- إضافة CSS للتحسينات الإضافية -->
+<style>
+    /* تحسينات للتجاوب */
+    @media (max-width: 640px) {
+        #motion-graphics .grid-cols-2 {
+            grid-template-columns: 1fr;
+        }
+        
+        #motion-graphics .h-\[250px\] {
+            height: 200px;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        #motion-graphics .grid-cols-4 {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        
+        #motion-graphics .grid-cols-3 {
+            grid-template-columns: 1fr;
+        }
+    }
+    
+    /* تحسينات للخطوط العربية */
+    #motion-graphics {
+        font-family: 'Cairo', sans-serif;
+        line-height: 1.6;
+    }
+    
+    /* تحسينات للأيقونات */
+    #motion-graphics i {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    /* تحسينات للصور المتحركة */
+    lottie-player {
+        display: block;
+        margin: 0 auto;
+    }
+    
+    /* تحسينات للهوامش على الشاشات الصغيرة */
+    @media (max-width: 480px) {
+        #motion-graphics .px-4 {
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+        
+        #motion-graphics .gap-3 {
+            gap: 0.75rem;
+        }
+        
+        #motion-graphics .p-3 {
+            padding: 0.75rem;
+        }
+    }
+</style>
+
+<!-- إضافة الأنيميشن Styles -->
+<style>
+    /* أنيميشن progress bar */
+    @keyframes progress {
+        from {
+            width: 0;
+        }
+        to {
+            width: var(--target-width);
+        }
+    }
+    
+    .animate-progress {
+        animation: progress 1.5s ease-out forwards;
+    }
+    
+    /* أنيميشن التدوير */
+    @keyframes rotate {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+    
+    .animate-rotate {
+        animation: rotate 20s linear infinite;
+    }
+    
+    /* أنيميشن الطفو */
+    @keyframes float {
+        0%, 100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-10px);
+        }
+    }
+    
+    .animate-float {
+        animation: float 3s ease-in-out infinite;
+    }
+    
+    /* أنيميشن الوميض */
+    @keyframes shimmer {
+        0% {
+            background-position: -200% center;
+        }
+        100% {
+            background-position: 200% center;
+        }
+    }
+    
+    .animate-shimmer {
+        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+        background-size: 200% 100%;
+        animation: shimmer 2s infinite;
+    }
+</style>
+
+<!-- JavaScript للأنيميشن عند التمرير -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // تفعيل الأنيميشن عند التمرير
+        const animateOnScroll = () => {
+            const elements = document.querySelectorAll('.animate-on-scroll');
+            
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < window.innerHeight - elementVisible) {
+                    element.classList.remove('opacity-0');
+                    
+                    const animationType = element.getAttribute('data-animation');
+                    switch(animationType) {
+                        case 'fade-up':
+                            element.classList.remove('translate-y-10');
+                            break;
+                        case 'slide-left':
+                            element.classList.remove('-translate-x-10');
+                            break;
+                        case 'slide-right':
+                            element.classList.remove('translate-x-10');
+                            break;
+                    }
+                    
+                    // تفعيل الأنيميشن للعناصر الداخلية
+                    const childElements = element.querySelectorAll('.transform');
+                    childElements.forEach((child, index) => {
+                        setTimeout(() => {
+                            child.classList.remove('opacity-0');
+                            child.classList.remove('translate-y-4');
+                            child.classList.remove('translate-y-8');
+                        }, index * 100);
+                    });
+                }
+            });
+        };
+        
+        // تفعيل progress bars عند الظهور
+        const animateProgressBars = () => {
+            const progressBars = document.querySelectorAll('.animate-progress');
+            
+            progressBars.forEach(bar => {
+                const barTop = bar.getBoundingClientRect().top;
+                
+                if (barTop < window.innerHeight - 100 && !bar.classList.contains('animated')) {
+                    bar.classList.add('animated');
+                    const width = bar.style.width;
+                    bar.style.setProperty('--target-width', width);
+                    bar.style.width = '0';
+                    
+                    setTimeout(() => {
+                        bar.style.width = width;
+                    }, 300);
+                }
+            });
+        };
+        
+        // إضافة تأثيرات hover تفاعلية
+        const addHoverEffects = () => {
+            // تأثير hover على البطاقات
+            const cards = document.querySelectorAll('.bg-white.rounded-xl');
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-5px)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                });
+            });
+            
+            // تأثير hover على الأزرار
+            const buttons = document.querySelectorAll('a[href^="#"]');
+            buttons.forEach(button => {
+                button.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-3px) scale(1.05)';
+                });
+                
+                button.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                });
+            });
+        };
+        
+        // تفعيل الأنيميشن عند التمرير
+        window.addEventListener('scroll', () => {
+            animateOnScroll();
+            animateProgressBars();
+        });
+        
+        // تهيئة التأثيرات
+        animateOnScroll();
+        addHoverEffects();
+        window.addEventListener('load', animateOnScroll);
+        
+        // تشغيل الأنيميشن الأولي
+        setTimeout(animateOnScroll, 500);
+    });
+</script>
+
+     <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 pt-20 pb-8 relative overflow-hidden">
+        <!-- Wave Pattern -->
+        <div class="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-primary via-secondary to-accent"></div>
+        
+     
+
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10 mb-16">
+                
+                <!-- Company Info - Enhanced -->
+                <div>
+                    <div class="flex items-center space-x-3 space-x-reverse mb-6">
+                        <div class="w-14 h-14 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center shadow-lg">
+                            <img src="../img/logo.png" alt="">
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-white">تريند</h3>
+                            <p class="text-sm text-gray-400">Trend Agency</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 leading-relaxed mb-6">
+                        رواد في عالم الدعاية والإعلان، نبتكر حلولاً تسويقية استثنائية تحوّل العلامات التجارية إلى إمبراطوريات
+                    </p>
+                    <div class="flex gap-3">
+                        <a href="https://www.facebook.com/trend.e.marketing74" class="social-icon-footer w-11 h-11 bg-gray-800 hover:bg-primary rounded-xl flex items-center justify-center transition-all duration-300 group">
+                            <i class="fab fa-facebook-f group-hover:scale-110 transition-transform"></i>
+                        </a>
+                       <a href="https://wa.me/201095576024"
+                            class="social-icon-footer w-11 h-11 bg-gray-800 hover:bg-green-600 rounded-xl flex items-center justify-center transition-all duration-300 group">
+                            <i class="fab fa-whatsapp group-hover:scale-110 transition-transform"></i>
+                        </a>
+
+                        <a href="instagram.com/trend.agency.eg" class="social-icon-footer w-11 h-11 bg-gray-800 hover:bg-pink-600 rounded-xl flex items-center justify-center transition-all duration-300 group">
+                            <i class="fab fa-instagram group-hover:scale-110 transition-transform"></i>
+                        </a>
+                       
+                       <a href="https://www.tiktok.com/@trend.agency.eg"
+                              class="social-icon-footer w-11 h-11 bg-gray-800 hover:bg-black rounded-xl flex items-center justify-center transition-all duration-300 group">
+                            <i class="fab fa-tiktok group-hover:scale-110 transition-transform"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <!-- Quick Links - Enhanced -->
+                <div>
+                    <h4 class="text-white font-bold text-xl mb-6 pb-3 border-b border-gray-700 relative">
+                        روابط سريعة
+                        <span class="absolute bottom-0 right-0 w-12 h-0.5 bg-accent"></span>
+                    </h4>
+                    <ul class="space-y-3">
+                        <li>
+                            <a href="../index.html" class="footer-link hover:text-accent transition-all duration-300 flex items-center group">
+                                <i class="fas fa-chevron-left ml-3 text-xs group-hover:ml-4 transition-all"></i>
+                                الرئيسية
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../services.html" class="footer-link hover:text-accent transition-all duration-300 flex items-center group">
+                                <i class="fas fa-chevron-left ml-3 text-xs group-hover:ml-4 transition-all"></i>
+                                خدماتنا
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../projects.html" class="footer-link hover:text-accent transition-all duration-300 flex items-center group">
+                                <i class="fas fa-chevron-left ml-3 text-xs group-hover:ml-4 transition-all"></i>
+                                مشاريعنا
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../about.html" class="footer-link hover:text-accent transition-all duration-300 flex items-center group">
+                                <i class="fas fa-chevron-left ml-3 text-xs group-hover:ml-4 transition-all"></i>
+                                من نحن
+                            </a>
+                        </li>
+                        <li>
+                            <a href="tel:01095576024" class="footer-link hover:text-accent transition-all duration-300 flex items-center group">
+                                <i class="fas fa-chevron-left ml-3 text-xs group-hover:ml-4 transition-all"></i>
+                                تواصل معنا
+                            </a>
+                        </li>
+                        <li>
+                           
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Services Links - Enhanced -->
+                <div>
+                    <h4 class="text-white font-bold text-xl mb-6 pb-3 border-b border-gray-700 relative">
+                        خدماتنا
+                        <span class="absolute bottom-0 right-0 w-12 h-0.5 bg-accent"></span>
+                    </h4>
+                    <ul class="space-y-3">
+                        <li>
+                            <a href="./media-management.html" class="footer-link hover:text-accent transition-all duration-300 flex items-center group">
+                                <i class="fas fa-hashtag ml-3 text-sm text-primary group-hover:scale-125 transition-transform"></i>
+                                إدارة السوشيال ميديا
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./Website-design.html" class="footer-link hover:text-accent transition-all duration-300 flex items-center group">
+                                <i class="fas fa-laptop-code ml-3 text-sm text-primary group-hover:scale-125 transition-transform"></i>
+                                تصميم المواقع
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./Video-production.html" class="footer-link hover:text-accent transition-all duration-300 flex items-center group">
+                                <i class="fas fa-video ml-3 text-sm text-primary group-hover:scale-125 transition-transform"></i>
+                                إنتاج الفيديو
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./Google-adwords.html" class="footer-link hover:text-accent transition-all duration-300 flex items-center group">
+                                <i class="fab fa-google ml-3 text-sm text-primary group-hover:scale-125 transition-transform"></i>
+                                إعلانات جوجل
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./Branding.html" class="footer-link hover:text-accent transition-all duration-300 flex items-center group">
+                                <i class="fas fa-palette ml-3 text-sm text-primary group-hover:scale-125 transition-transform"></i>
+                                الهويات التجارية
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./Content-creation.html" class="footer-link hover:text-accent transition-all duration-300 flex items-center group">
+                                <i class="fas fa-camera ml-3 text-sm text-primary group-hover:scale-125 transition-transform"></i>
+                                 صناعة المحتوي 
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info - Enhanced -->
+                <div>
+                    <h4 class="text-white font-bold text-xl mb-6 pb-3 border-b border-gray-700 relative">
+                        تواصل معنا
+                        <span class="absolute bottom-0 right-0 w-12 h-0.5 bg-accent"></span>
+                    </h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-start space-x-3 space-x-reverse group cursor-pointer">
+                            <div class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center group-hover:bg-primary transition-all duration-300">
+                                <i class="fas fa-map-marker-alt text-accent group-hover:text-white"></i>
+                            </div>
+                            <div>
+                                <span class="block text-white font-medium mb-1">العنوان</span>
+                                <span class="text-sm text-gray-400">القاهرة،مصر</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start space-x-3 space-x-reverse group cursor-pointer">
+                            <div class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center group-hover:bg-primary transition-all duration-300">
+                                <i class="fas fa-phone-alt text-accent group-hover:text-white"></i>
+                            </div>
+                            <div>
+                                <span class="block text-white font-medium mb-1">الهاتف</span>
+                                <span dir="ltr" class="text-sm text-gray-400">01095576024</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start space-x-3 space-x-reverse group cursor-pointer">
+                            <div class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center group-hover:bg-primary transition-all duration-300">
+                                <i class="fas fa-envelope text-accent group-hover:text-white"></i>
+                            </div>
+                            <div>
+                                <span class="block text-white font-medium mb-1">البريد الإلكتروني</span>
+                                <span class="text-sm text-gray-400">info@trendagency.com</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start space-x-3 space-x-reverse group cursor-pointer">
+                            <div class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center group-hover:bg-primary transition-all duration-300">
+                                <i class="fas fa-clock text-accent group-hover:text-white"></i>
+                            </div>
+                            <div>
+                                <span class="block text-white font-medium mb-1">ساعات العمل</span>
+                                <span class="text-sm text-gray-400">الأحد - الخميس<br>9 صباحاً - 6 مساءً</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Payment Methods & Trust Seals -->
+            <div class="border-t border-gray-800 pt-8 mb-8">
+                <div class="flex flex-col lg:flex-row justify-between items-center gap-8">
+                    <div>
+                        <h5 class="text-white font-medium mb-4 text-center lg:text-right">طرق الدفع المتاحة</h5>
+                        <div class="flex gap-3 justify-center lg:justify-start">
+                            <div class="w-12 h-8 bg-gray-800 rounded-md flex items-center justify-center">
+                                <i class="fab fa-cc-visa text-gray-400"></i>
+                            </div>
+                            <div class="w-12 h-8 bg-gray-800 rounded-md flex items-center justify-center">
+                                <i class="fab fa-cc-mastercard text-gray-400"></i>
+                            </div>
+                            <div class="w-12 h-8 bg-gray-800 rounded-md flex items-center justify-center">
+                                <i class="fab fa-cc-paypal text-gray-400"></i>
+                            </div>
+                            <div class="w-12 h-8 bg-gray-800 rounded-md flex items-center justify-center">
+                                <i class="fas fa-university text-gray-400"></i>
+                            </div>
+                            <div class="w-12 h-8 bg-gray-800 rounded-md flex items-center justify-center">
+                                <i class="fab fa-apple-pay text-gray-400"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="text-center">
+                        <h5 class="text-white font-medium mb-4">شهادات الجودة</h5>
+                        <div class="flex gap-4">
+                            <div class="w-16 h-16 bg-gray-800 rounded-lg flex items-center justify-center border border-gray-700">
+                                <i class="fas fa-shield-alt text-accent text-2xl"></i>
+                            </div>
+                            <div class="w-16 h-16 bg-gray-800 rounded-lg flex items-center justify-center border border-gray-700">
+                                <i class="fas fa-award text-accent text-2xl"></i>
+                            </div>
+                            <div class="w-16 h-16 bg-gray-800 rounded-lg flex items-center justify-center border border-gray-700">
+                                <i class="fas fa-certificate text-accent text-2xl"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="text-center lg:text-left">
+                        <h5 class="text-white font-medium mb-4">تطبيق الجوال</h5>
+                        <div class="flex gap-3 justify-center lg:justify-start">
+                            <button class="px-4 py-2 bg-gray-800 hover:bg-gray-700 rounded-lg flex items-center gap-2 transition-all duration-300 group">
+                                <i class="fab fa-apple text-xl"></i>
+                                <div class="text-right">
+                                    <div class="text-xs text-gray-400">تحميل من</div>
+                                    <div class="text-white text-sm">App Store</div>
+                                </div>
+                            </button>
+                            <button class="px-4 py-2 bg-gray-800 hover:bg-gray-700 rounded-lg flex items-center gap-2 transition-all duration-300 group">
+                                <i class="fab fa-google-play text-xl"></i>
+                                <div class="text-right">
+                                    <div class="text-xs text-gray-400">تحميل من</div>
+                                    <div class="text-white text-sm">Google Play</div>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Bar - Enhanced -->
+            <div class="border-t border-gray-800 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                    <div class="text-center md:text-right">
+                        <p class="text-gray-400 text-sm">
+                            © 2024 <span class="text-accent font-semibold">تريند للدعاية والإعلان</span> - جميع الحقوق محفوظة
+                        </p>
+                        <p class="text-gray-500 text-xs mt-1">رقم السجل التجاري: 1010456789</p>
+                    </div>
+                    
+                    <div class="flex gap-6 text-sm">
+                        <a href="#" class="footer-bottom-link hover:text-accent transition-all duration-300 relative after:absolute after:bottom-0 after:right-0 after:w-0 after:h-0.5 after:bg-accent after:transition-all after:duration-300 hover:after:w-full">سياسة الخصوصية</a>
+                        <a href="#" class="footer-bottom-link hover:text-accent transition-all duration-300 relative after:absolute after:bottom-0 after:right-0 after:w-0 after:h-0.5 after:bg-accent after:transition-all after:duration-300 hover:after:w-full">الشروط والأحكام</a>
+                        <a href="#" class="footer-bottom-link hover:text-accent transition-all duration-300 relative after:absolute after:bottom-0 after:right-0 after:w-0 after:h-0.5 after:bg-accent after:transition-all after:duration-300 hover:after:w-full">إخلاء المسؤولية</a>
+                        <a href="#" class="footer-bottom-link hover:text-accent transition-all duration-300 relative after:absolute after:bottom-0 after:right-0 after:w-0 after:h-0.5 after:bg-accent after:transition-all after:duration-300 hover:after:w-full">خريطة الموقع</a>
+                    </div>
+                    
+                    <div class="flex items-center gap-3">
+                        <button id="back-to-top" class="w-10 h-10 bg-gray-800 hover:bg-primary rounded-lg flex items-center justify-center transition-all duration-300 group">
+                            <i class="fas fa-chevron-up group-hover:animate-bounce"></i>
+                        </button>
+                        <div class="text-xs text-gray-500">العودة للأعلى</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- CSS Styles للتحسينات -->
+    <style>
+        .footer-link {
+            padding: 8px 0;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .footer-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 0;
+            height: 1px;
+            background: linear-gradient(to left, #d97706, #1e40af);
+            transition: width 0.3s ease;
+        }
+        
+        .footer-link:hover::after {
+            width: 100%;
+        }
+        
+        .social-icon-footer {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .social-icon-footer::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            transform: translate(-50%, -50%);
+            transition: width 0.3s ease, height 0.3s ease;
+        }
+        
+        .social-icon-footer:hover::before {
+            width: 100%;
+            height: 100%;
+        }
+        
+        .footer-bottom-link {
+            padding-bottom: 4px;
+        }
+        
+        /* Back to Top Button Animation */
+        #back-to-top {
+            transform: translateY(0);
+            transition: transform 0.3s ease;
+        }
+        
+        #back-to-top:hover {
+            transform: translateY(-3px);
+        }
+        
+        /* Newsletter Form Animation */
+        form input:focus {
+            box-shadow: 0 0 0 3px rgba(217, 119, 6, 0.1);
+        }
+        
+        /* Wave Pattern Animation */
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, 
+                #1e3a8a 0%, 
+                #1e40af 25%, 
+                #d97706 50%, 
+                #1e40af 75%, 
+                #1e3a8a 100%);
+            background-size: 200% 100%;
+            animation: wave 3s linear infinite;
+        }
+        
+        @keyframes wave {
+            0% { background-position: 0% 0%; }
+            100% { background-position: 200% 0%; }
+        }
+    </style>
+
+    <!-- JavaScript for Back to Top -->
+    <script>
+        // Back to Top Button
+        document.getElementById('back-to-top').addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Show/Hide Back to Top Button
+        window.addEventListener('scroll', function() {
+            const backToTopBtn = document.getElementById('back-to-top');
+            if (window.scrollY > 300) {
+                backToTopBtn.classList.remove('opacity-0', 'invisible');
+                backToTopBtn.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopBtn.classList.remove('opacity-100', 'visible');
+                backToTopBtn.classList.add('opacity-0', 'invisible');
+            }
+        });
+        
+        // Newsletter Form Submission
+        document.querySelector('footer form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = this.querySelector('input[type="email"]').value;
+            if (email) {
+                alert('شكراً لك! تم تسجيل بريدك الإلكتروني بنجاح.');
+                this.reset();
+            }
+        });
+        
+        // Add initial classes for back to top button
+        document.addEventListener('DOMContentLoaded', function() {
+            const backToTopBtn = document.getElementById('back-to-top');
+            backToTopBtn.classList.add('opacity-0', 'invisible');
+        });
+    </script>
+
+    <!-- Scroll to Top Button -->
+    <button id="scroll-top" class="fixed bottom-8 left-8 w-12 h-12 bg-gradient-to-r from-primary to-secondary text-white rounded-full shadow-lg hover:shadow-2xl transition-all duration-300 opacity-0 invisible hover:scale-110 z-40 flex items-center justify-center">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Custom JavaScript -->
+    <script src="js/main.js"></script>
+
+</body>
+</html>

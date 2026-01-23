@@ -1,0 +1,582 @@
+/*
+===========================================
+Trend Agency - Custom CSS Styles
+===========================================
+*/
+
+/* ==========================================
+   1. Global Styles & Custom Properties
+   ========================================== */
+
+:root {
+    --primary: #1e3a8a;
+    --secondary: #1e40af;
+    --accent: #d97706;
+    --dark: #1f2937;
+    --light: #f9fafb;
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Cairo', sans-serif;
+    overflow-x: hidden;
+}
+
+/* ==========================================
+   2. Custom Scrollbar (for modern browsers)
+   ========================================== */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, var(--primary), var(--secondary));
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent);
+}
+
+/* ==========================================
+   3. Selection Color
+   ========================================== */
+
+::selection {
+    background-color: var(--primary);
+    color: white;
+}
+
+::-moz-selection {
+    background-color: var(--primary);
+    color: white;
+}
+
+/* ==========================================
+   4. Navbar Enhancements
+   ========================================== */
+
+#navbar {
+    backdrop-filter: blur(10px);
+    transition: var(--transition);
+}
+
+.nav-link {
+    position: relative;
+    transition: var(--transition);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    right: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(to left, var(--primary), var(--accent));
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Desktop dropdown animation */
+nav ul li .absolute {
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+}
+
+/* ==========================================
+   5. Hero Section Animations
+   ========================================== */
+
+.floating {
+    animation: floating 6s ease-in-out infinite;
+}
+
+@keyframes floating {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* Pulse animation for SVG elements */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+}
+
+.pulse {
+    animation: pulse 3s ease-in-out infinite;
+}
+
+/* ==========================================
+   6. Service Cards Enhancements
+   ========================================== */
+
+.service-card {
+    position: relative;
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(30, 58, 138, 0.05), transparent);
+    transition: right 0.6s ease;
+}
+
+.service-card:hover::before {
+    right: 100%;
+}
+
+.service-card:hover {
+    border-color: var(--primary);
+}
+
+/* Icon animation in service cards */
+.service-card .group-hover\:scale-110 {
+    transition: transform 0.3s ease;
+}
+
+/* ==========================================
+   7. Project Items Enhancements
+   ========================================== */
+
+.project-item {
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.project-item img {
+    transition: transform 0.5s ease;
+}
+
+.project-item:hover img {
+    transform: scale(1.1);
+}
+
+/* Project overlay gradient */
+.project-item .absolute {
+    transition: opacity 0.3s ease;
+}
+
+/* ==========================================
+   8. Partner Logos Animation
+   ========================================== */
+
+.partner-logo {
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.partner-logo:hover {
+    transform: translateY(-5px) scale(1.05);
+}
+
+/* Grayscale to color transition */
+.partner-logo .grayscale {
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+}
+
+.partner-logo:hover .grayscale {
+    filter: grayscale(0%);
+}
+
+/* ==========================================
+   9. Button Enhancements
+   ========================================== */
+
+button, .btn, a[class*="bg-gradient"] {
+    position: relative;
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+button::before, .btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease, height 0.6s ease;
+}
+
+button:hover::before, .btn:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+/* ==========================================
+   10. Scroll to Top Button Animation
+   ========================================== */
+
+#scroll-top {
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+}
+
+#scroll-top:hover {
+    transform: translateY(-5px) scale(1.1);
+}
+
+/* ==========================================
+   11. Form Input Enhancements
+   ========================================== */
+
+input, textarea, select {
+    transition: var(--transition);
+}
+
+input:focus, textarea:focus, select:focus {
+    box-shadow: 0 0 0 4px rgba(30, 58, 138, 0.1);
+}
+
+/* Placeholder styling */
+input::placeholder, textarea::placeholder {
+    color: #9ca3af;
+    transition: var(--transition);
+}
+
+input:focus::placeholder, textarea:focus::placeholder {
+    color: #d1d5db;
+    transform: translateX(-10px);
+}
+
+/* ==========================================
+   12. Background Gradients & Patterns
+   ========================================== */
+
+.bg-gradient-custom {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+}
+
+/* Animated gradient background */
+@keyframes gradient-shift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.gradient-animate {
+    background-size: 200% 200%;
+    animation: gradient-shift 15s ease infinite;
+}
+
+/* ==========================================
+   13. Loading State Animations
+   ========================================== */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.6s ease forwards;
+}
+
+/* ==========================================
+   14. Hover Glow Effects
+   ========================================== */
+
+.glow-on-hover {
+    transition: var(--transition);
+}
+
+.glow-on-hover:hover {
+    box-shadow: 0 0 20px rgba(30, 58, 138, 0.4),
+                0 0 40px rgba(30, 58, 138, 0.2);
+}
+
+/* ==========================================
+   15. Text Gradient Effects
+   ========================================== */
+
+.text-gradient {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* ==========================================
+   16. Card Shine Effect
+   ========================================== */
+
+.card-shine {
+    position: relative;
+    overflow: hidden;
+}
+
+.card-shine::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        45deg,
+        transparent 30%,
+        rgba(255, 255, 255, 0.1) 50%,
+        transparent 70%
+    );
+    transform: rotate(45deg);
+    transition: all 0.6s ease;
+    opacity: 0;
+}
+
+.card-shine:hover::after {
+    opacity: 1;
+    left: 100%;
+}
+
+/* ==========================================
+   17. Stats Counter Styles
+   ========================================== */
+
+.stat-number {
+    font-variant-numeric: tabular-nums;
+    transition: color 0.3s ease;
+}
+
+/* ==========================================
+   18. Section Dividers
+   ========================================== */
+
+.section-divider {
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(to left, var(--accent), var(--primary));
+    margin: 0 auto;
+    border-radius: 2px;
+}
+
+/* ==========================================
+   19. Mobile Menu Animation
+   ========================================== */
+
+#mobile-menu {
+    animation: slideDown 0.3s ease forwards;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ==========================================
+   20. Utility Classes
+   ========================================== */
+
+.transition-all {
+    transition: var(--transition);
+}
+
+.shadow-custom {
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.shadow-custom-hover:hover {
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+/* ==========================================
+   21. Responsive Typography
+   ========================================== */
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.75rem;
+    }
+    
+    h3 {
+        font-size: 1.5rem;
+    }
+    
+    p {
+        font-size: 0.95rem;
+    }
+}
+
+/* ==========================================
+   22. Print Styles
+   ========================================== */
+
+@media print {
+    nav, footer, #scroll-top {
+        display: none;
+    }
+    
+    body {
+        background: white;
+        color: black;
+    }
+}
+
+/* ==========================================
+   23. Accessibility Enhancements
+   ========================================== */
+
+/* Focus visible for keyboard navigation */
+*:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 2px;
+}
+
+/* Reduced motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* ==========================================
+   24. Dark Mode Support (Optional)
+   ========================================== */
+
+@media (prefers-color-scheme: dark) {
+    /* Uncomment if you want to support dark mode
+    body {
+        background-color: #111827;
+        color: #f9fafb;
+    }
+    */
+}
+
+/* ==========================================
+   25. Custom Animations for AOS
+   ========================================== */
+
+[data-aos] {
+    transition-property: opacity, transform;
+}
+
+[data-aos="fade-up"] {
+    transform: translateY(30px);
+    opacity: 0;
+}
+
+[data-aos="fade-down"] {
+    transform: translateY(-30px);
+    opacity: 0;
+}
+
+[data-aos="fade-left"] {
+    transform: translateX(-30px);
+    opacity: 0;
+}
+
+[data-aos="fade-right"] {
+    transform: translateX(30px);
+    opacity: 0;
+}
+
+[data-aos].aos-animate {
+    transform: translate(0, 0);
+    opacity: 1;
+}
+
+/* ==========================================
+   26. Loading Spinner (if needed)
+   ========================================== */
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid rgba(30, 58, 138, 0.1);
+    border-top-color: var(--primary);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* ==========================================
+   27. Grid Enhancement
+   ========================================== */
+
+.grid-auto-fit {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+/* ==========================================
+   28. Backdrop Blur Support
+   ========================================== */
+
+@supports (backdrop-filter: blur(10px)) {
+    #navbar {
+        backdrop-filter: blur(10px);
+        background-color: rgba(255, 255, 255, 0.9);
+    }
+}
+
+/* ==========================================
+   End of Custom CSS Styles
+   ========================================== */

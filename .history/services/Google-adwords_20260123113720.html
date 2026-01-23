@@ -1,0 +1,1117 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="شركة تريند للدعاية والإعلان - نقدم خدمات احترافية في إدارة وسائل التواصل الاجتماعي، تصميم المواقع، إنتاج الفيديوهات، والهويات التجارية">
+    <meta name="keywords" content="دعاية وإعلان, تسويق, سوشيال ميديا, تصميم مواقع, إنتاج فيديو">
+    <title>تريند - Trend | شركة الدعاية والإعلان</title>
+    
+    <!-- TailwindCSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts - Cairo for Arabic -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    <!--  -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+    <!-- TailwindCSS Custom Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1e3a8a', // كحلي
+                        secondary: '#1e40af', // أزرق غامق
+                        accent: '#d97706', // ذهبي
+                        dark: '#1f2937',
+                        light: '#f9fafb'
+                    },
+                    fontFamily: {
+                        'cairo': ['Cairo', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+
+<!-- إضافة سكريبت للموبايل لتحسين الأداء -->
+<script>
+    // تحسين الأداء للموبايل
+    document.addEventListener('DOMContentLoaded', function() {
+        // إصلاح القائمة المتنقلة
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', function() {
+                const isHidden = mobileMenu.style.display === 'none' || mobileMenu.style.display === '';
+                mobileMenu.style.display = isHidden ? 'block' : 'none';
+                
+                // تغيير الأيقونة
+                this.querySelector('i').className = isHidden ? 'fas fa-times' : 'fas fa-bars';
+            });
+            
+            // إغلاق القائمة عند النقر على رابط
+            const mobileLinks = mobileMenu.querySelectorAll('a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    mobileMenu.style.display = 'none';
+                    mobileMenuBtn.querySelector('i').className = 'fas fa-bars';
+                });
+            });
+        }
+        
+        // إصلاح القائمة المنسدلة للخدمات في الموبايل
+        const mobileServicesBtn = document.getElementById('mobile-services-btn');
+        const mobileServicesMenu = document.getElementById('mobile-services-menu');
+        
+        if (mobileServicesBtn && mobileServicesMenu) {
+            mobileServicesBtn.addEventListener('click', function() {
+                const isHidden = mobileServicesMenu.style.display === 'none' || mobileServicesMenu.style.display === '';
+                mobileServicesMenu.style.display = isHidden ? 'block' : 'none';
+                
+                // تغيير الأيقونة
+                const icon = this.querySelector('i');
+                icon.className = isHidden ? 'fas fa-chevron-up text-xs' : 'fas fa-chevron-down text-xs';
+            });
+        }
+        
+        // تحسين الصور للتحميل السريع في الموبايل
+        if (window.innerWidth <= 768) {
+            const images = document.querySelectorAll('img');
+            images.forEach(img => {
+                if (!img.getAttribute('loading')) {
+                    img.setAttribute('loading', 'lazy');
+                }
+            });
+        }
+        
+        // إضافة تأثير تحميل للـ Lottie في الموبايل
+        const lottiePlayers = document.querySelectorAll('lottie-player');
+        if (window.innerWidth <= 768) {
+            lottiePlayers.forEach(player => {
+                player.setAttribute('speed', '0.8');
+            });
+        }
+        
+        // إصلاح ارتفاع القسم في الموبايل
+        function adjustHeroHeight() {
+            const heroSection = document.getElementById('home');
+            if (heroSection && window.innerWidth <= 768) {
+                heroSection.style.minHeight = 'auto';
+                heroSection.style.paddingTop = '4rem';
+                heroSection.style.paddingBottom = '2rem';
+            }
+        }
+        
+        // استدعاء الوظيفة عند التحميل وتغيير الحجم
+        adjustHeroHeight();
+        window.addEventListener('resize', adjustHeroHeight);
+        
+        // تحسين التمرير في الموبايل
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    // إغلاق القائمة المتنقلة إذا كانت مفتوحة
+                    if (mobileMenu && mobileMenu.style.display === 'block') {
+                        mobileMenu.style.display = 'none';
+                        if (mobileMenuBtn) {
+                            mobileMenuBtn.querySelector('i').className = 'fas fa-bars';
+                        }
+                    }
+                    
+                    // التمرير السلس مع تعديل للنافبار في الموبايل
+                    const navbarHeight = window.innerWidth <= 768 ? 80 : 100;
+                    const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    });
+</script>
+</head>
+<body class="font-cairo bg-white text-gray-800 overflow-x-hidden">
+
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 bg-white shadow-lg z-50 transition-all duration-300">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                
+                <!-- Logo & Brand -->
+                <div class="flex items-center space-x-3 space-x-reverse">
+                    <div class="w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center">
+                        <span class="text-white text-2xl font-bold">T</span>
+                    </div>
+                    <div>
+                        <h1 class="text-2xl font-bold text-primary">تريند</h1>
+                        <p class="text-xs text-gray-500">Trend Agency</p>
+                    </div>
+                </div>
+
+                <!-- Desktop Menu -->
+                <ul class="hidden lg:flex items-center space-x-8 space-x-reverse">
+                    <li><a href="#home" class="nav-link text-gray-700 hover:text-primary transition-colors duration-300 font-semibold">الرئيسية</a></li>
+                    
+                    <!-- Services Dropdown -->
+                    <li class="relative group">
+                        <a href="./services.html" class="nav-link text-gray-700 hover:text-primary transition-colors duration-300 font-semibold flex items-center">
+                            خدماتنا
+                            <i class="fas fa-chevron-down mr-2 text-xs"></i>
+                        </a>
+                        <ul class="absolute top-full right-0 bg-white shadow-2xl rounded-lg mt-2 py-3 w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform group-hover:translate-y-0 translate-y-2">
+                            <li><a href="#service-social" class="block px-6 py-3 hover:bg-gray-50 hover:text-primary transition-colors duration-200"><i class="fas fa-hashtag ml-3 text-primary"></i>إدارة وسائل التواصل الاجتماعي</a></li>
+                            <li><a href="#service-web" class="block px-6 py-3 hover:bg-gray-50 hover:text-primary transition-colors duration-200"><i class="fas fa-laptop-code ml-3 text-primary"></i>تصميم واستضافة المواقع</a></li>
+                            <li><a href="#service-video" class="block px-6 py-3 hover:bg-gray-50 hover:text-primary transition-colors duration-200"><i class="fas fa-video ml-3 text-primary"></i>إنتاج الفيديوهات</a></li>
+                            <li><a href="#service-ads" class="block px-6 py-3 hover:bg-gray-50 hover:text-primary transition-colors duration-200"><i class="fab fa-google ml-3 text-primary"></i>إعلانات جوجل أدوردز</a></li>
+                            <li><a href="#service-branding" class="block px-6 py-3 hover:bg-gray-50 hover:text-primary transition-colors duration-200"><i class="fas fa-palette ml-3 text-primary"></i>تصميم الهويات التجارية</a></li>
+                            <li><a href="#service-photography" class="block px-6 py-3 hover:bg-gray-50 hover:text-primary transition-colors duration-200"><i class="fas fa-camera ml-3 text-primary"></i>تصوير المنتجات</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li><a href="#projects" class="nav-link text-gray-700 hover:text-primary transition-colors duration-300 font-semibold">مشاريعنا</a></li>
+                    <li><a href="./about.html" class="nav-link text-gray-700 hover:text-primary transition-colors duration-300 font-semibold">من نحن</a></li>
+                    <li><a href="#contact" class="bg-gradient-to-r from-primary to-secondary text-white px-6 py-3 rounded-full hover:shadow-xl transition-all duration-300 font-semibold hover:scale-105">تواصل معنا</a></li>
+                </ul>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="lg:hidden text-primary text-2xl focus:outline-none">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="lg:hidden hidden bg-white border-t border-gray-200">
+            <ul class="py-4">
+                <li><a href="#home" class="block px-6 py-3 hover:bg-gray-50 text-gray-700 hover:text-primary transition-colors">الرئيسية</a></li>
+                <li>
+                    <button id="mobile-services-btn" class="w-full text-right px-6 py-3 hover:bg-gray-50 text-gray-700 hover:text-primary transition-colors flex justify-between items-center">
+                        خدماتنا
+                        <i class="fas fa-chevron-down text-xs"></i>
+                    </button>
+                    <ul id="mobile-services-menu" class="hidden bg-gray-50">
+                        <li><a href="#service-social" class="block px-10 py-2 hover:bg-gray-100 text-sm text-gray-600 hover:text-primary">إدارة وسائل التواصل الاجتماعي</a></li>
+                        <li><a href="#service-web" class="block px-10 py-2 hover:bg-gray-100 text-sm text-gray-600 hover:text-primary">تصميم واستضافة المواقع</a></li>
+                        <li><a href="#service-video" class="block px-10 py-2 hover:bg-gray-100 text-sm text-gray-600 hover:text-primary">إنتاج الفيديوهات</a></li>
+                        <li><a href="#service-ads" class="block px-10 py-2 hover:bg-gray-100 text-sm text-gray-600 hover:text-primary">إعلانات جوجل أدوردز</a></li>
+                        <li><a href="#service-branding" class="block px-10 py-2 hover:bg-gray-100 text-sm text-gray-600 hover:text-primary">تصميم الهويات التجارية</a></li>
+                        <li><a href="#service-photography" class="block px-10 py-2 hover:bg-gray-100 text-sm text-gray-600 hover:text-primary">تصوير المنتجات</a></li>
+                    </ul>
+                </li>
+                <li><a href="#projects" class="block px-6 py-3 hover:bg-gray-50 text-gray-700 hover:text-primary transition-colors">مشاريعنا</a></li>
+                <li><a href="#about" class="block px-6 py-3 hover:bg-gray-50 text-gray-700 hover:text-primary transition-colors">من نحن</a></li>
+                <li><a href="#contact" class="block px-6 py-3 hover:bg-gray-50 text-primary font-semibold transition-colors">تواصل معنا</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+<!-- Paid Advertising & Google Ads Section -->
+<section id="paid-advertising" class="bg-white pt-16 md:pt-20 lg:pt-24 pb-12 md:pb-16 lg:pb-20 overflow-hidden">
+    <!-- Hero Header -->
+    <div class="relative bg-gradient-to-r from-primary to-secondary pt-12 md:pt-16 lg:pt-20 pb-8 md:pb-12 lg:pb-16 mb-8 md:mb-12 lg:mb-16 overflow-hidden">
+        <!-- Animated Background Elements -->
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="absolute -top-20 -right-20 w-64 h-64 bg-white/5 rounded-full animate-pulse"></div>
+            <div class="absolute -bottom-20 -left-20 w-80 h-80 bg-white/5 rounded-full animate-pulse" style="animation-delay: 1s"></div>
+        </div>
+        
+        <div class="container relative mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 md:mb-6">
+                    الإعلانات <span class="text-white">الممولة وإعلانات جوجل</span>
+                </h1>
+                <p class="text-white/90 text-sm sm:text-base md:text-lg max-w-3xl mx-auto mb-4 md:mb-6 lg:mb-8 px-4">
+                    وصل إلى عملائك المستهدفين بدقة عالية وضاعف مبيعاتك باستخدام إعلانات جوجل الذكية
+                </p>
+                <div class="w-16 sm:w-20 md:w-24 h-1 bg-white/50 mx-auto"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
+        <!-- Introduction Section -->
+        <div class="grid lg:grid-cols-2 gap-8 md:gap-10 lg:gap-12 items-center mb-12 md:mb-16 lg:mb-20">
+            <!-- Left Content -->
+            <div class="space-y-4 md:space-y-6">
+                <h2 class="text-xl sm:text-2xl md:text-3xl font-bold text-primary mb-3 md:mb-4">
+                    لماذا الإعلانات الممولة هي المستقبل؟
+                </h2>
+                <p class="text-gray-600 leading-relaxed text-sm sm:text-base md:text-lg">
+                    في عالم يشهد منافسة شرسة على الانتباه، أصبحت الإعلانات الممولة الوسيلة الأكثر فعالية للوصول إلى جمهورك المستهدف في الوقت المناسب والمكان المناسب. مع معدلات تحويل تصل إلى 3 أضعاف الإعلانات التقليدية، تقدم إعلانات جوجل أدوردز نتائج ملموسة وقابلة للقياس.
+                </p>
+                
+                <div class="bg-gradient-to-r from-primary/5 to-secondary/5 rounded-xl p-4 md:p-5 border-r-4 border-accent">
+                    <div class="flex items-center space-x-3 md:space-x-4 mb-2">
+                        <div class="w-10 h-10 bg-accent rounded-full flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-chart-line text-white text-lg"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800 text-sm md:text-base">نتائج مضمونة وقابلة للقياس</h4>
+                            <p class="text-gray-600 text-xs md:text-sm">دفع مقابل النتائج الفعلية فقط</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-sm md:text-base mt-2">
+                        تدفع فقط عندما ينقر شخص مهتم على إعلانك أو يتخذ إجراءً، مما يضمن أفضل عائد على استثمارك.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Right Image/Animation -->
+            <div class="mt-6 lg:mt-0">
+                <div class="relative">
+                    <div class="rounded-2xl p-3 md:p-4 lg:p-6">
+                        <!-- Google Ads Animation -->
+                        <lottie-player
+                            src="../lottie/Digital Marketing.json"
+                            background="transparent"
+                            speed="1"
+                            loop
+                            autoplay
+                            class="w-full h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px]"
+                        ></lottie-player>
+                    </div>
+                    <!-- Floating Badge -->
+                    <div class="absolute -top-3 -right-3 bg-white border border-accent rounded-lg px-3 py-1 shadow-lg">
+                        <span class="text-accent font-bold text-xs md:text-sm">Google Ads Certified</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Google Ads Benefits -->
+        <div class="mb-12 md:mb-16 lg:mb-20">
+            <div class="bg-gradient-to-r from-gray-50 to-gray-100 rounded-xl md:rounded-2xl p-6 md:p-8 lg:p-10 border border-gray-200">
+                <div class="text-center mb-6 md:mb-8">
+                    <h3 class="text-xl sm:text-2xl md:text-3xl font-bold text-primary mb-3 md:mb-4">
+                        مزايا إعلانات جوجل أدوردز
+                    </h3>
+                    <p class="text-gray-600 text-sm sm:text-base md:text-lg max-w-3xl mx-auto">
+                        اكتشف لماذا تعتبر إعلانات جوجل الخيار الأمثل للوصول إلى عملاء جدد وزيادة المبيعات
+                    </p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+                    <!-- Benefit 1 -->
+                    <div class="bg-white p-4 md:p-5 rounded-xl shadow-sm border border-gray-100 transition-all duration-300 hover:scale-105 hover:shadow-md hover:border-primary/20">
+                        <div class="flex items-center mb-3 md:mb-4">
+                            <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center mr-3">
+                                <i class="fas fa-bullseye text-white text-lg"></i>
+                            </div>
+                            <h4 class="font-bold text-gray-800 text-sm md:text-base">استهداف دقيق للغاية</h4>
+                        </div>
+                        <p class="text-gray-600 text-xs sm:text-sm">
+                            استهدف العملاء بناءً على اهتماماتهم، سلوكيات التصفح، الموقع الجغرافي، والكلمات المفتاحية التي يبحثون عنها.
+                        </p>
+                    </div>
+                    
+                    <!-- Benefit 2 -->
+                    <div class="bg-white p-4 md:p-5 rounded-xl shadow-sm border border-gray-100 transition-all duration-300 hover:scale-105 hover:shadow-md hover:border-primary/20">
+                        <div class="flex items-center mb-3 md:mb-4">
+                            <div class="w-10 h-10 bg-gradient-to-br from-green-500 to-green-600 rounded-lg flex items-center justify-center mr-3">
+                                <i class="fas fa-money-bill-wave text-white text-lg"></i>
+                            </div>
+                            <h4 class="font-bold text-gray-800 text-sm md:text-base">مرونة في الميزانية</h4>
+                        </div>
+                        <p class="text-gray-600 text-xs sm:text-sm">
+                            ابدأ بميزانية صغيرة وزدها تدريجياً. تتحكم تماماً في إنفاقك وتدفع فقط مقابل النتائج الفعلية.
+                        </p>
+                    </div>
+                    
+                    <!-- Benefit 3 -->
+                    <div class="bg-white p-4 md:p-5 rounded-xl shadow-sm border border-gray-100 transition-all duration-300 hover:scale-105 hover:shadow-md hover:border-primary/20">
+                        <div class="flex items-center mb-3 md:mb-4">
+                            <div class="w-10 h-10 bg-gradient-to-br from-purple-500 to-purple-600 rounded-lg flex items-center justify-center mr-3">
+                                <i class="fas fa-tachometer-alt text-white text-lg"></i>
+                            </div>
+                            <h4 class="font-bold text-gray-800 text-sm md:text-base">نتائج سريعة وفورية</h4>
+                        </div>
+                        <p class="text-gray-600 text-xs sm:text-sm">
+                            بمجرد تشغيل الحملة، تبدأ النتائج في الظهور فوراً. لا داعي للانتظار طويلاً لرؤية تأثير إعلاناتك.
+                        </p>
+                    </div>
+                    
+                    <!-- Benefit 4 -->
+                    <div class="bg-white p-4 md:p-5 rounded-xl shadow-sm border border-gray-100 transition-all duration-300 hover:scale-105 hover:shadow-md hover:border-primary/20">
+                        <div class="flex items-center mb-3 md:mb-4">
+                            <div class="w-10 h-10 bg-gradient-to-br from-red-500 to-red-600 rounded-lg flex items-center justify-center mr-3">
+                                <i class="fas fa-chart-bar text-white text-lg"></i>
+                            </div>
+                            <h4 class="font-bold text-gray-800 text-sm md:text-base">تحليلات مفصلة</h4>
+                        </div>
+                        <p class="text-gray-600 text-xs sm:text-sm">
+                            تتبع أداء حملاتك بدقة مع تقارير مفصلة تساعدك في اتخاذ قرارات مستنيرة لتحسين النتائج.
+                        </p>
+                    </div>
+                    
+                    <!-- Benefit 5 -->
+                    <div class="bg-white p-4 md:p-5 rounded-xl shadow-sm border border-gray-100 transition-all duration-300 hover:scale-105 hover:shadow-md hover:border-primary/20">
+                        <div class="flex items-center mb-3 md:mb-4">
+                            <div class="w-10 h-10 bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-lg flex items-center justify-center mr-3">
+                                <i class="fas fa-mobile-alt text-white text-lg"></i>
+                            </div>
+                            <h4 class="font-bold text-gray-800 text-sm md:text-base">تغطية شاملة</h4>
+                        </div>
+                        <p class="text-gray-600 text-xs sm:text-sm">
+                            ظهر على محرك بحث جوجل، يوتيوب، شبكة جوجل الإعلانية، جيميل، ومواقع الشركاء. وصل إلى جمهورك أينما كان.
+                        </p>
+                    </div>
+                    
+                    <!-- Benefit 6 -->
+                    <div class="bg-white p-4 md:p-5 rounded-xl shadow-sm border border-gray-100 transition-all duration-300 hover:scale-105 hover:shadow-md hover:border-primary/20">
+                        <div class="flex items-center mb-3 md:mb-4">
+                            <div class="w-10 h-10 bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-lg flex items-center justify-center mr-3">
+                                <i class="fas fa-user-shield text-white text-lg"></i>
+                            </div>
+                            <h4 class="font-bold text-gray-800 text-sm md:text-base">أمان وموثوقية</h4>
+                        </div>
+                        <p class="text-gray-600 text-xs sm:text-sm">
+                            استفد من نظام جوجل المتطور للكشف عن النقرات الاحتيالية وحماية استثمارك الإعلاني.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Our Process Section -->
+        <div class="grid lg:grid-cols-2 gap-8 md:gap-10 lg:gap-12 items-center mb-12 md:mb-16 lg:mb-20">
+            <!-- Process Content -->
+            <div class="space-y-4 md:space-y-6">
+                <h2 class="text-xl sm:text-2xl md:text-3xl font-bold text-primary mb-3 md:mb-4">
+                    كيف ننفذ حملات إعلانية ناجحة؟
+                </h2>
+                
+                <div class="space-y-4 md:space-y-6">
+                    <!-- Step 1 -->
+                    <div class="flex items-start space-x-3 md:space-x-4">
+                        <div class="flex-shrink-0">
+                            <div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
+                                <span class="text-primary font-bold">1</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800 mb-1 text-sm md:text-base">التحليل والتخطيط الاستراتيجي</h4>
+                            <p class="text-gray-600 text-xs sm:text-sm">
+                                نبدأ بدراسة عميقة لسوقك، منافسيك، وجمهورك المستهدف. نحدد الأهداف القابلة للقياس ونضع استراتيجية إعلانية شاملة تغطي جميع جوانب الحملة.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 2 -->
+                    <div class="flex items-start space-x-3 md:space-x-4">
+                        <div class="flex-shrink-0">
+                            <div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
+                                <span class="text-primary font-bold">2</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800 mb-1 text-sm md:text-base">إعداد الكلمات المفتاحية والإعلانات</h4>
+                            <p class="text-gray-600 text-xs sm:text-sm">
+                                نبحث عن أفضل الكلمات المفتاحية ذات الصلة والتنافسية. نكتب إعلانات جذابة ومقنعة تستهدف احتياجات عملائك المحتملين ونقاط الألم الخاصة بهم.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 3 -->
+                    <div class="flex items-start space-x-3 md:space-x-4">
+                        <div class="flex-shrink-0">
+                            <div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
+                                <span class="text-primary font-bold">3</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800 mb-1 text-sm md:text-base">إطلاق الحملة والاستهداف الدقيق</h4>
+                            <p class="text-gray-600 text-xs sm:text-sm">
+                                نطلق الحملة باستخدام تقنيات استهداف متقدمة تضمن وصول إعلاناتك للشخص المناسب في الوقت المناسب. نضبط الميزانية والمناقصات للحصول على أفضل قيمة.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 4 -->
+                    <div class="flex items-start space-x-3 md:space-x-4">
+                        <div class="flex-shrink-0 mr-3">
+                            <div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
+                                <span class="text-primary font-bold">4</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800 mb-1 text-sm md:text-base">المراقبة والتحسين المستمر</h4>
+                            <p class="text-gray-600 text-xs sm:text-sm">
+                                نراقب أداء الحملة 24/7 ونحلل البيانات بدقة. نجري تحسينات مستمرة لتعزيز النتائج وتقليل التكلفة لكل تحويل.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Process Stats -->
+            <div class="mt-6 lg:mt-0">
+                <div class="relative">
+                    <div class=" rounded-xl md:rounded-2xl p-6 md:p-8">
+                      
+                        
+                      <img src="../img/Google sitemap-amico.png" alt="">
+                        
+                        <!-- Quote -->
+                        <div class="mt-6 p-4 bg-white/80 backdrop-blur-sm rounded-xl border border-gray-200">
+                            <div class="flex items-start space-x-3 space-x-reverse">
+                                <i class="fas fa-quote-right text-primary text-xl mt-1"></i>
+                                <div>
+                                    <p class="text-gray-700 text-sm md:text-base italic">
+                                        "بفضل إعلانات جوجل، حققت شركتنا نمواً بنسبة 300% في المبيعات خلال 6 أشهر فقط."
+                                    </p>
+                                    <p class="text-gray-600 text-xs mt-2">- محمد أحمد، مدير التسويق في شركة النجاح</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Campaign Types -->
+        <div class="mb-12 md:mb-16 lg:mb-20">
+            <div class="text-center mb-6 md:mb-8 lg:mb-10">
+                <h3 class="text-xl sm:text-2xl md:text-3xl font-bold text-primary mb-3 md:mb-4">أنواع حملات إعلانات جوجل التي نقدمها</h3>
+                <p class="text-gray-600 text-sm sm:text-base md:text-lg max-w-3xl mx-auto">
+                    نقدم مجموعة متنوعة من الحملات الإعلانية المصممة خصيصاً لتحقيق أهدافك التجارية
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+                <!-- Campaign 1 -->
+                <div class="bg-white p-5 md:p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md hover:border-primary/20 transition-all duration-300">
+                    <div class="flex items-center space-x-3 md:space-x-4 mb-4">
+                        <div class="w-12 h-12 ml-3 bg-gradient-to-br from-blue-500  to-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-search text-white text-lg"></i>
+                        </div>
+                        <h4 class="font-bold text-gray-800 text-base md:text-lg">إعلانات البحث</h4>
+                    </div>
+                    <p class="text-gray-600 text-sm md:text-base mb-4">
+                        ظهر في نتائج بحث جوجل عندما يبحث الأشخاص عن منتجاتك أو خدماتك. مثالي لجذب العملاء في مرحلة البحث النشط.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="inline-block bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">كلمات مفتاحية</span>
+                        <span class="inline-block bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">نص الإعلان</span>
+                        <span class="inline-block bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">نسبة النقر</span>
+                    </div>
+                </div>
+                
+                <!-- Campaign 2 -->
+                <div class="bg-white p-5 md:p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md hover:border-primary/20 transition-all duration-300">
+                    <div class="flex items-center space-x-3 md:space-x-4 mb-4">
+                        <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-globe text-white text-lg"></i>
+                        </div>
+                        <h4 class="font-bold text-gray-800 text-base md:text-lg">إعلانات الشبكة الإعلانية</h4>
+                    </div>
+                    <p class="text-gray-600 text-sm md:text-base mb-4">
+                        ظهر على ملايين المواقع والمدونات والتطبيقات عبر شبكة جوجل الإعلانية. مثالي لزيادة الوعي بالعلامة التجارية.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="inline-block bg-green-100 text-green-800 px-2 py-1 rounded text-xs">مواقع متنوعة</span>
+                        <span class="inline-block bg-green-100 text-green-800 px-2 py-1 rounded text-xs">صورة/فيديو</span>
+                        <span class="inline-block bg-green-100 text-green-800 px-2 py-1 rounded text-xs">الوعي بالعلامة</span>
+                    </div>
+                </div>
+                
+                <!-- Campaign 3 -->
+                <div class="bg-white p-5 md:p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md hover:border-primary/20 transition-all duration-300">
+                    <div class="flex items-center space-x-3 md:space-x-4 mb-4">
+                        <div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-video text-white text-lg"></i>
+                        </div>
+                        <h4 class="font-bold text-gray-800 text-base md:text-lg">إعلانات يوتيوب</h4>
+                    </div>
+                    <p class="text-gray-600 text-sm md:text-base mb-4">
+                        استخدم قوة الفيديو للوصول إلى جمهور يوتيوب الواسع. مثالي للعروض التوضيحية والتجارب والقصص المؤثرة.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="inline-block bg-purple-100 text-purple-800 px-2 py-1 rounded text-xs">فيديو</span>
+                        <span class="inline-block bg-purple-100 text-purple-800 px-2 py-1 rounded text-xs">قبل/أثناء الفيديو</span>
+                        <span class="inline-block bg-purple-100 text-purple-800 px-2 py-1 rounded text-xs">تفاعل عالي</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Why Choose Us -->
+        <div class="mb-12 md:mb-16 lg:mb-20">
+            <div class="bg-gradient-to-r from-primary/5 to-secondary/5 rounded-2xl p-6 md:p-8 lg:p-10 border-r-4 border-accent">
+                <div class="text-center mb-6 md:mb-8">
+                    <h3 class="text-xl sm:text-2xl md:text-3xl font-bold text-primary mb-3 md:mb-4">
+                        لماذا تختار تريند لإدارة إعلاناتك؟
+                    </h3>
+                    <p class="text-gray-600 text-sm sm:text-base md:text-lg max-w-3xl mx-auto">
+                        نتميز بخبرة عميقة وفريق متخصص يضمن لك الحصول على أفضل النتائج من استثمارك الإعلاني
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+                    <div class="bg-white p-4 md:p-5 rounded-xl shadow-sm border border-gray-100 transition-all duration-300 hover:scale-105 hover:shadow-md">
+                        <div class="flex items-center space-x-3 md:space-x-4 mb-3">
+                            <div class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-certificate text-primary"></i>
+                            </div>
+                            <h4 class="font-bold text-gray-800 text-base">شهادات معتمدة من جوجل</h4>
+                        </div>
+                        <p class="text-gray-600 text-sm">فريقنا معتمد من جوجل ويتلقى تدريبات مستمرة على أحدث التقنيات</p>
+                    </div>
+                    
+                    <div class="bg-white p-4 md:p-5 rounded-xl shadow-sm border border-gray-100 transition-all duration-300 hover:scale-105 hover:shadow-md">
+                        <div class="flex items-center space-x-3 md:space-x-4 mb-3">
+                            <div class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-chart-pie text-primary"></i>
+                            </div>
+                            <h4 class="font-bold text-gray-800 text-base">تقارير مفصلة وشفافة</h4>
+                        </div>
+                        <p class="text-gray-600 text-sm">نقدم لك تقارير شهرية مفصلة توضح كل تفصيلة عن أداء حملاتك</p>
+                    </div>
+                    
+                    <div class="bg-white p-4 md:p-5 rounded-xl shadow-sm border border-gray-100 transition-all duration-300 hover:scale-105 hover:shadow-md">
+                        <div class="flex items-center space-x-3 md:space-x-4 mb-3">
+                            <div class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-cogs text-primary"></i>
+                            </div>
+                            <h4 class="font-bold text-gray-800 text-base">تحسين مستمر للحملات</h4>
+                        </div>
+                        <p class="text-gray-600 text-sm">نحسن حملاتك باستمرار بناءً على تحليل البيانات وأداء الحملة</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA Section -->
+        <div class="text-center">
+            <div class="bg-gradient-to-r from-primary to-secondary rounded-2xl p-6 md:p-8 lg:p-10 border border-primary/20">
+                <h3 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-3 md:mb-4 lg:mb-6">
+                    مستعد لتحويل زوار الإنترنت إلى عملاء دائمين؟
+                </h3>
+                <p class="text-white/90 text-sm sm:text-base md:text-lg mb-6 md:mb-8 max-w-2xl mx-auto px-4">
+                    تواصل معنا اليوم لتحليل مجاني لحسابك الإعلاني وتصميم استراتيجية إعلانية تضمن لك نجاح حملتك
+                </p>
+                <div class="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
+                    <a href="#contact" class="inline-flex items-center bg-white text-primary hover:bg-gray-100 px-6 py-2.5 md:px-7 md:py-3 lg:px-8 lg:py-3.5 rounded-full font-semibold hover:shadow-lg transition-all duration-300 hover:scale-105 text-sm sm:text-base md:text-lg">
+                        <i class="fas fa-ad ml-1.5 md:ml-2 text-xs sm:text-sm md:text-base"></i>
+                        ابدأ حملتك الإعلانية الآن
+                    </a>
+                    <a href="#portfolio" class="inline-flex items-center border border-white text-white hover:bg-white/20 px-6 py-2.5 md:px-7 md:py-3 lg:px-8 lg:py-3.5 rounded-full font-semibold transition-all duration-300 text-sm sm:text-base md:text-lg">
+                        <i class="fas fa-chart-bar ml-1.5 md:ml-2 text-xs sm:text-sm md:text-base"></i>
+                        شاهد دراسات حالة ناجحة
+                    </a>
+                </div>
+                <p class="text-white/80 text-xs sm:text-sm mt-6">
+                    احصل على تحليل مجاني لحسابك الإعلاني الحالي واقتراحات تحسين فورية
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CSS Styles for Responsive Design -->
+<style>
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+        #paid-advertising .lg\:grid-cols-2 {
+            grid-template-columns: 1fr;
+        }
+        
+        #paid-advertising .lg\:grid-cols-3 {
+            grid-template-columns: 1fr;
+        }
+        
+        #paid-advertising .md\:grid-cols-2 {
+            grid-template-columns: 1fr;
+        }
+        
+        #paid-advertising .grid-cols-3 {
+            grid-template-columns: 1fr;
+        }
+    }
+    
+    /* Responsive Typography */
+    @media (max-width: 640px) {
+        #paid-advertising h1 {
+            font-size: 1.75rem;
+        }
+        
+        #paid-advertising h2 {
+            font-size: 1.5rem;
+        }
+        
+        #paid-advertising h3 {
+            font-size: 1.25rem;
+        }
+        
+        #paid-advertising p {
+            font-size: 0.875rem;
+        }
+    }
+    
+    /* Responsive Spacing */
+    @media (max-width: 480px) {
+        #paid-advertising .container {
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+        
+        #paid-advertising .gap-8 {
+            gap: 1.5rem;
+        }
+        
+        #paid-advertising .p-6 {
+            padding: 1rem;
+        }
+        
+        #paid-advertising .p-5 {
+            padding: 0.75rem;
+        }
+    }
+    
+    /* Responsive Lottie Player */
+    #paid-advertising lottie-player {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+    
+    /* Hover Effects */
+    #paid-advertising .hover\\:scale-105:hover {
+        transform: scale(1.05);
+    }
+    
+    /* Transition Smoothing */
+    #paid-advertising .transition-all {
+        transition: all 0.3s ease;
+    }
+</style>
+
+     <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 pt-20 pb-8 relative overflow-hidden">
+        <!-- Wave Pattern -->
+        <div class="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-primary via-secondary to-accent"></div>
+        
+    
+
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10 mb-16">
+                
+                <!-- Company Info - Enhanced -->
+                <div>
+                    <div class="flex items-center space-x-3 space-x-reverse mb-6">
+                        <div class="w-14 h-14 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center shadow-lg">
+                            <span class="text-white text-3xl font-bold">T</span>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-white">تريند</h3>
+                            <p class="text-sm text-gray-400">Trend Agency</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 leading-relaxed mb-6">
+                        رواد في عالم الدعاية والإعلان، نبتكر حلولاً تسويقية استثنائية تحوّل العلامات التجارية إلى إمبراطوريات
+                    </p>
+                    <div class="flex gap-3">
+                        <a href="#" class="social-icon-footer w-11 h-11 bg-gray-800 hover:bg-primary rounded-xl flex items-center justify-center transition-all duration-300 group">
+                            <i class="fab fa-facebook-f group-hover:scale-110 transition-transform"></i>
+                        </a>
+                        <a href="#" class="social-icon-footer w-11 h-11 bg-gray-800 hover:bg-blue-400 rounded-xl flex items-center justify-center transition-all duration-300 group">
+                            <i class="fab fa-twitter group-hover:scale-110 transition-transform"></i>
+                        </a>
+                        <a href="#" class="social-icon-footer w-11 h-11 bg-gray-800 hover:bg-pink-600 rounded-xl flex items-center justify-center transition-all duration-300 group">
+                            <i class="fab fa-instagram group-hover:scale-110 transition-transform"></i>
+                        </a>
+                        <a href="#" class="social-icon-footer w-11 h-11 bg-gray-800 hover:bg-blue-700 rounded-xl flex items-center justify-center transition-all duration-300 group">
+                            <i class="fab fa-linkedin-in group-hover:scale-110 transition-transform"></i>
+                        </a>
+                        <a href="#" class="social-icon-footer w-11 h-11 bg-gray-800 hover:bg-red-600 rounded-xl flex items-center justify-center transition-all duration-300 group">
+                            <i class="fab fa-youtube group-hover:scale-110 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links - Enhanced -->
+                <div>
+                    <h4 class="text-white font-bold text-xl mb-6 pb-3 border-b border-gray-700 relative">
+                        روابط سريعة
+                        <span class="absolute bottom-0 right-0 w-12 h-0.5 bg-accent"></span>
+                    </h4>
+                    <ul class="space-y-3">
+                        <li>
+                            <a href="#home" class="footer-link hover:text-accent transition-all duration-300 flex items-center group">
+                                <i class="fas fa-chevron-left ml-3 text-xs group-hover:ml-4 transition-all"></i>
+                                الرئيسية
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#services" class="footer-link hover:text-accent transition-all duration-300 flex items-center group">
+                                <i class="fas fa-chevron-left ml-3 text-xs group-hover:ml-4 transition-all"></i>
+                                خدماتنا
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#projects" class="footer-link hover:text-accent transition-all duration-300 flex items-center group">
+                                <i class="fas fa-chevron-left ml-3 text-xs group-hover:ml-4 transition-all"></i>
+                                مشاريعنا
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#about" class="footer-link hover:text-accent transition-all duration-300 flex items-center group">
+                                <i class="fas fa-chevron-left ml-3 text-xs group-hover:ml-4 transition-all"></i>
+                                من نحن
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#contact" class="footer-link hover:text-accent transition-all duration-300 flex items-center group">
+                                <i class="fas fa-chevron-left ml-3 text-xs group-hover:ml-4 transition-all"></i>
+                                تواصل معنا
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#blog" class="footer-link hover:text-accent transition-all duration-300 flex items-center group">
+                                <i class="fas fa-chevron-left ml-3 text-xs group-hover:ml-4 transition-all"></i>
+                                المدونة
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Services Links - Enhanced -->
+                <div>
+                    <h4 class="text-white font-bold text-xl mb-6 pb-3 border-b border-gray-700 relative">
+                        خدماتنا
+                        <span class="absolute bottom-0 right-0 w-12 h-0.5 bg-accent"></span>
+                    </h4>
+                    <ul class="space-y-3">
+                        <li>
+                            <a href="#service-social" class="footer-link hover:text-accent transition-all duration-300 flex items-center group">
+                                <i class="fas fa-hashtag ml-3 text-sm text-primary group-hover:scale-125 transition-transform"></i>
+                                إدارة السوشيال ميديا
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#service-web" class="footer-link hover:text-accent transition-all duration-300 flex items-center group">
+                                <i class="fas fa-laptop-code ml-3 text-sm text-primary group-hover:scale-125 transition-transform"></i>
+                                تصميم المواقع
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#service-video" class="footer-link hover:text-accent transition-all duration-300 flex items-center group">
+                                <i class="fas fa-video ml-3 text-sm text-primary group-hover:scale-125 transition-transform"></i>
+                                إنتاج الفيديو
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#service-ads" class="footer-link hover:text-accent transition-all duration-300 flex items-center group">
+                                <i class="fab fa-google ml-3 text-sm text-primary group-hover:scale-125 transition-transform"></i>
+                                إعلانات جوجل
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#service-branding" class="footer-link hover:text-accent transition-all duration-300 flex items-center group">
+                                <i class="fas fa-palette ml-3 text-sm text-primary group-hover:scale-125 transition-transform"></i>
+                                الهويات التجارية
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#service-photography" class="footer-link hover:text-accent transition-all duration-300 flex items-center group">
+                                <i class="fas fa-camera ml-3 text-sm text-primary group-hover:scale-125 transition-transform"></i>
+                                تصوير المنتجات
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info - Enhanced -->
+                <div>
+                    <h4 class="text-white font-bold text-xl mb-6 pb-3 border-b border-gray-700 relative">
+                        تواصل معنا
+                        <span class="absolute bottom-0 right-0 w-12 h-0.5 bg-accent"></span>
+                    </h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-start space-x-3 space-x-reverse group cursor-pointer">
+                            <div class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center group-hover:bg-primary transition-all duration-300">
+                                <i class="fas fa-map-marker-alt text-accent group-hover:text-white"></i>
+                            </div>
+                            <div>
+                                <span class="block text-white font-medium mb-1">العنوان</span>
+                                <span class="text-sm text-gray-400">الرياض، المملكة العربية السعودية</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start space-x-3 space-x-reverse group cursor-pointer">
+                            <div class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center group-hover:bg-primary transition-all duration-300">
+                                <i class="fas fa-phone-alt text-accent group-hover:text-white"></i>
+                            </div>
+                            <div>
+                                <span class="block text-white font-medium mb-1">الهاتف</span>
+                                <span dir="ltr" class="text-sm text-gray-400">+966 50 123 4567</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start space-x-3 space-x-reverse group cursor-pointer">
+                            <div class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center group-hover:bg-primary transition-all duration-300">
+                                <i class="fas fa-envelope text-accent group-hover:text-white"></i>
+                            </div>
+                            <div>
+                                <span class="block text-white font-medium mb-1">البريد الإلكتروني</span>
+                                <span class="text-sm text-gray-400">info@trendagency.com</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start space-x-3 space-x-reverse group cursor-pointer">
+                            <div class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center group-hover:bg-primary transition-all duration-300">
+                                <i class="fas fa-clock text-accent group-hover:text-white"></i>
+                            </div>
+                            <div>
+                                <span class="block text-white font-medium mb-1">ساعات العمل</span>
+                                <span class="text-sm text-gray-400">الأحد - الخميس<br>9 صباحاً - 6 مساءً</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Payment Methods & Trust Seals -->
+            <div class="border-t border-gray-800 pt-8 mb-8">
+                <div class="flex flex-col lg:flex-row justify-between items-center gap-8">
+                    <div>
+                        <h5 class="text-white font-medium mb-4 text-center lg:text-right">طرق الدفع المتاحة</h5>
+                        <div class="flex gap-3 justify-center lg:justify-start">
+                            <div class="w-12 h-8 bg-gray-800 rounded-md flex items-center justify-center">
+                                <i class="fab fa-cc-visa text-gray-400"></i>
+                            </div>
+                            <div class="w-12 h-8 bg-gray-800 rounded-md flex items-center justify-center">
+                                <i class="fab fa-cc-mastercard text-gray-400"></i>
+                            </div>
+                            <div class="w-12 h-8 bg-gray-800 rounded-md flex items-center justify-center">
+                                <i class="fab fa-cc-paypal text-gray-400"></i>
+                            </div>
+                            <div class="w-12 h-8 bg-gray-800 rounded-md flex items-center justify-center">
+                                <i class="fas fa-university text-gray-400"></i>
+                            </div>
+                            <div class="w-12 h-8 bg-gray-800 rounded-md flex items-center justify-center">
+                                <i class="fab fa-apple-pay text-gray-400"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="text-center">
+                        <h5 class="text-white font-medium mb-4">شهادات الجودة</h5>
+                        <div class="flex gap-4">
+                            <div class="w-16 h-16 bg-gray-800 rounded-lg flex items-center justify-center border border-gray-700">
+                                <i class="fas fa-shield-alt text-accent text-2xl"></i>
+                            </div>
+                            <div class="w-16 h-16 bg-gray-800 rounded-lg flex items-center justify-center border border-gray-700">
+                                <i class="fas fa-award text-accent text-2xl"></i>
+                            </div>
+                            <div class="w-16 h-16 bg-gray-800 rounded-lg flex items-center justify-center border border-gray-700">
+                                <i class="fas fa-certificate text-accent text-2xl"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="text-center lg:text-left">
+                        <h5 class="text-white font-medium mb-4">تطبيق الجوال</h5>
+                        <div class="flex gap-3 justify-center lg:justify-start">
+                            <button class="px-4 py-2 bg-gray-800 hover:bg-gray-700 rounded-lg flex items-center gap-2 transition-all duration-300 group">
+                                <i class="fab fa-apple text-xl"></i>
+                                <div class="text-right">
+                                    <div class="text-xs text-gray-400">تحميل من</div>
+                                    <div class="text-white text-sm">App Store</div>
+                                </div>
+                            </button>
+                            <button class="px-4 py-2 bg-gray-800 hover:bg-gray-700 rounded-lg flex items-center gap-2 transition-all duration-300 group">
+                                <i class="fab fa-google-play text-xl"></i>
+                                <div class="text-right">
+                                    <div class="text-xs text-gray-400">تحميل من</div>
+                                    <div class="text-white text-sm">Google Play</div>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Bar - Enhanced -->
+            <div class="border-t border-gray-800 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                    <div class="text-center md:text-right">
+                        <p class="text-gray-400 text-sm">
+                            © 2024 <span class="text-accent font-semibold">تريند للدعاية والإعلان</span> - جميع الحقوق محفوظة
+                        </p>
+                        <p class="text-gray-500 text-xs mt-1">رقم السجل التجاري: 1010456789</p>
+                    </div>
+                    
+                    <div class="flex gap-6 text-sm">
+                        <a href="#" class="footer-bottom-link hover:text-accent transition-all duration-300 relative after:absolute after:bottom-0 after:right-0 after:w-0 after:h-0.5 after:bg-accent after:transition-all after:duration-300 hover:after:w-full">سياسة الخصوصية</a>
+                        <a href="#" class="footer-bottom-link hover:text-accent transition-all duration-300 relative after:absolute after:bottom-0 after:right-0 after:w-0 after:h-0.5 after:bg-accent after:transition-all after:duration-300 hover:after:w-full">الشروط والأحكام</a>
+                        <a href="#" class="footer-bottom-link hover:text-accent transition-all duration-300 relative after:absolute after:bottom-0 after:right-0 after:w-0 after:h-0.5 after:bg-accent after:transition-all after:duration-300 hover:after:w-full">إخلاء المسؤولية</a>
+                        <a href="#" class="footer-bottom-link hover:text-accent transition-all duration-300 relative after:absolute after:bottom-0 after:right-0 after:w-0 after:h-0.5 after:bg-accent after:transition-all after:duration-300 hover:after:w-full">خريطة الموقع</a>
+                    </div>
+                    
+                    <div class="flex items-center gap-3">
+                        <button id="back-to-top" class="w-10 h-10 bg-gray-800 hover:bg-primary rounded-lg flex items-center justify-center transition-all duration-300 group">
+                            <i class="fas fa-chevron-up group-hover:animate-bounce"></i>
+                        </button>
+                        <div class="text-xs text-gray-500">العودة للأعلى</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- CSS Styles للتحسينات -->
+    <style>
+        .footer-link {
+            padding: 8px 0;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .footer-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 0;
+            height: 1px;
+            background: linear-gradient(to left, #d97706, #1e40af);
+            transition: width 0.3s ease;
+        }
+        
+        .footer-link:hover::after {
+            width: 100%;
+        }
+        
+        .social-icon-footer {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .social-icon-footer::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            transform: translate(-50%, -50%);
+            transition: width 0.3s ease, height 0.3s ease;
+        }
+        
+        .social-icon-footer:hover::before {
+            width: 100%;
+            height: 100%;
+        }
+        
+        .footer-bottom-link {
+            padding-bottom: 4px;
+        }
+        
+        /* Back to Top Button Animation */
+        #back-to-top {
+            transform: translateY(0);
+            transition: transform 0.3s ease;
+        }
+        
+        #back-to-top:hover {
+            transform: translateY(-3px);
+        }
+        
+        /* Newsletter Form Animation */
+        form input:focus {
+            box-shadow: 0 0 0 3px rgba(217, 119, 6, 0.1);
+        }
+        
+        /* Wave Pattern Animation */
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, 
+                #1e3a8a 0%, 
+                #1e40af 25%, 
+                #d97706 50%, 
+                #1e40af 75%, 
+                #1e3a8a 100%);
+            background-size: 200% 100%;
+            animation: wave 3s linear infinite;
+        }
+        
+        @keyframes wave {
+            0% { background-position: 0% 0%; }
+            100% { background-position: 200% 0%; }
+        }
+    </style>
+
+    <!-- JavaScript for Back to Top -->
+    <script>
+        // Back to Top Button
+        document.getElementById('back-to-top').addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Show/Hide Back to Top Button
+        window.addEventListener('scroll', function() {
+            const backToTopBtn = document.getElementById('back-to-top');
+            if (window.scrollY > 300) {
+                backToTopBtn.classList.remove('opacity-0', 'invisible');
+                backToTopBtn.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopBtn.classList.remove('opacity-100', 'visible');
+                backToTopBtn.classList.add('opacity-0', 'invisible');
+            }
+        });
+        
+        // Newsletter Form Submission
+        document.querySelector('footer form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = this.querySelector('input[type="email"]').value;
+            if (email) {
+                alert('شكراً لك! تم تسجيل بريدك الإلكتروني بنجاح.');
+                this.reset();
+            }
+        });
+        
+        // Add initial classes for back to top button
+        document.addEventListener('DOMContentLoaded', function() {
+            const backToTopBtn = document.getElementById('back-to-top');
+            backToTopBtn.classList.add('opacity-0', 'invisible');
+        });
+    </script>
+
+    <!-- Scroll to Top Button -->
+    <button id="scroll-top" class="fixed bottom-8 left-8 w-12 h-12 bg-gradient-to-r from-primary to-secondary text-white rounded-full shadow-lg hover:shadow-2xl transition-all duration-300 opacity-0 invisible hover:scale-110 z-40 flex items-center justify-center">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Custom JavaScript -->
+    <script src="js/main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تريند - Trend Agency</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+   
+</head>
+<body dir="rtl">
+    <!-- شريط الشبكات الاجتماعية -->
+    <div class="social-bar fixed top-0 left-0 right-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center">
+                <div class="social-icons">
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+                <div class="text-sm hidden md:block">
+                    <i class="fas fa-phone-alt ml-2"></i>
+                    <span>+20 123 456 7890</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed top-10 left-0 right-0 bg-white shadow-lg z-40 transition-all duration-300">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                
+                <!-- Logo & Brand -->
+                <div class="flex items-center space-x-3 space-x-reverse">
+                    <div class="w-12 h-12 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+                        <span class="text-white text-2xl font-bold">T</span>
+                    </div>
+                    <div>
+                        <h1 class="text-2xl font-bold text-blue-600">تريند</h1>
+                        <p class="text-xs text-gray-500">Trend Agency</p>
+                    </div>
+                </div>
+
+                <!-- Desktop Menu (Centered) -->
+                <ul class="hidden lg:flex items-center space-x-8 space-x-reverse absolute left-1/2 transform -translate-x-1/2">
+                    <li><a href="#home" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-300 font-semibold">الرئيسية</a></li>
+                    
+                    <!-- Services Dropdown (بدون فراغ) -->
+                    <li class="relative group">
+                        <a href="#services" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-300 font-semibold flex items-center">
+                            خدماتنا
+                            <i class="fas fa-chevron-down mr-2 text-xs"></i>
+                        </a>
+                        <ul class="absolute top-full right-0 bg-white dropdown-menu py-3 w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform group-hover:translate-y-0 translate-y-0 z-10">
+                            <li><a href="#service-social" class="block px-6 py-3 hover:bg-gray-50 hover:text-blue-600 transition-colors duration-200"><i class="fas fa-hashtag ml-3 text-blue-600"></i>إدارة وسائل التواصل الاجتماعي</a></li>
+                            <li><a href="#service-web" class="block px-6 py-3 hover:bg-gray-50 hover:text-blue-600 transition-colors duration-200"><i class="fas fa-laptop-code ml-3 text-blue-600"></i>تصميم واستضافة المواقع</a></li>
+                            <li><a href="#service-video" class="block px-6 py-3 hover:bg-gray-50 hover:text-blue-600 transition-colors duration-200"><i class="fas fa-video ml-3 text-blue-600"></i>إنتاج الفيديوهات</a></li>
+                            <li><a href="#service-ads" class="block px-6 py-3 hover:bg-gray-50 hover:text-blue-600 transition-colors duration-200"><i class="fab fa-google ml-3 text-blue-600"></i>إعلانات جوجل أدوردز</a></li>
+                            <li><a href="#service-branding" class="block px-6 py-3 hover:bg-gray-50 hover:text-blue-600 transition-colors duration-200"><i class="fas fa-palette ml-3 text-blue-600"></i>تصميم الهويات التجارية</a></li>
+                            <li><a href="#service-photography" class="block px-6 py-3 hover:bg-gray-50 hover:text-blue-600 transition-colors duration-200"><i class="fas fa-camera ml-3 text-blue-600"></i>تصوير المنتجات</a></li>
+                        </ul>
+                    </li>
+                    
+                    <!-- Projects Dropdown (جديد) -->
+                    <li class="relative group">
+                        <a href="#projects" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-300 font-semibold flex items-center">
+                            مشاريعنا
+                            <i class="fas fa-chevron-down mr-2 text-xs"></i>
+                        </a>
+                        <ul class="absolute top-full right-0 bg-white dropdown-menu dropdown-projects py-3 w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform group-hover:translate-y-0 translate-y-0 z-10">
+                            <li><a href="#project-web" class="block px-6 py-3 hover:bg-gray-50 hover:text-blue-600 transition-colors duration-200"><i class="fas fa-globe ml-3 text-blue-600"></i>مواقع إلكترونية</a></li>
+                            <li><a href="#project-social" class="block px-6 py-3 hover:bg-gray-50 hover:text-blue-600 transition-colors duration-200"><i class="fas fa-thumbs-up ml-3 text-blue-600"></i>حملات تواصل اجتماعي</a></li>
+                            <li><a href="#project-branding" class="block px-6 py-3 hover:bg-gray-50 hover:text-blue-600 transition-colors duration-200"><i class="fas fa-paint-brush ml-3 text-blue-600"></i>هويات تجارية</a></li>
+                            <li><a href="#project-video" class="block px-6 py-3 hover:bg-gray-50 hover:text-blue-600 transition-colors duration-200"><i class="fas fa-film ml-3 text-blue-600"></i>إعلانات فيديو</a></li>
+                            <li><a href="#project-all" class="block px-6 py-3 hover:bg-gray-50 hover:text-blue-600 transition-colors duration-200 text-center border-t border-gray-100 mt-2 pt-2">عرض جميع المشاريع</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li><a href="#about" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-300 font-semibold">من نحن</a></li>
+                </ul>
+
+                <!-- Right Section: Language and Contact Buttons -->
+                <div class="flex items-center space-x-4 space-x-reverse">
+                    <!-- Language Switcher -->
+                    <div class="flex items-center space-x-2 space-x-reverse bg-gray-100 p-1 rounded-full">
+                        <button class="lang-btn active" id="lang-ar">عربي</button>
+                        <button class="lang-btn" id="lang-en">ENG</button>
+                    </div>
+                    
+                    <!-- Contact Button -->
+                    <a href="#contact" class="contact-btn hidden md:flex">
+                        <i class="fas fa-phone-alt"></i>
+                        تواصل معنا
+                    </a>
+                    
+                    <!-- Mobile Menu Button -->
+                    <button id="mobile-menu-btn" class="lg:hidden text-blue-600 text-2xl focus:outline-none">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="lg:hidden bg-white border-t border-gray-200">
+            <ul class="py-4">
+                <li><a href="#home" class="block px-6 py-3 hover:bg-gray-50 text-gray-700 hover:text-blue-600 transition-colors font-semibold">الرئيسية</a></li>
+                
+                <li>
+                    <button id="mobile-services-btn" class="w-full text-right px-6 py-3 hover:bg-gray-50 text-gray-700 hover:text-blue-600 transition-colors flex justify-between items-center font-semibold">
+                        خدماتنا
+                        <i class="fas fa-chevron-down text-xs transition-transform duration-300"></i>
+                    </button>
+                    <ul id="mobile-services-menu" class="mobile-dropdown bg-gray-50">
+                        <li><a href="#service-social" class="block px-10 py-2 hover:bg-gray-100 text-sm text-gray-600 hover:text-blue-600"><i class="fas fa-hashtag ml-2 text-blue-600"></i>إدارة وسائل التواصل الاجتماعي</a></li>
+                        <li><a href="#service-web" class="block px-10 py-2 hover:bg-gray-100 text-sm text-gray-600 hover:text-blue-600"><i class="fas fa-laptop-code ml-2 text-blue-600"></i>تصميم واستضافة المواقع</a></li>
+                        <li><a href="#service-video" class="block px-10 py-2 hover:bg-gray-100 text-sm text-gray-600 hover:text-blue-600"><i class="fas fa-video ml-2 text-blue-600"></i>إنتاج الفيديوهات</a></li>
+                        <li><a href="#service-ads" class="block px-10 py-2 hover:bg-gray-100 text-sm text-gray-600 hover:text-blue-600"><i class="fab fa-google ml-2 text-blue-600"></i>إعلانات جوجل أدوردز</a></li>
+                        <li><a href="#service-branding" class="block px-10 py-2 hover:bg-gray-100 text-sm text-gray-600 hover:text-blue-600"><i class="fas fa-palette ml-2 text-blue-600"></i>تصميم الهويات التجارية</a></li>
+                        <li><a href="#service-photography" class="block px-10 py-2 hover:bg-gray-100 text-sm text-gray-600 hover:text-blue-600"><i class="fas fa-camera ml-2 text-blue-600"></i>تصوير المنتجات</a></li>
+                    </ul>
+                </li>
+                
+                <li>
+                    <button id="mobile-projects-btn" class="w-full text-right px-6 py-3 hover:bg-gray-50 text-gray-700 hover:text-blue-600 transition-colors flex justify-between items-center font-semibold">
+                        مشاريعنا
+                        <i class="fas fa-chevron-down text-xs transition-transform duration-300"></i>
+                    </button>
+                    <ul id="mobile-projects-menu" class="mobile-dropdown bg-gray-50">
+                        <li><a href="#project-web" class="block px-10 py-2 hover:bg-gray-100 text-sm text-gray-600 hover:text-blue-600"><i class="fas fa-globe ml-2 text-blue-600"></i>مواقع إلكترونية</a></li>
+                        <li><a href="#project-social" class="block px-10 py-2 hover:bg-gray-100 text-sm text-gray-600 hover:text-blue-600"><i class="fas fa-thumbs-up ml-2 text-blue-600"></i>حملات تواصل اجتماعي</a></li>
+                        <li><a href="#project-branding" class="block px-10 py-2 hover:bg-gray-100 text-sm text-gray-600 hover:text-blue-600"><i class="fas fa-paint-brush ml-2 text-blue-600"></i>هويات تجارية</a></li>
+                        <li><a href="#project-video" class="block px-10 py-2 hover:bg-gray-100 text-sm text-gray-600 hover:text-blue-600"><i class="fas fa-film ml-2 text-blue-600"></i>إعلانات فيديو</a></li>
+                        <li><a href="#project-all" class="block px-10 py-2 hover:bg-gray-100 text-sm text-gray-600 hover:text-blue-600 text-center border-t border-gray-200 mt-2 pt-2">عرض جميع المشاريع</a></li>
+                    </ul>
+                </li>
+                
+                <li><a href="#about" class="block px-6 py-3 hover:bg-gray-50 text-gray-700 hover:text-blue-600 transition-colors font-semibold">من نحن</a></li>
+                <li><a href="#contact" class="block px-6 py-3 hover:bg-gray-50 text-blue-600 font-semibold transition-colors">تواصل معنا</a></li>
+                
+                <!-- Mobile Language Switcher -->
+                <li class="px-6 py-4 border-t border-gray-200 mt-2">
+                    <div class="flex justify-center space-x-4 space-x-reverse">
+                        <button class="lang-btn active" id="mobile-lang-ar">عربي</button>
+                        <button class="lang-btn" id="mobile-lang-en">English</button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+ <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8fafc;
+            padding-top: 120px; /* مساحة للنافبار */
+            min-height: 1500px; /* لجعل الصفحة طويلة للتجربة */
+        }
+        
+        .social-bar {
+            background: linear-gradient(to left, #4f46e5, #7c3aed);
+            color: white;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-icon {
+            color: white;
+            font-size: 18px;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icon:hover {
+            color: #fbbf24;
+            transform: translateY(-2px);
+        }
+        
+        /* تحسينات للقوائم المنسدلة */
+        .dropdown-menu {
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            border-top: 3px solid #7c3aed;
+            border-radius: 0 0 10px 10px;
+            overflow: hidden;
+        }
+        
+        .dropdown-projects {
+            border-top: 3px solid #4f46e5;
+        }
+        
+        /* تحسينات للروابط */
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            right: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(to left, #4f46e5, #7c3aed);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover:after {
+            width: 100%;
+        }
+        
+        /* أزرار اللغة */
+        .lang-btn {
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+        
+        .lang-btn.active {
+            background: linear-gradient(to left, #4f46e5, #7c3aed);
+            color: white;
+        }
+        
+        .lang-btn:not(.active) {
+            background-color: #f1f5f9;
+            color: #64748b;
+        }
+        
+        .lang-btn:not(.active):hover {
+            background-color: #e2e8f0;
+        }
+        
+        /* زر الاتصال */
+        .contact-btn {
+            background: linear-gradient(to left, #4f46e5, #7c3aed);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .contact-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(124, 58, 237, 0.3);
+        }
+        
+        /* تأثير النافبار عند التمرير */
+        .navbar-scrolled {
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            background-color: rgba(255, 255, 255, 0.95);
+        }
+        
+        /* تحسين القائمة المتنقلة */
+        #mobile-menu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease;
+        }
+        
+        #mobile-menu.open {
+            max-height: 500px;
+        }
+        
+        .mobile-dropdown {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        
+        .mobile-dropdown.open {
+            max-height: 300px;
+        }
+    </style>
+
+    <script>
+        // تفعيل/تعطيل القائمة المتنقلة
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('open');
+            this.innerHTML = mobileMenu.classList.contains('open') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+        
+        // تفعيل/تعطيل القائمة المنسدلة للخدمات في الجوال
+        document.getElementById('mobile-services-btn').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-services-menu');
+            const icon = this.querySelector('i');
+            
+            menu.classList.toggle('open');
+            icon.style.transform = menu.classList.contains('open') 
+                ? 'rotate(180deg)' 
+                : 'rotate(0deg)';
+        });
+        
+        // تفعيل/تعطيل القائمة المنسدلة للمشاريع في الجوال
+        document.getElementById('mobile-projects-btn').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-projects-menu');
+            const icon = this.querySelector('i');
+            
+            menu.classList.toggle('open');
+            icon.style.transform = menu.classList.contains('open') 
+                ? 'rotate(180deg)' 
+                : 'rotate(0deg)';
+        });
+        
+        // تبديل اللغة
+        document.querySelectorAll('.lang-btn, #mobile-lang-ar, #mobile-lang-en').forEach(btn => {
+            btn.addEventListener('click', function() {
+                // إزالة النشاط من جميع أزرار اللغة
+                document.querySelectorAll('.lang-btn').forEach(b => {
+                    b.classList.remove('active');
+                });
+                
+                // إضافة النشاط للزر الذي تم النقر عليه
+                this.classList.add('active');
+                
+                // عرض رسالة توضيحية
+                const lang = this.id.includes('en') ? 'English' : 'العربية';
+                alert(`تم التبديل إلى اللغة ${lang}`);
+            });
+        });
+        
+        // تأثير التمرير على النافبار
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            const socialBar = document.querySelector('.social-bar');
+            
+            if (window.scrollY > 50) {
+                navbar.classList.add('navbar-scrolled');
+                socialBar.style.opacity = '0.9';
+                socialBar.style.transform = 'translateY(-5px)';
+            } else {
+                navbar.classList.remove('navbar-scrolled');
+                socialBar.style.opacity = '1';
+                socialBar.style.transform = 'translateY(0)';
+            }
+        });
+        
+        // إغلاق القائمة المتنقلة عند النقر على رابط
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', function() {
+                document.getElementById('mobile-menu').classList.remove('open');
+                document.getElementById('mobile-menu-btn').innerHTML = '<i class="fas fa-bars"></i>';
+                
+                // إغلاق القوائم المنسدلة
+                document.getElementById('mobile-services-menu').classList.remove('open');
+                document.getElementById('mobile-projects-menu').classList.remove('open');
+                
+                // إعادة ضبط الأيقونات
+                document.querySelectorAll('#mobile-menu i.fa-chevron-down').forEach(icon => {
+                    icon.style.transform = 'rotate(0deg)';
+                });
+            });
+        });
+        
+        // إضافة تأثيرات للروابط عند التمرير
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
