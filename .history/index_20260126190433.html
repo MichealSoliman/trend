@@ -566,32 +566,22 @@
                     <li><a href="#" class="nav-link text-gray-700 hover:text-primary transition-colors duration-300 font-semibold">الرئيسية</a></li>
                     
                     <!-- Services Dropdown -->
-                   <li class="relative">
-  <a href="./services.html"
-     id="servicesBtn"
-     class="nav-link text-gray-700 hover:text-primary transition-colors duration-300 font-semibold flex items-center">
-    خدماتنا
-    <i class="fas fa-chevron-down mr-2 text-xs"></i>
-  </a>
-
-  <ul id="servicesMenu"
-      class="fixed bg-white shadow-2xl rounded-lg py-3 w-64 hidden z-50"
-      style="top:70px; ">
-      
-    <li><a href="./services/media-management.html" class="block px-6 py-3 hover:bg-gray-50 hover:text-primary transition-colors duration-200"><i class="fas fa-hashtag ml-3 text-primary"></i>إدارة وسائل التواصل الاجتماعي</a></li>
-
-        <li><a href="./services/Website-design.html" class="block px-6 py-3 hover:bg-gray-50 hover:text-primary transition-colors duration-200"><i class="fas fa-laptop-code ml-3 text-primary"></i>تصميم واستضافة المواقع</a></li>
-
-        <li><a href="./services/Video-production.html" class="block px-6 py-3 hover:bg-gray-50 hover:text-primary transition-colors duration-200"><i class="fas fa-video ml-3 text-primary"></i>إنتاج الفيديوهات</a></li>
-
-        <li><a href="./services/Google-adwords.html" class="block px-6 py-3 hover:bg-gray-50 hover:text-primary transition-colors duration-200"><i class="fab fa-google ml-3 text-primary"></i>إعلانات جوجل أدوردز</a></li>
-
-        <li><a href="./services/Branding.html" class="block px-6 py-3 hover:bg-gray-50 hover:text-primary transition-colors duration-200"><i class="fas fa-palette ml-3 text-primary"></i>تصميم الهويات التجارية</a></li>
-
-        <li><a href="./services/Content-creation.html" class="block px-6 py-3 hover:bg-gray-50 hover:text-primary transition-colors duration-200"><i class="fas fa-camera ml-3 text-primary"></i>صناعة المحتوي</a></li>
-  </ul>
-</li>
-
+                    <li class="relative group">
+                        <a href="./services.html" class="nav-link text-gray-700 hover:text-primary transition-colors duration-300 font-semibold flex items-center">
+                            خدماتنا
+                            <i class="fas fa-chevron-down mr-2 text-xs"></i>
+                        </a>
+                       <ul class="fixed bg-white shadow-2xl rounded-lg py-3 w-64
+opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-opacity duration-300"
+style="top:80px; ">
+                            <li><a href="./services/media-management.html" class="block px-6 py-3 hover:bg-gray-50 hover:text-primary transition-colors duration-200"><i class="fas fa-hashtag ml-3 text-primary"></i>إدارة وسائل التواصل الاجتماعي</a></li>
+                            <li><a href="./services/Website-design.html" class="block px-6 py-3 hover:bg-gray-50 hover:text-primary transition-colors duration-200"><i class="fas fa-laptop-code ml-3 text-primary"></i>تصميم واستضافة المواقع</a></li>
+                            <li><a href="./services/Video-production.html" class="block px-6 py-3 hover:bg-gray-50 hover:text-primary transition-colors duration-200"><i class="fas fa-video ml-3 text-primary"></i>إنتاج الفيديوهات</a></li>
+                            <li><a href="./services/Google-adwords.html" class="block px-6 py-3 hover:bg-gray-50 hover:text-primary transition-colors duration-200"><i class="fab fa-google ml-3 text-primary"></i>إعلانات جوجل أدوردز</a></li>
+                            <li><a href="./services/Branding.html" class="block px-6 py-3 hover:bg-gray-50 hover:text-primary transition-colors duration-200"><i class="fas fa-palette ml-3 text-primary"></i>تصميم الهويات التجارية</a></li>
+                            <li><a href="./services/Content-creation.html" class="block px-6 py-3 hover:bg-gray-50 hover:text-primary transition-colors duration-200"><i class="fas fa-camera ml-3 text-primary"></i>صناعة المحتوي </a></li>
+                        </ul>
+                    </li>
                     
                     <li><a href="./projects.html" class="nav-link text-gray-700 hover:text-primary transition-colors duration-300 font-semibold">مشاريعنا</a></li>
                     <li><a href="./about.html" class="nav-link text-gray-700 hover:text-primary transition-colors duration-300 font-semibold">من نحن</a></li>
@@ -629,25 +619,7 @@
             </ul>
         </div>
     </nav>
-<script>
-    const btn = document.getElementById("servicesBtn");
-const menu = document.getElementById("servicesMenu");
 
-btn.addEventListener("mouseenter", () => {
-  menu.classList.remove("hidden");
-});
-
-btn.addEventListener("mouseleave", () => {
-  setTimeout(() => {
-    if (!menu.matches(":hover")) menu.classList.add("hidden");
-  }, 100);
-});
-
-menu.addEventListener("mouseleave", () => {
-  menu.classList.add("hidden");
-});
-
-</script>
     <!-- Hero Section -->
     <section id="home" class="min-h-screen flex items-center relative overflow-hidden pt-20 bg-gradient-to-br from-gray-50 via-blue-50 to-gray-100">
         <!-- Decorative Background Elements -->
