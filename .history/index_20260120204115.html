@@ -1,138 +1,0 @@
-<!DOCTYPE html>
-<html lang="ar" dir="lt">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>EngazMedia</title>
-
-  <!-- Tailwind CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Custom Colors -->
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            primary: '#062240',
-            secondary: '#0b3a67',
-            accent: '#fbb040'
-          }
-        }
-      }
-    }
-  </script>
-</head>
-
-<body class="bg-primary text-white font-sans">
-
-  <!-- Top Bar -->
-  <div class="bg-secondary py-2">
-    <div class="container mx-auto px-4 flex flex-wrap items-center justify-between gap-4">
-
-      <button class="bg-accent text-black px-5 py-2 rounded font-semibold hover:opacity-90 transition">
-        اطلب عرض سعر
-      </button>
-
-      <div class="flex items-center gap-2">
-        <a href="#" class="bg-yellow-400 p-2 rounded">🟡</a>
-        <a href="#" class="bg-blue-600 p-2 rounded">in</a>
-        <a href="#" class="bg-pink-500 p-2 rounded">IG</a>
-        <a href="#" class="bg-red-600 p-2 rounded">YT</a>
-        <a href="#" class="bg-blue-500 p-2 rounded">FB</a>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- Navbar -->
-  <header class="bg-white text-primary shadow">
-    <div class="container mx-auto px-4 py-4 flex items-center justify-between">
-
-      <nav class="hidden md:flex items-center gap-6 font-semibold">
-        <a href="#" class="bg-primary text-white px-4 py-2 rounded">الرئيسية</a>
-        <a href="#">من نحن</a>
-        <a href="#">الخدمات</a>
-        <a href="#">سابقة أعمالنا</a>
-        <a href="#">عملائنا</a>
-        <a href="#">المدونة</a>
-        <a href="#">تواصل معنا</a>
-      </nav>
-
-      <div class="flex items-center gap-2">
-        <span>EN</span>
-        <img src="https://flagcdn.com/w20/gb.png" alt="EN">
-      </div>
-
-    </div>
-  </header>
-
-  <!-- Hero Section -->
-  <section class="relative py-20 overflow-hidden">
-    <div class="container mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
-
-      <!-- Image -->
-      <div class="flex justify-center">
-        <img 
-          src="https://i.imgur.com/zYxDCQT.png" 
-          alt="Digital Marketing"
-          class="max-w-full w-[420px] animate-fade"
-        >
-      </div>
-
-      <!-- Content -->
-      <div>
-        <h1 class="text-3xl md:text-4xl font-bold mb-6 indicating-relaxed">
-          شركة <span class="text-accent">إنجازميديا</span> EngazMedia
-        </h1>
-
-        <p class="text-gray-200 leading-loose mb-8">
-          تعد شركة إنجاز ميديا وكالة تسويق رقمية رائدة في تقديم خدمات متكاملة،
-          متخصصة في تقديم خدمات التسويق الإلكتروني وتصميم الهويات التجارية،
-          بالإضافة إلى حلول الويب والبرمجة وخدمات استضافة المواقع والسيرفرات،
-          منذ أكثر من 15 عامًا.
-        </p>
-
-        <button class="bg-blue-100 text-primary px-6 py-3 rounded font-semibold hover:bg-blue-200 transition">
-          عرض جميع خدماتنا
-        </button>
-      </div>
-
-    </div>
-
-    <!-- Wave Bottom -->
-    <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none">
-      <svg viewBox="0 0 500 60" preserveAspectRatio="none" class="w-full h-16">
-        <path d="M0,0 C150,60 350,0 500,40 L500,00 L0,0 Z" fill="#ffffff"></path>
-      </svg>
-    </div>
-  </section>
-
-  <!-- Floating Buttons -->
-  <a href="#" class="fixed bottom-6 right-6 bg-green-500 p-4 rounded-full shadow-lg text-white text-xl">
-    💬
-  </a>
-
-  <a href="#" class="fixed bottom-6 left-6 bg-accent p-4 rounded-full shadow-lg text-black text-xl">
-    📞
-  </a>
-
-  <!-- Simple Animation -->
-  <style>
-    .animate-fade {
-      animation: fadeUp 1.2s ease-in-out;
-    }
-    @keyframes fadeUp {
-      from {
-        opacity: 0;
-        transform: translateY(40px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-  </style>
-
-</body>
-</html>
