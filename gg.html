@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>البيت النقي · متجر فلاتر المياه</title>
+    <!-- Tailwind + Font Awesome -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- custom smooth behaviour & lightbox styles (مع الحفاظ على روح التصميم السابق) -->
+    <style>
+        /* أنيميشن الخلفية المتحركة من الهيدر */
+        @keyframes gradient-x {
+
+            0%,
+            100% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+        }
+
+        .animate-gradient-x {
+            background-size: 200% 200%;
+            animation: gradient-x 3s ease infinite;
+        }
+
+        /* تأثيرات البطاقات */
+        .gallery-item {
+            transition: transform 0.2s, box-shadow 0.2s;
+            cursor: pointer;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.02);
+            box-shadow: 0 25px 30px -12px rgba(0, 150, 200, 0.3);
+        }
+
+        /* لايت بوكس */
+        .lightbox-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.9);
+            backdrop-filter: blur(6px);
+            z-index: 999;
+            display: none;
+            place-items: center;
+            padding: 1rem;
+            direction: ltr;
+        }
+
+        .lightbox-overlay.active {
+            display: flex;
+        }
+
+        .lightbox-content {
+            max-width: 90vw;
+            max-height: 80vh;
+            border-radius: 24px;
+            box-shadow: 0 30px 60px #000;
+        }
+
+        .lightbox-caption {
+            color: white;
+            margin-top: 1rem;
+            font-size: 1.3rem;
+            font-weight: 500;
+        }
+
+        .nav-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.15);
+            color: white;
+            border: none;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            cursor: pointer;
+            backdrop-filter: blur(4px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: 0.2s;
+        }
+
+        .nav-arrow:hover {
+            background: #0f7b9e;
+        }
+
+        /* لون مستوحى من الماء */
+        .nav-arrow.left {
+            right: 30px;
+        }
+
+        /* السهم الأيمن (للخلف في rtl) */
+        .nav-arrow.right {
+            left: 30px;
+        }
+
+        /* السهم الأيسر (للأمام) */
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            left: 30px;
+            background: rgba(0, 0, 0, 0.4);
+            color: white;
+            border: none;
+            font-size: 2.4rem;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            backdrop-filter: blur(4px);
+            border: 1px solid #ffffff60;
+            transition: 0.2s;
+        }
+
+        .close-btn:hover {
+            background: #c53030;
+        }
+
+        @media (max-width: 640px) {
+            .nav-arrow {
+                width: 45px;
+                height: 45px;
+                font-size: 1.8rem;
+            }
+
+            .close-btn {
+                width: 45px;
+                height: 45px;
+            }
+        }
+
+        /* لون خاص للبيت النقي */
+        .text-water {
+            color: #0f7b9e;
+        }
+
+        .bg-water {
+            background-color: #0f7b9e;
+        }
+
+        .border-water {
+            border-color: #0f7b9e;
+        }
+
+        .from-water {
+            --tw-gradient-from: #0f7b9e;
+        }
+
+        .to-teal {
+            --tw-gradient-to: #2c7a7a;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 font-sans antialiased">
+
+    <!-- ========== HERO SECTION (مأخوذة من الكود الأصلي مع تعديل النص للبيت النقي) ========== -->
+    <div class="relative pt-12 md:pt-16 lg:pt-20 pb-8 md:pb-12 lg:pb-16 mb-8 md:mb-12 lg:mb-16 overflow-hidden">
+        <!-- Geometric Background Pattern (محفوظ) -->
+        <div class="absolute inset-0 bg-gradient-to-br from-water/5 via-transparent to-cyan-500/5 opacity-50">
+            <div class="absolute top-0 left-0 w-64 h-64 bg-water/10 rounded-full -translate-x-1/2 -translate-y-1/2">
+            </div>
+            <div
+                class="absolute bottom-0 right-0 w-80 h-80 bg-teal-500/10 rounded-full translate-x-1/3 translate-y-1/3">
+            </div>
+            <div
+                class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-cyan-400/5 rounded-full">
+            </div>
+        </div>
+
+        <div class="container relative mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <!-- Animated Title -->
+                <div class="inline-block relative mb-4 md:mb-6">
+                    <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 mb-2">
+                        <span
+                            class="bg-gradient-to-r from-water via-teal-500 to-cyan-500 bg-clip-text text-transparent animate-gradient-x">
+                            البيت النقي · متجر إلكتروني
+                        </span>
+                    </h1>
+                    <div
+                        class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-32 sm:w-40 md:w-48 h-1 bg-gradient-to-r from-water via-cyan-400 to-teal-500">
+                    </div>
+                </div>
+
+                <p
+                    class="text-gray-600 text-sm sm:text-base md:text-lg lg:text-xl max-w-3xl xl:max-w-4xl mx-auto mb-4 md:mb-6 lg:mb-8 px-4 leading-relaxed">
+                    قمنا ببناء متجر إلكتروني متكامل لعلامة <strong class="text-water">"البيت النقي"</strong> المتخصصة في
+                    فلاتر المياه.
+                    صممنا هوية رقمية نظيفة، تجربة تسوق سلسة، وعرضاً مميزاً للمنتجات. فيما يلي نبذة عن التصميمات وأهم
+                    الأعمال.
+                </p>
+
+                <!-- Animated Tags -->
+                <div class="flex flex-wrap justify-center gap-2 md:gap-3 mt-6 md:mt-8">
+                    <span
+                        class="px-3 py-1 bg-water/10 text-water rounded-full text-xs md:text-sm font-medium animate-pulse">تصميم
+                        متجر إلكتروني</span>
+                    <span
+                        class="px-3 py-1 bg-teal-500/10 text-teal-700 rounded-full text-xs md:text-sm font-medium animate-pulse"
+                        style="animation-delay: 0.2s">واجهة منتجات</span>
+                    <span
+                        class="px-3 py-1 bg-cyan-500/10 text-cyan-600 rounded-full text-xs md:text-sm font-medium animate-pulse"
+                        style="animation-delay: 0.4s">هوية نقية</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== ١. صوره في الوسط وتحتها محتوى (نبذة عن المشروع) ========== -->
+    <section class="max-w-5xl mx-auto px-4 my-10">
+        <!-- الصورة المركزية (قابلة للنقر) -->
+        <div class="flex justify-center">
+            <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white max-w-3xl w-full gallery-item"
+                onclick="openLightbox('image', 0)" style="cursor:zoom-in">
+                <!-- صورة تعبر عن فلاتر المياه / المتجر الإلكتروني (من unsplash) -->
+                <img src="https://images.unsplash.com/photo-1581244277943-fe4a9c7775c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
+                    alt="البيت النقي - متجر فلاتر" class="w-full h-auto object-cover aspect-video">
+                <div
+                    class="absolute bottom-4 right-4 bg-black/50 text-white px-4 py-2 rounded-full text-sm backdrop-blur-sm">
+                    <i class="fas fa-expand-alt ml-2"></i> اضغط للتكبير
+                </div>
+            </div>
+        </div>
+
+        <!-- المحتوى النصي (تحت الصورة) خاص بالبيت النقي -->
+        <div class="mt-10 bg-white rounded-3xl p-8 md:p-10 shadow-lg border border-teal-100">
+            <div class="flex items-center gap-3 mb-4">
+                <span class="bg-water/10 text-water px-4 py-1 rounded-full text-sm font-bold"><i
+                        class="fas fa-droplet ml-2"></i>البيت النقي</span>
+                <span class="bg-purple-100 text-purple-700 px-4 py-1 rounded-full text-sm"><i
+                        class="fas fa-pen-fancy ml-2"></i> تريند</span>
+            </div>
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">نقاء بلا حدود · متجر إلكتروني متكامل</h2>
+            <p class="text-gray-700 text-lg leading-relaxed mb-4">
+                <strong class="text-water">البيت النقي</strong> علامة رائدة في مجال فلاتر المياه المنزلية والتجارية.
+                أطلقنا متجراً إلكترونياً يعرض جميع المنتجات بشكل منظم وسلس، مع واجهات مستخدم مريحة وتجربة شراء سهلة.
+                قمنا بتصميم أكثر من ٣٠ شاشة رئيسية (صفحة رئيسية، صفحات منتجات، سلة شراء، لوحة تحكم مبسطة) بالإضافة إلى
+                هوية بصرية نظيفة تعكس النقاء والموثوقية.
+            </p>
+            <p class="text-gray-700 text-lg leading-relaxed">
+                <i class="fas fa-check-circle text-green-500 ml-2"></i> في المعرض أدناه نستعرض مجموعة من أهم التصميمات:
+                واجهة المتجر، بطاقات المنتجات، صفحات الفلاتر، وتصميمات ترويجية. اضغط على أي صورة لتكبيرها والتنقل بين
+                الأعمال.
+            </p>
+            <!-- إنجازات سريعة -->
+            <div class="flex flex-wrap gap-3 mt-6">
+                <div class="bg-gray-100 rounded-full px-5 py-2 text-sm"><i
+                        class="fas fa-paint-brush text-water ml-2"></i>٣٠+ شاشة</div>
+                <div class="bg-gray-100 rounded-full px-5 py-2 text-sm"><i
+                        class="fas fa-cart-shopping text-teal-500 ml-2"></i>متجر كامل</div>
+                <div class="bg-gray-100 rounded-full px-5 py-2 text-sm"><i
+                        class="fas fa-tint text-cyan-600 ml-2"></i>هوية نظيفة</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== ٢. سكشن بعض التصميمات (معرض الصور) ========== -->
+    <section class="max-w-7xl mx-auto px-4 my-20">
+        <div class="flex items-center justify-between mb-8">
+            <h2 class="text-3xl md:text-4xl font-bold text-water"><i class="fas fa-palette ml-3 text-teal-400"></i>
+                معرض التصميمات</h2>
+            <span class="bg-water/10 text-water px-5 py-2 rounded-full text-sm"> اضغط على أي تصميم لعرضه </span>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- الصور (كلها من Unsplash تعبر عن واجهات / منتجات تنقية) 
+                 نستخدم 6 صور مختلفة مع تحسين الوصف -->
+            <div class="gallery-item bg-white rounded-2xl overflow-hidden shadow-md border"
+                onclick="openLightbox('image', 1)">
+                <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80"
+                    class="w-full aspect-[4/3] object-cover" loading="lazy">
+                <div class="p-4 font-semibold text-gray-700">الصفحة الرئيسية <span
+                        class="block text-sm text-water">واجهة المتجر</span></div>
+            </div>
+            <div class="gallery-item bg-white rounded-2xl overflow-hidden shadow-md border"
+                onclick="openLightbox('image', 2)">
+                <img src="https://images.unsplash.com/photo-1597773150796-e5c14ebecbf5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80"
+                    class="w-full aspect-[4/3] object-cover" loading="lazy">
+                <div class="p-4 font-semibold text-gray-700">صفحة فئة المنتجات <span
+                        class="block text-sm text-teal-600">فلاتر ٧ مراحل</span></div>
+            </div>
+            <div class="gallery-item bg-white rounded-2xl overflow-hidden shadow-md border"
+                onclick="openLightbox('image', 3)">
+                <img src="https://images.unsplash.com/photo-1556905200-003566046fef?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80"
+                    class="w-full aspect-[4/3] object-cover" loading="lazy">
+                <div class="p-4 font-semibold text-gray-700">بطاقة منتج <span class="block text-sm text-cyan-600">فلتر
+                        تحت الحوض</span></div>
+            </div>
+            <div class="gallery-item bg-white rounded-2xl overflow-hidden shadow-md border"
+                onclick="openLightbox('image', 4)">
+                <img src="https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80"
+                    class="w-full aspect-[4/3] object-cover" loading="lazy">
+                <div class="p-4 font-semibold text-gray-700">صفحة تفاصيل المنتج <span
+                        class="block text-sm text-water">مواصفات دقيقة</span></div>
+            </div>
+            <div class="gallery-item bg-white rounded-2xl overflow-hidden shadow-md border"
+                onclick="openLightbox('image', 5)">
+                <img src="https://images.unsplash.com/photo-1578849278619-e73505e9610f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80"
+                    class="w-full aspect-[4/3] object-cover" loading="lazy">
+                <div class="p-4 font-semibold text-gray-700">سلة الشراء <span class="block text-sm text-teal-600">تجربة
+                        سلسة</span></div>
+            </div>
+            <div class="gallery-item bg-white rounded-2xl overflow-hidden shadow-md border"
+                onclick="openLightbox('image', 6)">
+                <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80"
+                    class="w-full aspect-[4/3] object-cover" loading="lazy">
+                <div class="p-4 font-semibold text-gray-700">بانر ترويجي <span class="block text-sm text-cyan-600">خصم
+                        على الفلاتر</span></div>
+            </div>
+            <!-- يمكن إضافة صورة سابعة إن أردنا، ولكن نكتفي بـ6 -->
+        </div>
+    </section>
+
+    <!-- ========== ٣. (لا يوجد سكشن فيديوهات) حسب الطلب، تم إلغاؤه. ولكن نضيف مسافة صغيرة للتذكير بلا فيديوهات ========== -->
+    <!-- حافظنا على التباعد، بدون محتوى فيديو -->
+
+    <!-- ========== ٤. الـ Lightbox (مع إمكانية التنقل بين الصور فقط) ========== -->
+    <div id="lightbox" class="lightbox-overlay" onclick="if(event.target===this) closeLightbox()">
+        <button class="close-btn" onclick="closeLightbox()"><i class="fas fa-times"></i></button>
+        <!-- أزرار التنقل -->
+        <button class="nav-arrow left" id="prevBtn" onclick="navigate(-1)"><i class="fas fa-chevron-right"></i></button>
+        <button class="nav-arrow right" id="nextBtn" onclick="navigate(1)"><i class="fas fa-chevron-left"></i></button>
+
+        <div class="text-center w-full">
+            <div id="lightbox-media-wrapper" class="lightbox-media-wrapper">
+                <div id="lightbox-media-container" class="flex justify-center items-center w-full">
+                    <!-- سيتم حقن الصورة هنا -->
+                </div>
+            </div>
+            <div id="lightbox-caption" class="lightbox-caption"></div>
+        </div>
+    </div>
+
+    <script>
+        // ********** بيانات المعرض (فقط صور) **********
+        // index 0: الصورة المركزية (الوسط) , 1-6: باقي التصميمات
+        const mediaItems = [
+            { type: 'image', src: 'https://images.unsplash.com/photo-1581244277943-fe4a9c7775c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80', caption: 'البيت النقي · متجر فلاتر المياه (الشعار والهوية)' },
+            { type: 'image', src: 'https://images.unsplash.com/photo-1542831371-29b0f74f9713?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80', caption: 'الصفحة الرئيسية · واجهة نظيفة وبسيطة' },
+            { type: 'image', src: 'https://images.unsplash.com/photo-1597773150796-e5c14ebecbf5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80', caption: 'صفحة الفلاتر المنزلية · عرض الشبكة' },
+            { type: 'image', src: 'https://images.unsplash.com/photo-1556905200-003566046fef?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80', caption: 'بطاقة منتج · فلتر ٧ مراحل مع سعر' },
+            { type: 'image', src: 'https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80', caption: 'صفحة تفاصيل المنتج · مواصفات دقيقة' },
+            { type: 'image', src: 'https://images.unsplash.com/photo-1578849278619-e73505e9610f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80', caption: 'سلة الشراء · تجربة مستخدم مبسطة' },
+            { type: 'image', src: 'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80', caption: 'بانر ترويجي · خصومات موسمية' }
+        ];
+
+        let currentIndex = 0;
+
+        // عناصر الـ DOM
+        const overlay = document.getElementById('lightbox');
+        const mediaContainer = document.getElementById('lightbox-media-container');
+        const captionDiv = document.getElementById('lightbox-caption');
+
+        // فتح اللايت بوكس
+        window.openLightbox = (type, index) => {
+            // type سيكون دومًا 'image' لاننا لا نستخدم فيديو. لكن نحتفظ بالمنطق
+            if (type === 'image') {
+                if (index === 0) currentIndex = 0;
+                else if (index >= 1 && index <= 6) currentIndex = index;
+                else currentIndex = 0;
+            }
+            renderLightbox();
+            overlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        };
+
+        function renderLightbox() {
+            const item = mediaItems[currentIndex];
+            if (!item) return;
+
+            mediaContainer.innerHTML = '';
+
+            if (item.type === 'image') {
+                const img = document.createElement('img');
+                img.src = item.src;
+                img.alt = 'معرض البيت النقي';
+                img.className = 'lightbox-content';
+                img.style.maxWidth = '90vw';
+                img.style.maxHeight = '70vh';
+                img.style.objectFit = 'contain';
+                mediaContainer.appendChild(img);
+            }
+            // لا توجد فيديوهات, ولكن لو وجدت نهملها
+
+            captionDiv.innerText = item.caption || 'البيت النقي';
+        }
+
+        // التنقل
+        window.navigate = (direction) => {
+            let newIndex = currentIndex + direction;
+            if (newIndex < 0) newIndex = mediaItems.length - 1;
+            if (newIndex >= mediaItems.length) newIndex = 0;
+            currentIndex = newIndex;
+            renderLightbox();
+        };
+
+        // إغلاق
+        window.closeLightbox = () => {
+            overlay.classList.remove('active');
+            document.body.style.overflow = '';
+            mediaContainer.innerHTML = '';
+        };
+
+        // التنقل بالسهمين
+        document.addEventListener('keydown', (e) => {
+            if (!overlay.classList.contains('active')) return;
+            if (e.key === 'ArrowRight') navigate(-1);
+            else if (e.key === 'ArrowLeft') navigate(1);
+            else if (e.key === 'Escape') closeLightbox();
+        });
+    </script>
+
+    <!-- إضافة نبذة بسيطة أسفل المعرض (اختياري) توضح أن الفيديوهات غير موجودة حسب الطلب -->
+    <div class="max-w-7xl mx-auto px-4 text-center text-gray-500 text-lg my-12 border-t border-gray-200 pt-8">
+        <i class="fas fa-paint-brush text-water ml-2"></i> تم استعراض أبرز تصميمات متجر <strong>البيت النقي</strong>
+        الإلكتروني. (لا يوجد سكشن فيديوهات حسب الرغبة)
+    </div>
+
+    <!-- تذييل -->
+    <footer class="text-center py-8 text-gray-500 border-t border-gray-200">
+        <p class="flex items-center justify-center gap-2"><i class="fas fa-droplet text-water"></i> البيت النقي ·
+            بالتعاون مع تريند <i class="fas fa-pen text-teal-500 mr-2"></i></p>
+    </footer>
+</body>
+
+</html>
