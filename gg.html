@@ -1,80 +1,110 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>البيت النقي · متجر فلاتر المياه</title>
-    <!-- Tailwind + Font Awesome -->
+    <meta name="description" content="جلابية ستوك - تصميم وإنتاج محتوى تسويقي للزي الإسلامي">
+    <title>جلابية ستوك · التراث الإسلامي</title>
+
+    <!-- TailwindCSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- custom smooth behaviour & lightbox styles (مع الحفاظ على روح التصميم السابق) -->
-    <style>
-        /* أنيميشن الخلفية المتحركة من الهيدر */
-        @keyframes gradient-x {
 
-            0%,
-            100% {
-                background-position: 0% 50%;
-            }
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
 
-            50% {
-                background-position: 100% 50%;
+    <!-- Google Fonts - Cairo -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Lottie (اختياري) -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+    <!-- Tailwind Custom Colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#821a2f',     // عنابي
+                        secondary: '#821a2f',
+                        accent: '#d97706',      // ذهبي
+                        dark: '#1f2937',
+                        light: '#f9fafb',
+                        greenIslamic: '#2d5e4a' // لمسة خضراء إسلامية
+                    },
+                    fontFamily: {
+                        'cairo': ['Cairo', 'sans-serif']
+                    }
+                }
             }
         }
+    </script>
 
+    <style>
+        * { font-family: 'Cairo', sans-serif; }
+
+        @keyframes gradient-x {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
         .animate-gradient-x {
             background-size: 200% 200%;
             animation: gradient-x 3s ease infinite;
         }
 
-        /* تأثيرات البطاقات */
         .gallery-item {
             transition: transform 0.2s, box-shadow 0.2s;
             cursor: pointer;
         }
-
         .gallery-item:hover {
             transform: scale(1.02);
-            box-shadow: 0 25px 30px -12px rgba(0, 150, 200, 0.3);
+            box-shadow: 0 25px 30px -12px rgba(130, 26, 47, 0.3);
         }
 
-        /* لايت بوكس */
+        /* Lightbox - مطابق تماماً للصفحة الأصلية */
         .lightbox-overlay {
             position: fixed;
             inset: 0;
-            background: rgba(0, 0, 0, 0.9);
-            backdrop-filter: blur(6px);
+            background: rgba(0, 0, 0, 0.95);
+            backdrop-filter: blur(8px);
             z-index: 999;
             display: none;
             place-items: center;
-            padding: 1rem;
+            padding: 1.5rem;
             direction: ltr;
         }
-
-        .lightbox-overlay.active {
-            display: flex;
-        }
-
+        .lightbox-overlay.active { display: flex; }
         .lightbox-content {
             max-width: 90vw;
             max-height: 80vh;
             border-radius: 24px;
-            box-shadow: 0 30px 60px #000;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+            margin: 0 auto;
+            display: block;
         }
-
+        .lightbox-media-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            min-height: 70vh;
+        }
         .lightbox-caption {
             color: white;
-            margin-top: 1rem;
+            margin-top: 1.5rem;
             font-size: 1.3rem;
+            text-align: center;
             font-weight: 500;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            display: inline-block;
+            backdrop-filter: blur(4px);
         }
-
         .nav-arrow {
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
-            background: rgba(255, 255, 255, 0.15);
+            background: rgba(255,255,255,0.15);
             color: white;
             border: none;
             width: 60px;
@@ -83,36 +113,27 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 2.5rem;
+            font-size: 2.2rem;
             cursor: pointer;
             backdrop-filter: blur(4px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            transition: 0.2s;
+            transition: all 0.2s;
+            border: 1px solid rgba(255,255,255,0.2);
+            z-index: 1000;
         }
-
         .nav-arrow:hover {
-            background: #0f7b9e;
+            background: #821a2f;
+            transform: translateY(-50%) scale(1.1);
         }
-
-        /* لون مستوحى من الماء */
-        .nav-arrow.left {
-            right: 30px;
-        }
-
-        /* السهم الأيمن (للخلف في rtl) */
-        .nav-arrow.right {
-            left: 30px;
-        }
-
-        /* السهم الأيسر (للأمام) */
+        .nav-arrow.left { right: 30px; }
+        .nav-arrow.right { left: 30px; }
         .close-btn {
             position: absolute;
             top: 20px;
             left: 30px;
-            background: rgba(0, 0, 0, 0.4);
+            background: rgba(0,0,0,0.5);
             color: white;
             border: none;
-            font-size: 2.4rem;
+            font-size: 2.2rem;
             width: 55px;
             height: 55px;
             border-radius: 50%;
@@ -123,255 +144,267 @@
             backdrop-filter: blur(4px);
             border: 1px solid #ffffff60;
             transition: 0.2s;
+            z-index: 1000;
         }
-
         .close-btn:hover {
-            background: #c53030;
+            background: #ef4444;
+            transform: rotate(90deg);
         }
-
+        .video-thumb {
+            position: relative;
+        }
+        .video-thumb::after {
+            content: "\f04b";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #821a2fe0;
+            color: white;
+            font-size: 2.2rem;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-left: 6px;
+            box-shadow: 0 10px 20px black;
+            transition: 0.2s;
+            border: 2px solid white;
+        }
+        .video-thumb:hover::after {
+            background: #d97706;
+            transform: translate(-50%, -50%) scale(1.07);
+        }
         @media (max-width: 640px) {
-            .nav-arrow {
-                width: 45px;
-                height: 45px;
-                font-size: 1.8rem;
-            }
-
-            .close-btn {
-                width: 45px;
-                height: 45px;
-            }
+            .nav-arrow { width: 45px; height: 45px; font-size: 1.5rem; }
+            .close-btn { width: 45px; height: 45px; font-size: 1.8rem; }
+            .lightbox-caption { font-size: 1rem; }
         }
 
-        /* لون خاص للبيت النقي */
-        .text-water {
-            color: #0f7b9e;
+        /* روابط الفوتر */
+        .footer-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 0;
+            height: 1px;
+            background: linear-gradient(to left, #d97706, #821a2f);
+            transition: width 0.3s ease;
         }
-
-        .bg-water {
-            background-color: #0f7b9e;
+        .footer-link:hover::after { width: 100%; }
+        .social-icon-footer::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            transform: translate(-50%, -50%);
+            transition: width 0.3s ease, height 0.3s ease;
         }
-
-        .border-water {
-            border-color: #0f7b9e;
+        .social-icon-footer:hover::before {
+            width: 100%;
+            height: 100%;
         }
-
-        .from-water {
-            --tw-gradient-from: #0f7b9e;
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #821a2f 0%, #d97706 50%, #821a2f 100%);
+            background-size: 200% 100%;
+            animation: wave 3s linear infinite;
         }
-
-        .to-teal {
-            --tw-gradient-to: #2c7a7a;
+        @keyframes wave {
+            0% { background-position: 0% 0%; }
+            100% { background-position: 200% 0%; }
         }
     </style>
 </head>
+<body class="font-cairo bg-white text-gray-800 overflow-x-hidden">
 
-<body class="bg-gray-50 font-sans antialiased">
-
-    <!-- ========== HERO SECTION (مأخوذة من الكود الأصلي مع تعديل النص للبيت النقي) ========== -->
-    <div class="relative pt-12 md:pt-16 lg:pt-20 pb-8 md:pb-12 lg:pb-16 mb-8 md:mb-12 lg:mb-16 overflow-hidden">
-        <!-- Geometric Background Pattern (محفوظ) -->
-        <div class="absolute inset-0 bg-gradient-to-br from-water/5 via-transparent to-cyan-500/5 opacity-50">
-            <div class="absolute top-0 left-0 w-64 h-64 bg-water/10 rounded-full -translate-x-1/2 -translate-y-1/2">
-            </div>
-            <div
-                class="absolute bottom-0 right-0 w-80 h-80 bg-teal-500/10 rounded-full translate-x-1/3 translate-y-1/3">
-            </div>
-            <div
-                class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-cyan-400/5 rounded-full">
-            </div>
-        </div>
-
-        <div class="container relative mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center">
-                <!-- Animated Title -->
-                <div class="inline-block relative mb-4 md:mb-6">
-                    <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 mb-2">
-                        <span
-                            class="bg-gradient-to-r from-water via-teal-500 to-cyan-500 bg-clip-text text-transparent animate-gradient-x">
-                            البيت النقي · متجر إلكتروني
-                        </span>
-                    </h1>
-                    <div
-                        class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-32 sm:w-40 md:w-48 h-1 bg-gradient-to-r from-water via-cyan-400 to-teal-500">
+    <!-- ==================== NAVBAR (مطابقة تماماً) ==================== -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 bg-white shadow-lg z-50 transition-all duration-300">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3 space-x-reverse">
+                    <div class="w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center">
+                        <span class="text-white text-2xl font-bold">T</span>
+                    </div>
+                    <div>
+                        <h1 class="text-2xl font-bold text-primary">تريند</h1>
+                        <p class="text-xs text-gray-500">Trend Agency</p>
                     </div>
                 </div>
 
-                <p
-                    class="text-gray-600 text-sm sm:text-base md:text-lg lg:text-xl max-w-3xl xl:max-w-4xl mx-auto mb-4 md:mb-6 lg:mb-8 px-4 leading-relaxed">
-                    قمنا ببناء متجر إلكتروني متكامل لعلامة <strong class="text-water">"البيت النقي"</strong> المتخصصة في
-                    فلاتر المياه.
-                    صممنا هوية رقمية نظيفة، تجربة تسوق سلسة، وعرضاً مميزاً للمنتجات. فيما يلي نبذة عن التصميمات وأهم
-                    الأعمال.
-                </p>
+                <!-- Desktop Menu -->
+                <ul class="hidden lg:flex items-center space-x-8 space-x-reverse">
+                    <li><a href="#" class="text-gray-700 hover:text-primary transition font-semibold">الرئيسية</a></li>
+                    <li class="relative group">
+                        <a href="#" class="text-gray-700 hover:text-primary transition font-semibold flex items-center">
+                            خدماتنا <i class="fas fa-chevron-down mr-2 text-xs"></i>
+                        </a>
+                    </li>
+                    <li><a href="#" class="text-gray-700 hover:text-primary transition font-semibold">مشاريعنا</a></li>
+                    <li><a href="#" class="text-gray-700 hover:text-primary transition font-semibold">من نحن</a></li>
+                    <li><a href="#" class="bg-gradient-to-r from-primary to-secondary text-white px-6 py-3 rounded-full hover:shadow-xl transition font-semibold">تواصل معنا</a></li>
+                </ul>
 
-                <!-- Animated Tags -->
-                <div class="flex flex-wrap justify-center gap-2 md:gap-3 mt-6 md:mt-8">
-                    <span
-                        class="px-3 py-1 bg-water/10 text-water rounded-full text-xs md:text-sm font-medium animate-pulse">تصميم
-                        متجر إلكتروني</span>
-                    <span
-                        class="px-3 py-1 bg-teal-500/10 text-teal-700 rounded-full text-xs md:text-sm font-medium animate-pulse"
-                        style="animation-delay: 0.2s">واجهة منتجات</span>
-                    <span
-                        class="px-3 py-1 bg-cyan-500/10 text-cyan-600 rounded-full text-xs md:text-sm font-medium animate-pulse"
-                        style="animation-delay: 0.4s">هوية نقية</span>
-                </div>
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="lg:hidden text-primary text-2xl focus:outline-none">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu (مبسطة) -->
+        <div id="mobile-menu" class="lg:hidden hidden bg-white border-t border-gray-200">
+            <ul class="py-4">
+                <li><a href="#" class="block px-6 py-3 hover:bg-gray-50">الرئيسية</a></li>
+                <li><a href="#" class="block px-6 py-3 hover:bg-gray-50">خدماتنا</a></li>
+                <li><a href="#" class="block px-6 py-3 hover:bg-gray-50">مشاريعنا</a></li>
+                <li><a href="#" class="block px-6 py-3 hover:bg-gray-50">من نحن</a></li>
+                <li><a href="#" class="block px-6 py-3 text-primary font-semibold">تواصل معنا</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ========== HERO SECTION ========== (خاص بـ جلابية ستوك) -->
+    <div class="relative pt-28 md:pt-32 pb-8 md:pb-12 overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-amber-600/5 opacity-50">
+            <div class="absolute top-0 left-0 w-64 h-64 bg-primary/10 rounded-full -translate-x-1/2 -translate-y-1/2"></div>
+            <div class="absolute bottom-0 right-0 w-80 h-80 bg-amber-600/10 rounded-full translate-x-1/3 translate-y-1/3"></div>
+        </div>
+        <div class="container relative mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="inline-block relative mb-4">
+                <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 mb-2">
+                    <span class="bg-gradient-to-r from-primary via-amber-600 to-greenIslamic bg-clip-text text-transparent animate-gradient-x">
+                        جلابية ستوك
+                    </span>
+                </h1>
+                <div class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-32 sm:w-40 md:w-48 h-1 bg-gradient-to-r from-primary via-amber-600 to-greenIslamic"></div>
+            </div>
+            <p class="text-gray-600 text-sm sm:text-base md:text-lg lg:text-xl max-w-3xl mx-auto mb-4 px-4 leading-relaxed">
+                قمنا بتنفيذ أعمال تسويق رقمي متكاملة لصالح <strong class="text-primary">جلابية ستوك</strong>، 
+                المتخصصة في بيع الجلابيات والزي الإسلامي الأنيق. شمل العمل تصميم هوية بصرية، 
+                منشورات احترافية، وإنتاج فيديوهين ترويجيين مميزين.
+            </p>
+            <div class="flex flex-wrap justify-center gap-2 md:gap-3 mt-6">
+                <span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-xs md:text-sm font-medium animate-pulse">هوية بصرية</span>
+                <span class="px-3 py-1 bg-amber-600/10 text-amber-700 rounded-full text-xs md:text-sm font-medium animate-pulse" style="animation-delay:0.2s">فيديوين حصريين</span>
+                <span class="px-3 py-1 bg-greenIslamic/10 text-greenIslamic rounded-full text-xs md:text-sm font-medium animate-pulse" style="animation-delay:0.4s">زي إسلامي</span>
             </div>
         </div>
     </div>
 
-    <!-- ========== ١. صوره في الوسط وتحتها محتوى (نبذة عن المشروع) ========== -->
+    <!-- ========== ١. صورة مركزية + محتوى ========== -->
     <section class="max-w-5xl mx-auto px-4 my-10">
-        <!-- الصورة المركزية (قابلة للنقر) -->
         <div class="flex justify-center">
             <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white max-w-3xl w-full gallery-item"
                 onclick="openLightbox('image', 0)" style="cursor:zoom-in">
-                <!-- صورة تعبر عن فلاتر المياه / المتجر الإلكتروني (من unsplash) -->
-                <img src="https://images.unsplash.com/photo-1581244277943-fe4a9c7775c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
-                    alt="البيت النقي - متجر فلاتر" class="w-full h-auto object-cover aspect-video">
-                <div
-                    class="absolute bottom-4 right-4 bg-black/50 text-white px-4 py-2 rounded-full text-sm backdrop-blur-sm">
+                <!-- صورة مركزية تعبر عن جلابية ستوك (من unsplash موضوع جلابية/نسيج) -->
+                <img src="https://images.unsplash.com/photo-1623856011625-9b9d607c3b83?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
+                     alt="جلابية ستوك" class="w-full h-auto object-cover aspect-video">
+                <div class="absolute bottom-4 right-4 bg-black/50 text-white px-4 py-2 rounded-full text-sm backdrop-blur-sm">
                     <i class="fas fa-expand-alt ml-2"></i> اضغط للتكبير
                 </div>
             </div>
         </div>
 
-        <!-- المحتوى النصي (تحت الصورة) خاص بالبيت النقي -->
-        <div class="mt-10 bg-white rounded-3xl p-8 md:p-10 shadow-lg border border-teal-100">
+        <div class="mt-10 bg-white rounded-3xl p-8 md:p-10 shadow-lg border border-amber-200">
             <div class="flex items-center gap-3 mb-4">
-                <span class="bg-water/10 text-water px-4 py-1 rounded-full text-sm font-bold"><i
-                        class="fas fa-droplet ml-2"></i>البيت النقي</span>
-                <span class="bg-purple-100 text-purple-700 px-4 py-1 rounded-full text-sm"><i
-                        class="fas fa-pen-fancy ml-2"></i> تريند</span>
+                <span class="bg-primary/10 text-primary px-4 py-1 rounded-full text-sm font-bold">
+                    <i class="fas fa-tshirt ml-2"></i>جلابية ستوك
+                </span>
+                <span class="bg-amber-100 text-amber-700 px-4 py-1 rounded-full text-sm">
+                    <i class="fas fa-pen-fancy ml-2"></i> تريند
+                </span>
             </div>
-            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">نقاء بلا حدود · متجر إلكتروني متكامل</h2>
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">أصالة ورقي · حضور إسلامي مميز</h2>
             <p class="text-gray-700 text-lg leading-relaxed mb-4">
-                <strong class="text-water">البيت النقي</strong> علامة رائدة في مجال فلاتر المياه المنزلية والتجارية.
-                أطلقنا متجراً إلكترونياً يعرض جميع المنتجات بشكل منظم وسلس، مع واجهات مستخدم مريحة وتجربة شراء سهلة.
-                قمنا بتصميم أكثر من ٣٠ شاشة رئيسية (صفحة رئيسية، صفحات منتجات، سلة شراء، لوحة تحكم مبسطة) بالإضافة إلى
-                هوية بصرية نظيفة تعكس النقاء والموثوقية.
+                <strong class="text-primary">جلابية ستوك</strong> وجهة رائدة في تقديم الجلابيات الفاخرة والزي الإسلامي العصري. 
+                تعاونا معاً لبناء هوية رقمية تعكس القيم الأصيلة والذوق الرفيع. قمنا بتصميم مجموعة من المنشورات الاحترافية 
+                لعرض المنتجات، بالإضافة إلى <span class="font-semibold text-amber-600">فيديوين ترويجيين</span> حصريين 
+                تم بثهما على منصات التواصل الاجتماعي، مما ساهم في زيادة الوعي بالعلامة وجذب شريحة أوسع من المهتمين بالأزياء الإسلامية.
             </p>
             <p class="text-gray-700 text-lg leading-relaxed">
-                <i class="fas fa-check-circle text-green-500 ml-2"></i> في المعرض أدناه نستعرض مجموعة من أهم التصميمات:
-                واجهة المتجر، بطاقات المنتجات، صفحات الفلاتر، وتصميمات ترويجية. اضغط على أي صورة لتكبيرها والتنقل بين
-                الأعمال.
+                <i class="fas fa-check-circle text-green-500 ml-2"></i> في الأسفل يمكنك مشاهدة الفيديوين المنفذين حصرياً لهذا المشروع. 
+                (لا يوجد معرض صور مفتوح، فقط فيديوهان حسب الطلب)
             </p>
-            <!-- إنجازات سريعة -->
             <div class="flex flex-wrap gap-3 mt-6">
-                <div class="bg-gray-100 rounded-full px-5 py-2 text-sm"><i
-                        class="fas fa-paint-brush text-water ml-2"></i>٣٠+ شاشة</div>
-                <div class="bg-gray-100 rounded-full px-5 py-2 text-sm"><i
-                        class="fas fa-cart-shopping text-teal-500 ml-2"></i>متجر كامل</div>
-                <div class="bg-gray-100 rounded-full px-5 py-2 text-sm"><i
-                        class="fas fa-tint text-cyan-600 ml-2"></i>هوية نظيفة</div>
+                <div class="bg-gray-100 rounded-full px-5 py-2 text-sm"><i class="fas fa-paint-brush text-primary ml-2"></i>٢٠+ تصميم</div>
+                <div class="bg-gray-100 rounded-full px-5 py-2 text-sm"><i class="fas fa-video text-amber-600 ml-2"></i>٢ فيديو حصري</div>
+                <div class="bg-gray-100 rounded-full px-5 py-2 text-sm"><i class="fas fa-mosque text-greenIslamic ml-2"></i>زي إسلامي</div>
             </div>
         </div>
     </section>
 
-    <!-- ========== ٢. سكشن بعض التصميمات (معرض الصور) ========== -->
+    <!-- ========== ٢. سكشن الفيديوين (بدون معرض صور) ========== -->
     <section class="max-w-7xl mx-auto px-4 my-20">
         <div class="flex items-center justify-between mb-8">
-            <h2 class="text-3xl md:text-4xl font-bold text-water"><i class="fas fa-palette ml-3 text-teal-400"></i>
-                معرض التصميمات</h2>
-            <span class="bg-water/10 text-water px-5 py-2 rounded-full text-sm"> اضغط على أي تصميم لعرضه </span>
+            <h2 class="text-3xl md:text-4xl font-bold text-primary"><i class="fas fa-clapperboard ml-3 text-amber-500"></i> الفيديوهات</h2>
+            <span class="bg-primary/10 text-primary px-5 py-2 rounded-full text-sm"> اضغط لتشغيل الفيديو </span>
         </div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            <!-- الصور (كلها من Unsplash تعبر عن واجهات / منتجات تنقية) 
-                 نستخدم 6 صور مختلفة مع تحسين الوصف -->
-            <div class="gallery-item bg-white rounded-2xl overflow-hidden shadow-md border"
-                onclick="openLightbox('image', 1)">
-                <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80"
-                    class="w-full aspect-[4/3] object-cover" loading="lazy">
-                <div class="p-4 font-semibold text-gray-700">الصفحة الرئيسية <span
-                        class="block text-sm text-water">واجهة المتجر</span></div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto"> <!-- وسطين فقط -->
+            <!-- الفيديو الأول -->
+            <div class="gallery-item bg-white rounded-2xl overflow-hidden shadow-md border relative video-thumb"
+                onclick="openLightbox('video', 0)">
+                <img src="https://images.unsplash.com/photo-1623856011625-9b9d607c3b83?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80"
+                     class="w-full aspect-video object-cover" loading="lazy">
+                <div class="p-4 font-semibold text-gray-700 bg-white text-center">فيديو ترويجي · تشكيلة رمضان</div>
             </div>
-            <div class="gallery-item bg-white rounded-2xl overflow-hidden shadow-md border"
-                onclick="openLightbox('image', 2)">
-                <img src="https://images.unsplash.com/photo-1597773150796-e5c14ebecbf5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80"
-                    class="w-full aspect-[4/3] object-cover" loading="lazy">
-                <div class="p-4 font-semibold text-gray-700">صفحة فئة المنتجات <span
-                        class="block text-sm text-teal-600">فلاتر ٧ مراحل</span></div>
+            <!-- الفيديو الثاني -->
+            <div class="gallery-item bg-white rounded-2xl overflow-hidden shadow-md border relative video-thumb"
+                onclick="openLightbox('video', 1)">
+                <img src="https://images.unsplash.com/photo-1623856011625-9b9d607c3b83?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80"
+                     class="w-full aspect-video object-cover" loading="lazy">
+                <div class="p-4 font-semibold text-gray-700 bg-white text-center">إعلان جلابية العيد</div>
             </div>
-            <div class="gallery-item bg-white rounded-2xl overflow-hidden shadow-md border"
-                onclick="openLightbox('image', 3)">
-                <img src="https://images.unsplash.com/photo-1556905200-003566046fef?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80"
-                    class="w-full aspect-[4/3] object-cover" loading="lazy">
-                <div class="p-4 font-semibold text-gray-700">بطاقة منتج <span class="block text-sm text-cyan-600">فلتر
-                        تحت الحوض</span></div>
-            </div>
-            <div class="gallery-item bg-white rounded-2xl overflow-hidden shadow-md border"
-                onclick="openLightbox('image', 4)">
-                <img src="https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80"
-                    class="w-full aspect-[4/3] object-cover" loading="lazy">
-                <div class="p-4 font-semibold text-gray-700">صفحة تفاصيل المنتج <span
-                        class="block text-sm text-water">مواصفات دقيقة</span></div>
-            </div>
-            <div class="gallery-item bg-white rounded-2xl overflow-hidden shadow-md border"
-                onclick="openLightbox('image', 5)">
-                <img src="https://images.unsplash.com/photo-1578849278619-e73505e9610f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80"
-                    class="w-full aspect-[4/3] object-cover" loading="lazy">
-                <div class="p-4 font-semibold text-gray-700">سلة الشراء <span class="block text-sm text-teal-600">تجربة
-                        سلسة</span></div>
-            </div>
-            <div class="gallery-item bg-white rounded-2xl overflow-hidden shadow-md border"
-                onclick="openLightbox('image', 6)">
-                <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80"
-                    class="w-full aspect-[4/3] object-cover" loading="lazy">
-                <div class="p-4 font-semibold text-gray-700">بانر ترويجي <span class="block text-sm text-cyan-600">خصم
-                        على الفلاتر</span></div>
-            </div>
-            <!-- يمكن إضافة صورة سابعة إن أردنا، ولكن نكتفي بـ6 -->
         </div>
+        <!-- نص إضافي يؤكد عدم وجود معرض صور -->
+        <p class="text-center text-gray-500 mt-8 text-lg">
+            <i class="fas fa-eye-slash ml-2 text-primary"></i> لا يوجد معرض صور مفتوح، فقط فيديوهان حسب الطلب.
+        </p>
     </section>
 
-    <!-- ========== ٣. (لا يوجد سكشن فيديوهات) حسب الطلب، تم إلغاؤه. ولكن نضيف مسافة صغيرة للتذكير بلا فيديوهات ========== -->
-    <!-- حافظنا على التباعد، بدون محتوى فيديو -->
-
-    <!-- ========== ٤. الـ Lightbox (مع إمكانية التنقل بين الصور فقط) ========== -->
+    <!-- ========== ٣. الـ Lightbox (يدعم الفيديو فقط في هذه الحالة) ========== -->
     <div id="lightbox" class="lightbox-overlay" onclick="if(event.target===this) closeLightbox()">
         <button class="close-btn" onclick="closeLightbox()"><i class="fas fa-times"></i></button>
-        <!-- أزرار التنقل -->
-        <button class="nav-arrow left" id="prevBtn" onclick="navigate(-1)"><i class="fas fa-chevron-right"></i></button>
-        <button class="nav-arrow right" id="nextBtn" onclick="navigate(1)"><i class="fas fa-chevron-left"></i></button>
-
+        <button class="nav-arrow left" onclick="navigate(-1)"><i class="fas fa-chevron-right"></i></button>
+        <button class="nav-arrow right" onclick="navigate(1)"><i class="fas fa-chevron-left"></i></button>
         <div class="text-center w-full">
             <div id="lightbox-media-wrapper" class="lightbox-media-wrapper">
-                <div id="lightbox-media-container" class="flex justify-center items-center w-full">
-                    <!-- سيتم حقن الصورة هنا -->
-                </div>
+                <div id="lightbox-media-container" class="flex justify-center items-center w-full"></div>
             </div>
             <div id="lightbox-caption" class="lightbox-caption"></div>
         </div>
     </div>
 
+    <!-- بيانات المعرض (فقط صورة واحدة مركزية + فيديوهين) -->
     <script>
-        // ********** بيانات المعرض (فقط صور) **********
-        // index 0: الصورة المركزية (الوسط) , 1-6: باقي التصميمات
         const mediaItems = [
-            { type: 'image', src: 'https://images.unsplash.com/photo-1581244277943-fe4a9c7775c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80', caption: 'البيت النقي · متجر فلاتر المياه (الشعار والهوية)' },
-            { type: 'image', src: 'https://images.unsplash.com/photo-1542831371-29b0f74f9713?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80', caption: 'الصفحة الرئيسية · واجهة نظيفة وبسيطة' },
-            { type: 'image', src: 'https://images.unsplash.com/photo-1597773150796-e5c14ebecbf5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80', caption: 'صفحة الفلاتر المنزلية · عرض الشبكة' },
-            { type: 'image', src: 'https://images.unsplash.com/photo-1556905200-003566046fef?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80', caption: 'بطاقة منتج · فلتر ٧ مراحل مع سعر' },
-            { type: 'image', src: 'https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80', caption: 'صفحة تفاصيل المنتج · مواصفات دقيقة' },
-            { type: 'image', src: 'https://images.unsplash.com/photo-1578849278619-e73505e9610f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80', caption: 'سلة الشراء · تجربة مستخدم مبسطة' },
-            { type: 'image', src: 'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80', caption: 'بانر ترويجي · خصومات موسمية' }
+            { type: 'image', src: 'https://images.unsplash.com/photo-1623856011625-9b9d607c3b83?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80', caption: 'جلابية ستوك - الصورة الرئيسية' },
+            { type: 'video', src: 'https://www.w3schools.com/html/mov_bbb.mp4', caption: 'فيديو تشويقي · تشكيلة رمضان' },
+            { type: 'video', src: 'https://www.w3schools.com/html/movie.mp4', caption: 'إعلان جلابية العيد' }
         ];
-
         let currentIndex = 0;
 
-        // عناصر الـ DOM
         const overlay = document.getElementById('lightbox');
         const mediaContainer = document.getElementById('lightbox-media-container');
         const captionDiv = document.getElementById('lightbox-caption');
 
-        // فتح اللايت بوكس
         window.openLightbox = (type, index) => {
-            // type سيكون دومًا 'image' لاننا لا نستخدم فيديو. لكن نحتفظ بالمنطق
-            if (type === 'image') {
-                if (index === 0) currentIndex = 0;
-                else if (index >= 1 && index <= 6) currentIndex = index;
-                else currentIndex = 0;
-            }
+            if (type === 'image' && index === 0) currentIndex = 0;
+            else if (type === 'video') currentIndex = 1 + index; // video index 0->1, 1->2
             renderLightbox();
             overlay.classList.add('active');
             document.body.style.overflow = 'hidden';
@@ -380,41 +413,35 @@
         function renderLightbox() {
             const item = mediaItems[currentIndex];
             if (!item) return;
-
             mediaContainer.innerHTML = '';
-
             if (item.type === 'image') {
                 const img = document.createElement('img');
-                img.src = item.src;
-                img.alt = 'معرض البيت النقي';
+                img.src = item.src; img.alt = 'جلابية ستوك';
                 img.className = 'lightbox-content';
-                img.style.maxWidth = '90vw';
-                img.style.maxHeight = '70vh';
-                img.style.objectFit = 'contain';
+                img.style.maxWidth = '90vw'; img.style.maxHeight = '70vh'; img.style.objectFit = 'contain';
                 mediaContainer.appendChild(img);
+            } else {
+                const video = document.createElement('video');
+                video.src = item.src; video.controls = true; video.autoplay = true;
+                video.className = 'lightbox-content';
+                video.style.maxWidth = '90vw'; video.style.maxHeight = '70vh'; video.style.objectFit = 'contain';
+                video.playsInline = true;
+                mediaContainer.appendChild(video);
             }
-            // لا توجد فيديوهات, ولكن لو وجدت نهملها
-
-            captionDiv.innerText = item.caption || 'البيت النقي';
+            captionDiv.innerText = item.caption || 'جلابية ستوك';
         }
 
-        // التنقل
         window.navigate = (direction) => {
-            let newIndex = currentIndex + direction;
-            if (newIndex < 0) newIndex = mediaItems.length - 1;
-            if (newIndex >= mediaItems.length) newIndex = 0;
-            currentIndex = newIndex;
+            currentIndex = (currentIndex + direction + mediaItems.length) % mediaItems.length;
             renderLightbox();
         };
 
-        // إغلاق
         window.closeLightbox = () => {
             overlay.classList.remove('active');
             document.body.style.overflow = '';
             mediaContainer.innerHTML = '';
         };
 
-        // التنقل بالسهمين
         document.addEventListener('keydown', (e) => {
             if (!overlay.classList.contains('active')) return;
             if (e.key === 'ArrowRight') navigate(-1);
@@ -423,17 +450,131 @@
         });
     </script>
 
-    <!-- إضافة نبذة بسيطة أسفل المعرض (اختياري) توضح أن الفيديوهات غير موجودة حسب الطلب -->
-    <div class="max-w-7xl mx-auto px-4 text-center text-gray-500 text-lg my-12 border-t border-gray-200 pt-8">
-        <i class="fas fa-paint-brush text-water ml-2"></i> تم استعراض أبرز تصميمات متجر <strong>البيت النقي</strong>
-        الإلكتروني. (لا يوجد سكشن فيديوهات حسب الرغبة)
-    </div>
+    <!-- ========== FOOTER (مطابق للصفحة الأصلية مع تعديل النص) ========== -->
+    <footer class="bg-gray-900 text-gray-300 pt-20 pb-8 relative overflow-hidden">
+        <div class="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-primary via-secondary to-accent"></div>
 
-    <!-- تذييل -->
-    <footer class="text-center py-8 text-gray-500 border-t border-gray-200">
-        <p class="flex items-center justify-center gap-2"><i class="fas fa-droplet text-water"></i> البيت النقي ·
-            بالتعاون مع تريند <i class="fas fa-pen text-teal-500 mr-2"></i></p>
+        <!-- Newsletter Section -->
+        <div class="container mx-auto px-4 lg:px-8 mb-16 relative z-10">
+            <div class="bg-gradient-to-r from-gray-800 to-gray-900 border border-gray-700 rounded-2xl p-8 shadow-2xl transform -translate-y-10">
+                <div class="max-w-3xl mx-auto text-center">
+                    <h3 class="text-2xl font-bold text-white mb-3">ابقَ على اطلاع بآخر مستجداتنا</h3>
+                    <p class="text-gray-400 mb-6">اشترك في نشرتنا البريدية ليصلك كل جديد عن مشاريعنا</p>
+                    <form class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+                        <input type="email" placeholder="بريدك الإلكتروني"
+                            class="flex-grow px-6 py-3 bg-gray-700 text-white rounded-full border border-gray-600 focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/30 transition-all">
+                        <button type="submit"
+                            class="bg-gradient-to-r from-primary to-secondary text-white px-8 py-3 rounded-full hover:shadow-lg transition font-semibold hover:scale-105">
+                            اشترك الآن
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10 mb-16">
+                <!-- Company Info -->
+                <div>
+                    <div class="flex items-center space-x-3 space-x-reverse mb-6">
+                        <div class="w-14 h-14 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center shadow-lg">
+                            <span class="text-white text-3xl font-bold">T</span>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-white">تريند</h3>
+                            <p class="text-sm text-gray-400">Trend Agency</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 leading-relaxed mb-6">
+                        نبتكر حلولاً تسويقية استثنائية تحوّل العلامات التجارية إلى إمبراطوريات
+                    </p>
+                    <div class="flex gap-3">
+                        <a href="#" class="social-icon-footer w-11 h-11 bg-gray-800 hover:bg-primary rounded-xl flex items-center justify-center transition group"><i class="fab fa-facebook-f group-hover:scale-110"></i></a>
+                        <a href="#" class="social-icon-footer w-11 h-11 bg-gray-800 hover:bg-blue-400 rounded-xl flex items-center justify-center transition group"><i class="fab fa-twitter group-hover:scale-110"></i></a>
+                        <a href="#" class="social-icon-footer w-11 h-11 bg-gray-800 hover:bg-pink-600 rounded-xl flex items-center justify-center transition group"><i class="fab fa-instagram group-hover:scale-110"></i></a>
+                        <a href="#" class="social-icon-footer w-11 h-11 bg-gray-800 hover:bg-primary rounded-xl flex items-center justify-center transition group"><i class="fab fa-linkedin-in group-hover:scale-110"></i></a>
+                        <a href="#" class="social-icon-footer w-11 h-11 bg-gray-800 hover:bg-red-600 rounded-xl flex items-center justify-center transition group"><i class="fab fa-youtube group-hover:scale-110"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-white font-bold text-xl mb-6 pb-3 border-b border-gray-700 relative">
+                        روابط سريعة
+                        <span class="absolute bottom-0 right-0 w-12 h-0.5 bg-accent"></span>
+                    </h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="footer-link hover:text-accent transition flex items-center group"><i class="fas fa-chevron-left ml-3 text-xs group-hover:ml-4"></i>الرئيسية</a></li>
+                        <li><a href="#" class="footer-link hover:text-accent transition flex items-center group"><i class="fas fa-chevron-left ml-3 text-xs group-hover:ml-4"></i>خدماتنا</a></li>
+                        <li><a href="#" class="footer-link hover:text-accent transition flex items-center group"><i class="fas fa-chevron-left ml-3 text-xs group-hover:ml-4"></i>مشاريعنا</a></li>
+                        <li><a href="#" class="footer-link hover:text-accent transition flex items-center group"><i class="fas fa-chevron-left ml-3 text-xs group-hover:ml-4"></i>من نحن</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h4 class="text-white font-bold text-xl mb-6 pb-3 border-b border-gray-700 relative">
+                        خدماتنا
+                        <span class="absolute bottom-0 right-0 w-12 h-0.5 bg-accent"></span>
+                    </h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="footer-link hover:text-accent transition flex items-center"><i class="fas fa-hashtag ml-3 text-primary"></i>إدارة السوشيال ميديا</a></li>
+                        <li><a href="#" class="footer-link hover:text-accent transition flex items-center"><i class="fas fa-laptop-code ml-3 text-primary"></i>تصميم المواقع</a></li>
+                        <li><a href="#" class="footer-link hover:text-accent transition flex items-center"><i class="fas fa-video ml-3 text-primary"></i>إنتاج الفيديو</a></li>
+                        <li><a href="#" class="footer-link hover:text-accent transition flex items-center"><i class="fas fa-palette ml-3 text-primary"></i>الهويات التجارية</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h4 class="text-white font-bold text-xl mb-6 pb-3 border-b border-gray-700 relative">
+                        تواصل معنا
+                        <span class="absolute bottom-0 right-0 w-12 h-0.5 bg-accent"></span>
+                    </h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-start space-x-3 space-x-reverse group">
+                            <div class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center group-hover:bg-primary transition"><i class="fas fa-map-marker-alt text-accent"></i></div>
+                            <div><span class="block text-white font-medium">العنوان</span><span class="text-sm text-gray-400">الرياض، السعودية</span></div>
+                        </li>
+                        <li class="flex items-start space-x-3 space-x-reverse group">
+                            <div class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center group-hover:bg-primary transition"><i class="fas fa-phone-alt text-accent"></i></div>
+                            <div><span class="block text-white font-medium">الهاتف</span><span class="text-sm text-gray-400">+966 50 123 4567</span></div>
+                        </li>
+                        <li class="flex items-start space-x-3 space-x-reverse group">
+                            <div class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center group-hover:bg-primary transition"><i class="fas fa-envelope text-accent"></i></div>
+                            <div><span class="block text-white font-medium">البريد</span><span class="text-sm text-gray-400">info@trendagency.com</span></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="border-t border-gray-800 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                    <p class="text-gray-400 text-sm">© 2024 <span class="text-accent font-semibold">تريند للدعاية والإعلان</span> - جميع الحقوق محفوظة</p>
+                    <div class="flex gap-6 text-sm">
+                        <a href="#" class="footer-bottom-link hover:text-accent">سياسة الخصوصية</a>
+                        <a href="#" class="footer-bottom-link hover:text-accent">الشروط والأحكام</a>
+                    </div>
+                    <button id="back-to-top" class="w-10 h-10 bg-gray-800 hover:bg-primary rounded-lg flex items-center justify-center transition"><i class="fas fa-chevron-up"></i></button>
+                </div>
+            </div>
+        </div>
     </footer>
-</body>
 
+    <!-- Back to Top Script -->
+    <script>
+        document.getElementById('back-to-top')?.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+        // Mobile menu toggle بسيط
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        if (btn && menu) {
+            btn.addEventListener('click', () => {
+                menu.style.display = menu.style.display === 'none' ? 'block' : 'none';
+                btn.querySelector('i').className = menu.style.display === 'block' ? 'fas fa-times' : 'fas fa-bars';
+            });
+        }
+        // منع التمرير خلف lightbox يتم التعامل معه في navigate
+    </script>
+</body>
 </html>
