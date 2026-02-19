@@ -337,14 +337,13 @@
 <body class="font-cairo bg-white text-gray-800 overflow-x-hidden">
  <!-- Navbar -->
     <nav id="navbar" class="fixed top-0 left-0 right-0 bg-white shadow-lg z-50 transition-all duration-300">
-        <div class="container mx-auto px-4 lg:px-8">
+        <div class="container mx-auto px-6 md:px-12 lg:px-24 xl:px-32">
             <div class="flex justify-between items-center h-20">
-
+                
                 <!-- Logo & Brand -->
                 <div class="flex items-center space-x-3 space-x-reverse">
-                    <div
-                        class="w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center">
-                        <img src="../img/logo.png" alt="">
+                    <div class="w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center">
+                          <img src="../img/logo.png" alt="">
                     </div>
                     <div>
                         <h1 class="text-2xl font-bold text-primary">تريند</h1>
@@ -354,50 +353,27 @@
 
                 <!-- Desktop Menu -->
                 <ul class="hidden lg:flex items-center space-x-8 space-x-reverse">
-                    <li><a href="#home"
-                            class="nav-link text-gray-700 hover:text-primary transition-colors duration-300 font-semibold">الرئيسية</a>
-                    </li>
-
+                    <li><a href="../index.html" class="nav-link text-gray-700 hover:text-primary transition-colors duration-300 font-semibold">الرئيسية</a></li>
+                    
                     <!-- Services Dropdown -->
                     <li class="relative group">
-                        <a href="./services.html"
-                            class="nav-link text-gray-700 hover:text-primary transition-colors duration-300 font-semibold flex items-center">
+                        <a href="../services.html" class="nav-link text-gray-700 hover:text-primary transition-colors duration-300 font-semibold flex items-center">
                             خدماتنا
                             <i class="fas fa-chevron-down mr-2 text-xs"></i>
                         </a>
-                        <ul
-                            class="absolute top-full right-0 bg-white shadow-2xl rounded-lg mt-2 py-3 w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform group-hover:translate-y-0 translate-y-2">
-                            <li><a href="#service-social"
-                                    class="block px-6 py-3 hover:bg-gray-50 hover:text-primary transition-colors duration-200"><i
-                                        class="fas fa-hashtag ml-3 text-primary"></i>إدارة وسائل التواصل الاجتماعي</a>
-                            </li>
-                            <li><a href="#service-web"
-                                    class="block px-6 py-3 hover:bg-gray-50 hover:text-primary transition-colors duration-200"><i
-                                        class="fas fa-laptop-code ml-3 text-primary"></i>تصميم واستضافة المواقع</a></li>
-                            <li><a href="#service-video"
-                                    class="block px-6 py-3 hover:bg-gray-50 hover:text-primary transition-colors duration-200"><i
-                                        class="fas fa-video ml-3 text-primary"></i>إنتاج الفيديوهات</a></li>
-                            <li><a href="#service-ads"
-                                    class="block px-6 py-3 hover:bg-gray-50 hover:text-primary transition-colors duration-200"><i
-                                        class="fab fa-google ml-3 text-primary"></i>إعلانات جوجل أدوردز</a></li>
-                            <li><a href="#service-branding"
-                                    class="block px-6 py-3 hover:bg-gray-50 hover:text-primary transition-colors duration-200"><i
-                                        class="fas fa-palette ml-3 text-primary"></i>تصميم الهويات التجارية</a></li>
-                            <li><a href="#service-photography"
-                                    class="block px-6 py-3 hover:bg-gray-50 hover:text-primary transition-colors duration-200"><i
-                                        class="fas fa-camera ml-3 text-primary"></i>تصوير المنتجات</a></li>
+                        <ul class="absolute top-full right-0 bg-white shadow-2xl rounded-lg mt-2 py-3 w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform group-hover:translate-y-0 translate-y-2">
+                            <li><a href="../services/media-management.html" class="block px-6 py-3 hover:bg-gray-50 hover:text-primary transition-colors duration-200"><i class="fas fa-hashtag ml-3 text-primary"></i>إدارة وسائل التواصل الاجتماعي</a></li>
+                            <li><a href="../services/Website-design.html" class="block px-6 py-3 hover:bg-gray-50 hover:text-primary transition-colors duration-200"><i class="fas fa-laptop-code ml-3 text-primary"></i>تصميم واستضافة المواقع</a></li>
+                            <li><a href="../services/Video-production.html" class="block px-6 py-3 hover:bg-gray-50 hover:text-primary transition-colors duration-200"><i class="fas fa-video ml-3 text-primary"></i>إنتاج الفيديوهات</a></li>
+                            <li><a href="../services/Google-adwords.html" class="block px-6 py-3 hover:bg-gray-50 hover:text-primary transition-colors duration-200"><i class="fab fa-google ml-3 text-primary"></i>إعلانات جوجل أدوردز</a></li>
+                            <li><a href="../services/Branding.html" class="block px-6 py-3 hover:bg-gray-50 hover:text-primary transition-colors duration-200"><i class="fas fa-palette ml-3 text-primary"></i>تصميم الهويات التجارية</a></li>
+                            <li><a href="../services/Content-creation.html" class="block px-6 py-3 hover:bg-gray-50 hover:text-primary transition-colors duration-200"><i class="fas fa-camera ml-3 text-primary"></i> صناعة المحتوي</a></li>
                         </ul>
                     </li>
-
-                    <li><a href="#projects"
-                            class="nav-link text-gray-700 hover:text-primary transition-colors duration-300 font-semibold">مشاريعنا</a>
-                    </li>
-                    <li><a href="./about.html"
-                            class="nav-link text-gray-700 hover:text-primary transition-colors duration-300 font-semibold">من
-                            نحن</a></li>
-                    <li><a href="#contact"
-                            class="bg-gradient-to-r from-primary to-secondary text-white px-6 py-3 rounded-full hover:shadow-xl transition-all duration-300 font-semibold hover:scale-105">تواصل
-                            معنا</a></li>
+                    
+                    <li><a href="../projects.html" class="nav-link text-gray-700 hover:text-primary transition-colors duration-300 font-semibold">مشاريعنا</a></li>
+                    <li><a href="../about.html" class="nav-link text-gray-700 hover:text-primary transition-colors duration-300 font-semibold">من نحن</a></li>
+                    <li><a href="tel:01095576024" class="bg-gradient-to-r from-primary to-secondary text-white px-6 py-3 rounded-full hover:shadow-xl transition-all duration-300 font-semibold hover:scale-105">تواصل معنا</a></li>
                 </ul>
 
                 <!-- Mobile Menu Button -->
@@ -410,45 +386,24 @@
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="lg:hidden hidden bg-white border-t border-gray-200">
             <ul class="py-4">
-                <li><a href="#home"
-                        class="block px-6 py-3 hover:bg-gray-50 text-gray-700 hover:text-primary transition-colors">الرئيسية</a>
-                </li>
+                <li><a href="../index.html" class="block px-6 py-3 hover:bg-gray-50 text-gray-700 hover:text-primary transition-colors">الرئيسية</a></li>
                 <li>
-                    <button id="mobile-services-btn"
-                        class="w-full text-right px-6 py-3 hover:bg-gray-50 text-gray-700 hover:text-primary transition-colors flex justify-between items-center">
+                    <button id="mobile-services-btn" class="w-full text-right px-6 py-3 hover:bg-gray-50 text-gray-700 hover:text-primary transition-colors flex justify-between items-center">
                         خدماتنا
                         <i class="fas fa-chevron-down text-xs"></i>
                     </button>
                     <ul id="mobile-services-menu" class="hidden bg-gray-50">
-                        <li><a href="#service-social"
-                                class="block px-10 py-2 hover:bg-gray-100 text-sm text-gray-600 hover:text-primary">إدارة
-                                وسائل التواصل الاجتماعي</a></li>
-                        <li><a href="#service-web"
-                                class="block px-10 py-2 hover:bg-gray-100 text-sm text-gray-600 hover:text-primary">تصميم
-                                واستضافة المواقع</a></li>
-                        <li><a href="#service-video"
-                                class="block px-10 py-2 hover:bg-gray-100 text-sm text-gray-600 hover:text-primary">إنتاج
-                                الفيديوهات</a></li>
-                        <li><a href="#service-ads"
-                                class="block px-10 py-2 hover:bg-gray-100 text-sm text-gray-600 hover:text-primary">إعلانات
-                                جوجل أدوردز</a></li>
-                        <li><a href="#service-branding"
-                                class="block px-10 py-2 hover:bg-gray-100 text-sm text-gray-600 hover:text-primary">تصميم
-                                الهويات التجارية</a></li>
-                        <li><a href="#service-photography"
-                                class="block px-10 py-2 hover:bg-gray-100 text-sm text-gray-600 hover:text-primary">تصوير
-                                المنتجات</a></li>
+                        <li><a href="../services/media-management.html" class="block px-10 py-2 hover:bg-gray-100 text-sm text-gray-600 hover:text-primary">إدارة وسائل التواصل الاجتماعي</a></li>
+                        <li><a href="../services/Website-design.html" class="block px-10 py-2 hover:bg-gray-100 text-sm text-gray-600 hover:text-primary">تصميم واستضافة المواقع</a></li>
+                        <li><a href="../services/Video-production.html" class="block px-10 py-2 hover:bg-gray-100 text-sm text-gray-600 hover:text-primary">إنتاج الفيديوهات</a></li>
+                        <li><a href="../services/Google-adwords.html" class="block px-10 py-2 hover:bg-gray-100 text-sm text-gray-600 hover:text-primary">إعلانات جوجل أدوردز</a></li>
+                        <li><a href="#" class="block px-10 py-2 hover:bg-gray-100 text-sm text-gray-600 hover:text-primary">تصميم الهويات التجارية</a></li>
+                        <li><a href="../services/Content-creation.html" class="block px-10 py-2 hover:bg-gray-100 text-sm text-gray-600 hover:text-primary"> صناعة المحتوي </a></li>
                     </ul>
                 </li>
-                <li><a href="#projects"
-                        class="block px-6 py-3 hover:bg-gray-50 text-gray-700 hover:text-primary transition-colors">مشاريعنا</a>
-                </li>
-                <li><a href="#about"
-                        class="block px-6 py-3 hover:bg-gray-50 text-gray-700 hover:text-primary transition-colors">من
-                        نحن</a></li>
-                <li><a href="#contact"
-                        class="block px-6 py-3 hover:bg-gray-50 text-primary font-semibold transition-colors">تواصل
-                        معنا</a></li>
+                <li><a href="../projects.html" class="block px-6 py-3 hover:bg-gray-50 text-gray-700 hover:text-primary transition-colors">مشاريعنا</a></li>
+                <li><a href="../about.html" class="block px-6 py-3 hover:bg-gray-50 text-gray-700 hover:text-primary transition-colors">من نحن</a></li>
+                <li><a href="tel:01095576024" class="block px-6 py-3 hover:bg-gray-50 text-primary font-semibold transition-colors">تواصل معنا</a></li>
             </ul>
         </div>
     </nav>
@@ -719,36 +674,17 @@
     <footer class="bg-gray-900 text-gray-300 pt-20 pb-8 relative overflow-hidden">
         <!-- Wave Pattern -->
         <div class="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-primary via-secondary to-accent"></div>
-
-        <!-- Newsletter Section -->
-        <div class="container mx-auto px-4 lg:px-8 mb-16 relative z-10">
-            <div
-                class="bg-gradient-to-r from-gray-800 to-gray-900 border border-gray-700 rounded-2xl p-8 shadow-2xl transform -translate-y-10">
-                <div class="max-w-3xl mx-auto text-center">
-                    <h3 class="text-2xl font-bold text-white mb-3">ابقَ على اطلاع بآخر مستجداتنا</h3>
-                    <p class="text-gray-400 mb-6">اشترك في نشرتنا البريدية لتصلك أحدث العروض والأخبار</p>
-                    <form class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-                        <input type="email" placeholder="بريدك الإلكتروني"
-                            class="flex-grow px-6 py-3 bg-gray-700 text-white rounded-full border border-gray-600 focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/30 transition-all duration-300">
-                        <button type="submit"
-                            class="bg-gradient-to-r from-primary to-secondary text-white px-8 py-3 rounded-full hover:shadow-lg hover:shadow-primary/30 transition-all duration-300 font-semibold hover:scale-105">
-                            اشترك الآن
-                        </button>
-                    </form>
-                    <p class="text-gray-500 text-xs mt-4">نعد بعدم مشاركة بريدك مع أي طرف ثالث</p>
-                </div>
-            </div>
-        </div>
+        
+     
 
         <div class="container mx-auto px-4 lg:px-8">
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10 mb-16">
-
+                
                 <!-- Company Info - Enhanced -->
                 <div>
                     <div class="flex items-center space-x-3 space-x-reverse mb-6">
-                        <div
-                            class="w-14 h-14 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center shadow-lg">
-                            <span class="text-white text-3xl font-bold">T</span>
+                        <div class="w-14 h-14 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center shadow-lg">
+                            <img src="../img/logo.png" alt="">
                         </div>
                         <div>
                             <h3 class="text-2xl font-bold text-white">تريند</h3>
@@ -756,30 +692,26 @@
                         </div>
                     </div>
                     <p class="text-gray-400 leading-relaxed mb-6">
-                        رواد في عالم الدعاية والإعلان، نبتكر حلولاً تسويقية استثنائية تحوّل العلامات التجارية إلى
-                        إمبراطوريات
+                        رواد في عالم الدعاية والإعلان، نبتكر حلولاً تسويقية استثنائية تحوّل العلامات التجارية إلى إمبراطوريات
                     </p>
                     <div class="flex gap-3">
-                        <a href="#"
-                            class="social-icon-footer w-11 h-11 bg-gray-800 hover:bg-primary rounded-xl flex items-center justify-center transition-all duration-300 group">
+                        <a href="https://www.facebook.com/trend.e.marketing74" class="social-icon-footer w-11 h-11 bg-gray-800 hover:bg-primary rounded-xl flex items-center justify-center transition-all duration-300 group">
                             <i class="fab fa-facebook-f group-hover:scale-110 transition-transform"></i>
                         </a>
-                        <a href="#"
-                            class="social-icon-footer w-11 h-11 bg-gray-800 hover:bg-blue-400 rounded-xl flex items-center justify-center transition-all duration-300 group">
-                            <i class="fab fa-twitter group-hover:scale-110 transition-transform"></i>
+                       <a href="https://wa.me/201095576024"
+                            class="social-icon-footer w-11 h-11 bg-gray-800 hover:bg-green-600 rounded-xl flex items-center justify-center transition-all duration-300 group">
+                            <i class="fab fa-whatsapp group-hover:scale-110 transition-transform"></i>
                         </a>
-                        <a href="#"
-                            class="social-icon-footer w-11 h-11 bg-gray-800 hover:bg-pink-600 rounded-xl flex items-center justify-center transition-all duration-300 group">
+
+                        <a href="instagram.com/trend.agency.eg" class="social-icon-footer w-11 h-11 bg-gray-800 hover:bg-pink-600 rounded-xl flex items-center justify-center transition-all duration-300 group">
                             <i class="fab fa-instagram group-hover:scale-110 transition-transform"></i>
                         </a>
-                        <a href="#"
-                            class="social-icon-footer w-11 h-11 bg-gray-800 hover:bg-[#821a2f] rounded-xl flex items-center justify-center transition-all duration-300 group">
-                            <i class="fab fa-linkedin-in group-hover:scale-110 transition-transform"></i>
+                       
+                       <a href="https://www.tiktok.com/@trend.agency.eg"
+                              class="social-icon-footer w-11 h-11 bg-gray-800 hover:bg-black rounded-xl flex items-center justify-center transition-all duration-300 group">
+                            <i class="fab fa-tiktok group-hover:scale-110 transition-transform"></i>
                         </a>
-                        <a href="#"
-                            class="social-icon-footer w-11 h-11 bg-gray-800 hover:bg-red-600 rounded-xl flex items-center justify-center transition-all duration-300 group">
-                            <i class="fab fa-youtube group-hover:scale-110 transition-transform"></i>
-                        </a>
+
                     </div>
                 </div>
 
@@ -791,46 +723,37 @@
                     </h4>
                     <ul class="space-y-3">
                         <li>
-                            <a href="#home"
-                                class="footer-link hover:text-accent transition-all duration-300 flex items-center group">
+                            <a href="../index.html" class="footer-link hover:text-accent transition-all duration-300 flex items-center group">
                                 <i class="fas fa-chevron-left ml-3 text-xs group-hover:ml-4 transition-all"></i>
                                 الرئيسية
                             </a>
                         </li>
                         <li>
-                            <a href="#services"
-                                class="footer-link hover:text-accent transition-all duration-300 flex items-center group">
+                            <a href="../services.html" class="footer-link hover:text-accent transition-all duration-300 flex items-center group">
                                 <i class="fas fa-chevron-left ml-3 text-xs group-hover:ml-4 transition-all"></i>
                                 خدماتنا
                             </a>
                         </li>
                         <li>
-                            <a href="#projects"
-                                class="footer-link hover:text-accent transition-all duration-300 flex items-center group">
+                            <a href="../projects.html" class="footer-link hover:text-accent transition-all duration-300 flex items-center group">
                                 <i class="fas fa-chevron-left ml-3 text-xs group-hover:ml-4 transition-all"></i>
                                 مشاريعنا
                             </a>
                         </li>
                         <li>
-                            <a href="#about"
-                                class="footer-link hover:text-accent transition-all duration-300 flex items-center group">
+                            <a href="../about.html" class="footer-link hover:text-accent transition-all duration-300 flex items-center group">
                                 <i class="fas fa-chevron-left ml-3 text-xs group-hover:ml-4 transition-all"></i>
                                 من نحن
                             </a>
                         </li>
                         <li>
-                            <a href="#contact"
-                                class="footer-link hover:text-accent transition-all duration-300 flex items-center group">
+                            <a href="tel:01095576024" class="footer-link hover:text-accent transition-all duration-300 flex items-center group">
                                 <i class="fas fa-chevron-left ml-3 text-xs group-hover:ml-4 transition-all"></i>
                                 تواصل معنا
                             </a>
                         </li>
                         <li>
-                            <a href="#blog"
-                                class="footer-link hover:text-accent transition-all duration-300 flex items-center group">
-                                <i class="fas fa-chevron-left ml-3 text-xs group-hover:ml-4 transition-all"></i>
-                                المدونة
-                            </a>
+                           
                         </li>
                     </ul>
                 </div>
@@ -843,51 +766,39 @@
                     </h4>
                     <ul class="space-y-3">
                         <li>
-                            <a href="#service-social"
-                                class="footer-link hover:text-accent transition-all duration-300 flex items-center group">
-                                <i
-                                    class="fas fa-hashtag ml-3 text-sm text-primary group-hover:scale-125 transition-transform"></i>
+                            <a href="../services/media-management.html" class="footer-link hover:text-accent transition-all duration-300 flex items-center group">
+                                <i class="fas fa-hashtag ml-3 text-sm text-primary group-hover:scale-125 transition-transform"></i>
                                 إدارة السوشيال ميديا
                             </a>
                         </li>
                         <li>
-                            <a href="#service-web"
-                                class="footer-link hover:text-accent transition-all duration-300 flex items-center group">
-                                <i
-                                    class="fas fa-laptop-code ml-3 text-sm text-primary group-hover:scale-125 transition-transform"></i>
+                            <a href="../services/Website-design.html" class="footer-link hover:text-accent transition-all duration-300 flex items-center group">
+                                <i class="fas fa-laptop-code ml-3 text-sm text-primary group-hover:scale-125 transition-transform"></i>
                                 تصميم المواقع
                             </a>
                         </li>
                         <li>
-                            <a href="#service-video"
-                                class="footer-link hover:text-accent transition-all duration-300 flex items-center group">
-                                <i
-                                    class="fas fa-video ml-3 text-sm text-primary group-hover:scale-125 transition-transform"></i>
+                            <a href="../services/Video-production.html" class="footer-link hover:text-accent transition-all duration-300 flex items-center group">
+                                <i class="fas fa-video ml-3 text-sm text-primary group-hover:scale-125 transition-transform"></i>
                                 إنتاج الفيديو
                             </a>
                         </li>
                         <li>
-                            <a href="#service-ads"
-                                class="footer-link hover:text-accent transition-all duration-300 flex items-center group">
-                                <i
-                                    class="fab fa-google ml-3 text-sm text-primary group-hover:scale-125 transition-transform"></i>
+                            <a href="../services/Google-adwords.html" class="footer-link hover:text-accent transition-all duration-300 flex items-center group">
+                                <i class="fab fa-google ml-3 text-sm text-primary group-hover:scale-125 transition-transform"></i>
                                 إعلانات جوجل
                             </a>
                         </li>
                         <li>
-                            <a href="#service-branding"
-                                class="footer-link hover:text-accent transition-all duration-300 flex items-center group">
-                                <i
-                                    class="fas fa-palette ml-3 text-sm text-primary group-hover:scale-125 transition-transform"></i>
+                            <a href="../services/Branding.html" class="footer-link hover:text-accent transition-all duration-300 flex items-center group">
+                                <i class="fas fa-palette ml-3 text-sm text-primary group-hover:scale-125 transition-transform"></i>
                                 الهويات التجارية
                             </a>
                         </li>
                         <li>
-                            <a href="#service-photography"
-                                class="footer-link hover:text-accent transition-all duration-300 flex items-center group">
-                                <i
-                                    class="fas fa-camera ml-3 text-sm text-primary group-hover:scale-125 transition-transform"></i>
-                                تصوير المنتجات
+                            <a href="../services/Content-creation.html" class="footer-link hover:text-accent transition-all duration-300 flex items-center group">
+                                <i class="fas fa-camera ml-3 text-sm text-primary group-hover:scale-125 transition-transform"></i>
+                                 صناعة المحتوي 
                             </a>
                         </li>
                     </ul>
@@ -901,28 +812,25 @@
                     </h4>
                     <ul class="space-y-4">
                         <li class="flex items-start space-x-3 space-x-reverse group cursor-pointer">
-                            <div
-                                class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center group-hover:bg-primary transition-all duration-300">
+                            <div class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center group-hover:bg-primary transition-all duration-300">
                                 <i class="fas fa-map-marker-alt text-accent group-hover:text-white"></i>
                             </div>
                             <div>
                                 <span class="block text-white font-medium mb-1">العنوان</span>
-                                <span class="text-sm text-gray-400">الرياض، المملكة العربية السعودية</span>
+                                <span class="text-sm text-gray-400">القاهرة،مصر</span>
                             </div>
                         </li>
                         <li class="flex items-start space-x-3 space-x-reverse group cursor-pointer">
-                            <div
-                                class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center group-hover:bg-primary transition-all duration-300">
+                            <div class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center group-hover:bg-primary transition-all duration-300">
                                 <i class="fas fa-phone-alt text-accent group-hover:text-white"></i>
                             </div>
                             <div>
                                 <span class="block text-white font-medium mb-1">الهاتف</span>
-                                <span dir="ltr" class="text-sm text-gray-400">+966 50 123 4567</span>
+                                <span dir="ltr" class="text-sm text-gray-400">01095576024</span>
                             </div>
                         </li>
                         <li class="flex items-start space-x-3 space-x-reverse group cursor-pointer">
-                            <div
-                                class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center group-hover:bg-primary transition-all duration-300">
+                            <div class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center group-hover:bg-primary transition-all duration-300">
                                 <i class="fas fa-envelope text-accent group-hover:text-white"></i>
                             </div>
                             <div>
@@ -931,8 +839,7 @@
                             </div>
                         </li>
                         <li class="flex items-start space-x-3 space-x-reverse group cursor-pointer">
-                            <div
-                                class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center group-hover:bg-primary transition-all duration-300">
+                            <div class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center group-hover:bg-primary transition-all duration-300">
                                 <i class="fas fa-clock text-accent group-hover:text-white"></i>
                             </div>
                             <div>
@@ -968,38 +875,33 @@
                             </div>
                         </div>
                     </div>
-
+                    
                     <div class="text-center">
                         <h5 class="text-white font-medium mb-4">شهادات الجودة</h5>
                         <div class="flex gap-4">
-                            <div
-                                class="w-16 h-16 bg-gray-800 rounded-lg flex items-center justify-center border border-gray-700">
+                            <div class="w-16 h-16 bg-gray-800 rounded-lg flex items-center justify-center border border-gray-700">
                                 <i class="fas fa-shield-alt text-accent text-2xl"></i>
                             </div>
-                            <div
-                                class="w-16 h-16 bg-gray-800 rounded-lg flex items-center justify-center border border-gray-700">
+                            <div class="w-16 h-16 bg-gray-800 rounded-lg flex items-center justify-center border border-gray-700">
                                 <i class="fas fa-award text-accent text-2xl"></i>
                             </div>
-                            <div
-                                class="w-16 h-16 bg-gray-800 rounded-lg flex items-center justify-center border border-gray-700">
+                            <div class="w-16 h-16 bg-gray-800 rounded-lg flex items-center justify-center border border-gray-700">
                                 <i class="fas fa-certificate text-accent text-2xl"></i>
                             </div>
                         </div>
                     </div>
-
+                    
                     <div class="text-center lg:text-left">
                         <h5 class="text-white font-medium mb-4">تطبيق الجوال</h5>
                         <div class="flex gap-3 justify-center lg:justify-start">
-                            <button
-                                class="px-4 py-2 bg-gray-800 hover:bg-gray-700 rounded-lg flex items-center gap-2 transition-all duration-300 group">
+                            <button class="px-4 py-2 bg-gray-800 hover:bg-gray-700 rounded-lg flex items-center gap-2 transition-all duration-300 group">
                                 <i class="fab fa-apple text-xl"></i>
                                 <div class="text-right">
                                     <div class="text-xs text-gray-400">تحميل من</div>
                                     <div class="text-white text-sm">App Store</div>
                                 </div>
                             </button>
-                            <button
-                                class="px-4 py-2 bg-gray-800 hover:bg-gray-700 rounded-lg flex items-center gap-2 transition-all duration-300 group">
+                            <button class="px-4 py-2 bg-gray-800 hover:bg-gray-700 rounded-lg flex items-center gap-2 transition-all duration-300 group">
                                 <i class="fab fa-google-play text-xl"></i>
                                 <div class="text-right">
                                     <div class="text-xs text-gray-400">تحميل من</div>
@@ -1016,30 +918,20 @@
                 <div class="flex flex-col md:flex-row justify-between items-center gap-6">
                     <div class="text-center md:text-right">
                         <p class="text-gray-400 text-sm">
-                            © 2024 <span class="text-accent font-semibold">تريند للدعاية والإعلان</span> - جميع الحقوق
-                            محفوظة
+                            © 2024 <span class="text-accent font-semibold">تريند للدعاية والإعلان</span> - جميع الحقوق محفوظة
                         </p>
                         <p class="text-gray-500 text-xs mt-1">رقم السجل التجاري: 1010456789</p>
                     </div>
-
+                    
                     <div class="flex gap-6 text-sm">
-                        <a href="#"
-                            class="footer-bottom-link hover:text-accent transition-all duration-300 relative after:absolute after:bottom-0 after:right-0 after:w-0 after:h-0.5 after:bg-accent after:transition-all after:duration-300 hover:after:w-full">سياسة
-                            الخصوصية</a>
-                        <a href="#"
-                            class="footer-bottom-link hover:text-accent transition-all duration-300 relative after:absolute after:bottom-0 after:right-0 after:w-0 after:h-0.5 after:bg-accent after:transition-all after:duration-300 hover:after:w-full">الشروط
-                            والأحكام</a>
-                        <a href="#"
-                            class="footer-bottom-link hover:text-accent transition-all duration-300 relative after:absolute after:bottom-0 after:right-0 after:w-0 after:h-0.5 after:bg-accent after:transition-all after:duration-300 hover:after:w-full">إخلاء
-                            المسؤولية</a>
-                        <a href="#"
-                            class="footer-bottom-link hover:text-accent transition-all duration-300 relative after:absolute after:bottom-0 after:right-0 after:w-0 after:h-0.5 after:bg-accent after:transition-all after:duration-300 hover:after:w-full">خريطة
-                            الموقع</a>
+                        <a href="#" class="footer-bottom-link hover:text-accent transition-all duration-300 relative after:absolute after:bottom-0 after:right-0 after:w-0 after:h-0.5 after:bg-accent after:transition-all after:duration-300 hover:after:w-full">سياسة الخصوصية</a>
+                        <a href="#" class="footer-bottom-link hover:text-accent transition-all duration-300 relative after:absolute after:bottom-0 after:right-0 after:w-0 after:h-0.5 after:bg-accent after:transition-all after:duration-300 hover:after:w-full">الشروط والأحكام</a>
+                        <a href="#" class="footer-bottom-link hover:text-accent transition-all duration-300 relative after:absolute after:bottom-0 after:right-0 after:w-0 after:h-0.5 after:bg-accent after:transition-all after:duration-300 hover:after:w-full">إخلاء المسؤولية</a>
+                        <a href="#" class="footer-bottom-link hover:text-accent transition-all duration-300 relative after:absolute after:bottom-0 after:right-0 after:w-0 after:h-0.5 after:bg-accent after:transition-all after:duration-300 hover:after:w-full">خريطة الموقع</a>
                     </div>
-
+                    
                     <div class="flex items-center gap-3">
-                        <button id="back-to-top"
-                            class="w-10 h-10 bg-gray-800 hover:bg-primary rounded-lg flex items-center justify-center transition-all duration-300 group">
+                        <button id="back-to-top" class="w-10 h-10 bg-gray-800 hover:bg-primary rounded-lg flex items-center justify-center transition-all duration-300 group">
                             <i class="fas fa-chevron-up group-hover:animate-bounce"></i>
                         </button>
                         <div class="text-xs text-gray-500">العودة للأعلى</div>
