@@ -17,7 +17,148 @@
   "hero_highlight": "Creative Reality",
   "hero_desc": "Trend Advertising Company – Your strategic partner in building a strong and impactful digital presence. We provide integrated solutions that combine creativity and professionalism to achieve your marketing goals.",
   "hero_btn_contact": "Contact Us",
-  "hero_btn_projects": "View Our Projects"
+  "hero_btn_projects": "View Our Projects",
+  "stats_projects": "Successful Projects",
+  "stats_clients": "Happy Clients",
+  "stats_experience": "Years of Experience",
+
+
+
+   "services_title": "Our Services",
+  "services_desc": "We provide creative solutions and integrated marketing strategies that help your brand grow and stand out in the market.",
+  "service_video_title": "Video Production",
+  "service_video_desc": "We produce professional videos that tell your story with high quality and strong visual impact.",
+  "service_web_title": "Website Design & Hosting",
+  "service_web_desc": "Responsive websites for all devices with secure and fast hosting.",
+
+  "service_social_title": "Social Media Management",
+  "service_social_desc": "Build and grow your presence on social media platforms with strategic plans.",
+
+  "service_brand_title": "Brand Identity Design",
+  "service_brand_desc": "A complete visual identity that reflects your brand personality and sets you apart.",
+  "service_animation_title": "Animation Video Production",
+  "service_animation_desc": "Creative and engaging animated videos that deliver your message in an innovative way.",
+
+  "service_google_title": "Google Ads Campaigns",
+  "service_google_desc": "Targeted advertising campaigns to increase your visibility on Google search.",
+
+  "service_crm_title": "Customer Relationship Management",
+  "service_crm_desc": "Comprehensive solutions to manage and develop your relationships with customers effectively.",
+
+  "service_wordpress_title": "WordPress Website Management",
+  "service_wordpress_desc": "Full management for WordPress websites including updates, security, backups, speed optimization, and troubleshooting.",
+
+  "service_seo_title": "Content Writing & SEO",
+  "service_seo_desc": "Professional content and search engine optimization to increase your online visibility.",
+  "consult_now": "Consult Our Experts Now",
+
+
+
+
+  "why_title": "Why Choose Us",
+  "why_desc": "At Trend, we provide integrated creative solutions that combine long experience with unlimited creativity to achieve your marketing goals and strengthen your brand.",
+
+  "why_exp_title": "Over 8 Years of Experience",
+  "why_exp_desc": "Extensive experience in advertising and marketing campaigns that help brands grow and achieve their goals.",
+
+  "why_creative_title": "Innovative Creativity",
+  "why_creative_desc": "Creative ideas and unique solutions that make your brand stand out and attract your target audience.",
+
+  "why_results_title": "Real Results",
+  "why_results_desc": "Strategic marketing plans that ensure clear ROI and measurable results.",
+
+  "why_team_title": "Professional Team",
+  "why_team_desc": "A specialized team in marketing and design working professionally to deliver the best quality.",
+
+  "why_support_title": "Continuous Support",
+  "why_support_desc": "Ongoing technical support and follow-up to ensure stable performance and the best results.",
+
+
+
+
+
+  
+  "call_now": "Call Us Now",
+  "whatsapp_contact": "Contact Us on WhatsApp",
+  "contact_title": "Contact Us",
+  "contact_desc": "We are here to answer your questions and help you achieve your marketing goals.",
+
+  "phone": "Phone",
+  "email": "Email",
+  "location": "Location",
+  "contact_location": "Cairo, Egypt",
+  "work_hours": "Working Hours",
+ "contact_service_select": "Select Required Service",
+  "contact_service_social": "Social Media Management",
+  "contact_service_web": "Website Design & Hosting",
+  "contact_service_video": "Video Production",
+  "contact_service_ads": "Google Ads",
+  "contact_service_branding": "Brand Identity Design",
+  "service_photography": "Product Photography",
+  "work_hours_details": "Detailed Working Hours",
+  "days_work": "Sunday - Thursday",
+  "work_time": "9 AM - 6 PM",
+  "friday": "Friday",
+  "saturday": "Saturday",
+  "holiday": "Closed",
+
+  "follow_us": "Follow Us:",
+  "send_message": "Send Us a Message",
+
+  "name": "Name",
+  "phone_number": "Phone Number",
+  "message": "Your Message",
+
+  "send_btn": "Send Message",
+
+  "quick_contact": "Quick Contact:",
+  "call": "Call",
+  "whatsapp": "WhatsApp",
+  "mail": "Email",
+
+
+
+    "newsletter_title": "Stay Updated With Our Latest News",
+  "newsletter_desc": "Subscribe to our newsletter to receive the latest offers and updates.",
+  "newsletter_email": "Your Email Address",
+  "newsletter_btn": "Subscribe Now",
+  "newsletter_note": "We promise not to share your email with any third party.",
+
+
+
+
+  "footer_desc": "Leaders in advertising and marketing, creating exceptional marketing solutions that turn brands into powerful empires.",
+
+  "quick_links": "Quick Links",
+  "services": "Our Services",
+  "contact_us": "Contact Us",
+
+  "home": "Home",
+  "projects": "Projects",
+  "about": "About Us",
+  "contact": "Contact Us",
+
+  "google_ads": "Google Ads",
+  "content_creation": "Content Creation",
+  "video_production": "Video Production",
+  "social_media": "Social Media Management",
+  "website_design": "Website Design",
+  "branding": "Brand Identity",
+
+  "address": "Address",
+ 
+  "working_hours": "Working Hours",
+
+  "payment_methods": "Payment Methods",
+  "quality_certificates": "Quality Certificates",
+  "mobile_app": "Mobile App",
+
+  "privacy_policy": "Privacy Policy",
+  "terms_conditions": "Terms & Conditions",
+  "disclaimer": "Disclaimer",
+  "sitemap": "Sitemap",
+
+  "back_to_top": "Back to Top"
 
   
 }
