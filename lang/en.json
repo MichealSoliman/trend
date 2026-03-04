@@ -24,7 +24,7 @@
 
 
 
-   "services_title": "Our Services",
+  "services_title": "Our Services",
   "services_desc": "We provide creative solutions and integrated marketing strategies that help your brand grow and stand out in the market.",
   "service_video_title": "Video Production",
   "service_video_desc": "We produce professional videos that tell your story with high quality and strong visual impact.",
@@ -158,7 +158,58 @@
   "disclaimer": "Disclaimer",
   "sitemap": "Sitemap",
 
-  "back_to_top": "Back to Top"
+  "back_to_top": "Back to Top",
 
+
+
+   "about_title": "About Us",
+
+  "about_desc": "We are Trend Agency, providing innovative marketing and digital solutions that help brands grow and stand out in the market through creativity, strategic planning, and professional execution.",
+
+  "about_tag1": "Smart Marketing Expertise",
+  "about_tag2": "Creative Solutions",
+  "about_tag3": "Your Success Partner",
+
+  "about_story_title": "Our Story",
+
+  "about_story_p1": "Trend Advertising Agency was founded with an ambitious vision to create a real transformation in the world of marketing and advertising. We believe every brand has its own unique story, and our mission is to tell that story in a powerful way that connects with audiences.",
+
+  "about_story_p2": "For more than 8 years, we have helped build and develop hundreds of brands, from small startups to large enterprises, supporting them in achieving their business goals through integrated creative solutions.",
+  "about_values_title": "Our Core Values",
+
+"about_value1_title": "Creativity",
+"about_value1_desc": "We create out-of-the-box solutions that make your brand stand out.",
+
+"about_value2_title": "Trust",
+"about_value2_desc": "We focus on building long-term relationships based on trust.",
+
+"about_value3_title": "Excellence",
+"about_value3_desc": "We strive to achieve the highest standards of quality in everything we deliver.",
+
+"about_value4_title": "Teamwork",
+"about_value4_desc": "We believe that great achievements come through collaboration and teamwork.",
+
+"about_stats_title": "Our Numbers Speak",
+
+"about_stat1": "Years of Experience",
+"about_stat2": "Successful Projects",
+"about_stat3": "Client Satisfaction",
+"about_stat4": "Loyal Clients",
+"about_team_title": "Our Professional Team",
+
+  "about_team1_name": "Mohamed Ahmed",
+  "about_team1_position": "Creative Director",
+  "about_team1_desc": "Expert in design and brand identity with 10 years of experience",
+
+  "about_team2_name": "Sara Khaled",
+  "about_team2_position": "Digital Marketing Manager",
+  "about_team2_desc": "Specialist in social media marketing strategies",
+
+  "about_team3_name": "Abdullah Saeed",
+  "about_team3_position": "Lead Web Developer",
+  "about_team3_desc": "Expert in website and web application development",
+
+"about_call_now": "Call Us Now",
+"about_email_us": "Email Us"
   
 }
