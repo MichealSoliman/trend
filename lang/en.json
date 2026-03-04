@@ -1,7 +1,7 @@
 {
 "nav_title": "trand",
   "nav_home": "Home",
-  "nav_services": "Services",
+  "nav_services": " Services",
   "nav_projects": "Projects",
   "nav_about": "About Us",
   "nav_contact": "Contact Us",
@@ -210,6 +210,72 @@
   "about_team3_desc": "Expert in website and web application development",
 
 "about_call_now": "Call Us Now",
-"about_email_us": "Email Us"
+"about_email_us": "Email Us",
+
+
+
+
+
+ "page_services_title": "Our Integrated Services",
+
+  "page_services_desc": "We provide complete digital solutions starting from strategy and creativity to execution and development, helping you build a strong brand and achieve measurable results.",
+
+  "page_services_tag1": "Complete Digital Solutions",
+  "page_services_tag2": "Professional Team",
+  "page_services_tag3": "Measurable Results",
+
+  "services_experience_title": "Exceptional Work Experience",
+
+  "services_experience_desc": "We believe your project's success begins with an exceptional working experience. We work with you step by step to transform your ideas into reality while maintaining the highest standards of quality and professionalism.",
+
+  "services_feature1_title": "Achieving Goals",
+  "services_feature1_desc": "We help you define clear goals and achieve them effectively.",
+
+  "services_feature2_title": "Innovative Solutions",
+  "services_feature2_desc": "We create solutions tailored to your needs that stand out from the competition.",
+
+  "services_feature3_title": "Data Analysis",
+  "services_feature3_desc": "We use data analytics to continuously improve your project's performance.",
+
+  "services_quality_title": "Guaranteed Quality",
+  "services_quality_desc": "We are committed to the highest quality standards in everything we deliver.",
+
+  "services_delivery_title": "On-Time Delivery",
+  "services_delivery_desc": "We always deliver projects within the agreed timeline.",
+
+  "services_team_title": "Integrated Team",
+  "services_team_desc": "Experts in all fields of digital marketing.",
+
+
+ 
+"services_why_title": "Why Choose Our Services?",
+
+"services_fast_results_title": "Fast Results",
+"services_fast_results_desc": "We ensure measurable results in the shortest time using proven strategies.",
+
+"services_partnership_title": "True Partnership",
+"services_partnership_desc": "We work with you as a strategic partner, not just a service provider, to ensure your success.",
+
+"services_measurable_title": "Measurable Performance",
+"services_measurable_desc": "All our services include clear metrics and detailed reports to measure ROI.",
+
+"services_support_title": "Continuous Support",
+"services_support_desc": "Our support team is available around the clock to help with any questions or issues.",
+
+"faq_title": "Frequently Asked Questions",
+
+"faq_q1": "How long does it take to build a website?",
+"faq_a1": "The timeline depends on the size and complexity of the project. Simple websites take 2–4 weeks, medium projects 4–8 weeks, and large projects may take 8–12 weeks.",
+
+"faq_q2": "Do you provide technical support after delivery?",
+"faq_a2": "Yes, we offer free technical support for 3 months after delivery, in addition to monthly or yearly maintenance packages.",
+
+"faq_q3": "How can I track the performance of my marketing campaigns?",
+"faq_a3": "We provide detailed monthly reports with key performance metrics, along with a dashboard that allows you to track campaign performance anytime.",
+
+"faq_q4": "Do you offer free quotes?",
+"faq_a4": "Yes, we provide a free project evaluation and a detailed quotation with no obligation."
   
+
+
 }
