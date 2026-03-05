@@ -274,7 +274,64 @@
 "faq_a3": "We provide detailed monthly reports with key performance metrics, along with a dashboard that allows you to track campaign performance anytime.",
 
 "faq_q4": "Do you offer free quotes?",
-"faq_a4": "Yes, we provide a free project evaluation and a detailed quotation with no obligation."
+"faq_a4": "Yes, we provide a free project evaluation and a detailed quotation with no obligation.",
+
+
+"projects_title": "Our Projects",
+"projects_desc": "We take pride in delivering a wide range of successful projects in design, digital marketing, and content management. Our focus is always on quality, creativity, and achieving measurable results for our clients.",
+"projects_tag1": "Featured Projects",
+"projects_tag2": "Happy Clients",
+"projects_tag3": "Real Results",
+
+"project1_category": "Video Production & Design",
+"project1_title": "Video Production & Design for Egyptian Eagle",
+"project1_desc": "Producing professional marketing videos for Egyptian Eagle car rental to showcase the fleet, strengthen brand identity, and increase bookings.",
+"project1_details": "View Details",
+
+"project2_category": "Real Estate Branding",
+"project2_title": "Brand Identity Development for Engaz Real Estate",
+"project2_desc": "Designing a professional brand identity for Engaz Real Estate including logo design, color palette, design patterns, and social media templates to strengthen their market presence.",
+"project2_details": "View Details",
+
+"project3_category": "Motion Graphics",
+"project3_title": "Promotional Motion Video for Stoke Jalabiya",
+"project3_desc": "Producing a promotional motion graphics video for Stoke Islamic clothing brand highlighting fabric quality and modern designs to boost sales and social media engagement.",
+"project3_details": "View Details",
+
+"project4_category": "Video Production",
+"project4_title": "Promotional Videos for Zidan Group",
+"project4_desc": "Producing and designing professional promotional videos for Zidan Group real estate investment and finishing company to showcase projects and finishing work with a modern style.",
+"project4_details": "View Details",
+
+"project5_category": "Design & Social Media",
+"project5_title": "Design & Reels Videos for Far East Furniture Gallery",
+"project5_desc": "Creating creative designs and professional Facebook reels showcasing the latest furniture collections with engaging editing and marketing content to increase engagement and sales.",
+"project5_details": "View Case Study",
+
+"project6_category": "Design & Social Media",
+"project6_title": "Design & Promotional Videos for Purity Stars Water Solutions",
+"project6_desc": "Producing professional designs and promotional videos to showcase water filtration systems and purification stations while building trust and highlighting product quality.",
+"project6_details": "View Case Study",
+
+"project7_category": "E-commerce Store",
+"project7_title": "E-commerce Website for Water Corner",
+"project7_desc": "Designing and developing a professional online store for water filters and purification systems with an organized product structure and user-friendly shopping experience.",
+"project7_details": "View Case Study",
+
+"project8_category": "Real Estate Consulting",
+"project8_title": "Masarat Al-Ibdaa Real Estate Consulting Website",
+"project8_desc": "Designing a professional website presenting real estate consulting services, investment analysis, and project management with a clean user experience.",
+"project8_details": "View Case Study",
+
+"project9_category": "Marble & Granite",
+"project9_title": "Al-Nour Marble & Granite Website",
+"project9_desc": "Designing a professional website to showcase premium local and imported marble and granite collections along with previous projects and inspection request features.",
+"project9_details": "View Case Study",
+
+"project10_category": "Digital Marketing",
+"project10_title": "Marketing Videos for Car Star",
+"project10_desc": "Producing professional marketing videos for Car Star car sales and rental company targeting Facebook, Instagram, and TikTok to increase bookings and brand awareness.",
+"project10_details": "View Case Study"
   
 
 
