@@ -3,7 +3,16 @@ let currentLang = localStorage.getItem("lang") || "ar";
 async function loadLanguage(lang) {
   try {
 
-    const response = await fetch(`lang/${lang}.json`);
+    // تحديد المسار الصحيح
+    let path = "";
+
+    if (window.location.pathname.includes("/projects/") || window.location.pathname.includes("/services/")) {
+      path = "../lang/";
+    } else {
+      path = "lang/";
+    }
+
+    const response = await fetch(path + lang + ".json");
 
     if (!response.ok) {
       throw new Error("Language file not found");
@@ -12,15 +21,15 @@ async function loadLanguage(lang) {
     const translations = await response.json();
 
     // ترجمة النصوص
-    document.querySelectorAll("[data-i18n]").forEach(element => {
-      const key = element.getAttribute("data-i18n");
-      element.innerHTML = translations[key] || key;
+    document.querySelectorAll("[data-i18n]").forEach(el => {
+      const key = el.getAttribute("data-i18n");
+      el.innerHTML = translations[key] || key;
     });
 
     // ترجمة placeholder
-    document.querySelectorAll("[data-i18n-placeholder]").forEach(element => {
-      const key = element.getAttribute("data-i18n-placeholder");
-      element.setAttribute("placeholder", translations[key] || key);
+    document.querySelectorAll("[data-i18n-placeholder]").forEach(el => {
+      const key = el.getAttribute("data-i18n-placeholder");
+      el.placeholder = translations[key] || key;
     });
 
     // اتجاه الصفحة
