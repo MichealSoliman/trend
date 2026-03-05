@@ -387,7 +387,77 @@
   "branding_cta_btn1": "Start Your Brand Design Now",
   "branding_cta_btn2": "View Our Previous Work",
 
-  "branding_cta_note": "Get a free consultation and a full analysis of your current brand identity."
+  "branding_cta_note": "Get a free consultation and a full analysis of your current brand identity.",
+
+
+
+
+  "content_title": "Content Creation",
+  "content_desc": "We create engaging content that attracts audiences and drives interaction, from creative writing to visual design.",
+  "content_tag1": "Professional Content",
+  "content_tag2": "Visual Identity",
+  "content_tag3": "Brand Guidelines",
+
+  "content_why_title": "Why is our content different?",
+  "content_why_desc": "We don't create ordinary content, we craft stories that engage audiences and achieve your marketing goals.",
+
+  "content_card1_title": "Creative Writing",
+  "content_card1_desc": "Texts that attract readers and achieve marketing goals",
+
+  "content_card2_title": "Visual Production",
+  "content_card2_desc": "Professional videos that enhance your brand identity",
+
+  "content_card3_title": "Performance Analysis",
+  "content_card3_desc": "Continuous optimization based on data analysis",
+
+  "content_visual_title": "Visual Content That Captures Attention",
+  "content_visual_desc": "We create stunning visual content combining creativity and effectiveness",
+
+  "content_visual_list1": "Professional Graphic Design",
+  "content_visual_list2": "Short Marketing Videos",
+  "content_visual_list3": "Informative Infographics",
+  "content_visual_list4": "Interactive Motion Graphics",
+
+  "content_visual_btn": "View Our Portfolio",
+
+  "content_writing_title": "Conversion-Focused Content Writing",
+  "content_writing_desc": "Our professional writers create content that converts visitors into customers",
+
+  "content_quote_title": "The Power of Written Words",
+  "content_quote_desc": "Great content is the foundation of successful marketing",
+  "content_quote_text": "We write content that tells your brand story and builds trust",
+
+  "content_tag1": "Blog Articles",
+  "content_tag2": "Ad Copy",
+  "content_tag3": "Video Scripts",
+  "content_tag4": "Product Descriptions",
+
+  "content_stats_title": "Numbers That Reflect Our Content Quality",
+  "content_stats_desc": "We are proud of the success we achieved",
+
+  "content_stats1": "Completed Content Projects",
+  "content_stats2": "Customer Satisfaction",
+  "content_stats3": "Professional Writers & Designers",
+  "content_stats4": "24/7 Support",
+
+  "content_services_title": "Our Content Creation Services",
+  "content_services_desc": "A complete set of services covering all your content needs",
+
+  "content_service1_title": "Article Writing",
+  "content_service1_desc": "Professional articles for your blog",
+
+  "content_service2_title": "Video Production",
+  "content_service2_desc": "Professional marketing videos",
+
+  "content_service3_title": "Graphic Design",
+  "content_service3_desc": "Attractive visuals for social media",
+
+  "content_more_details": "More Details",
+
+  "content_cta_title": "Ready to Turn Content Into a Driving Force for Your Brand?",
+  "content_cta_desc": "Contact us today for a customized content strategy",
+  "content_cta_btn1": "Talk to Our Experts",
+  "content_cta_btn2": "View Our Work"
   
 
 
