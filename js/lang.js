@@ -48,6 +48,7 @@ function setLanguage(lang) {
   loadLanguage(lang);
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  loadLanguage(currentLang);
+document.addEventListener("DOMContentLoaded", async () => {
+  await loadLanguage(currentLang);
+  document.documentElement.style.visibility = "visible";
 });
