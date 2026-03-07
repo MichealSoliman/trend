@@ -658,7 +658,90 @@
 
   "motion_cta_call": "Contact Us Now",
   "motion_cta_projects": "View Our Previous Work",
-  "motion_cta_support": "Our support team is always ready to help you"
+  "motion_cta_support": "Our support team is always ready to help you",
+
+
+
+
+
+
+
+
+    "web_title": "Website Design & Hosting",
+  "web_desc": "We design fast, secure, and professional websites with powerful hosting that ensures high performance and an excellent user experience on all devices.",
+
+  "web_tag1": "Modern Website Design",
+  "web_tag2": "Fast & Secure Hosting",
+  "web_tag3": "Continuous Technical Support",
+
+  "web_solution_title": "Integrated Solutions to Build Your Digital Presence",
+  "web_solution_desc": "In a fast-evolving digital world, having a professional website is no longer optional. At Trend, we provide a complete solution from idea to launch with a high-performance website that works perfectly on all devices.",
+
+  "web_feature1_title": "Professional & Attractive Design",
+  "web_feature1_desc": "We create modern designs that reflect your brand identity and attract your visitors.",
+
+  "web_feature2_title": "Secure & Fast Hosting",
+  "web_feature2_desc": "We provide the best hosting solutions with high speed and complete security.",
+
+  "web_feature3_title": "Continuous Technical Support",
+  "web_feature3_desc": "Our professional support team is ready to help you anytime.",
+
+  "web_process_title": "Your Website Design Journey Step by Step",
+  "web_process_desc": "We follow a clear methodology to ensure you get the perfect website that fits your needs.",
+
+  "web_step1_title": "Planning & Analysis",
+  "web_step1_desc": "Understanding your needs, analyzing competitors, and defining goals.",
+
+  "web_step2_title": "Design & Development",
+  "web_step2_desc": "Creating an attractive user interface and developing the website with modern technologies.",
+
+  "web_step3_title": "Hosting & Deployment",
+  "web_step3_desc": "Setting up hosting and launching the website with the proper technical configuration.",
+
+  "web_step4_title": "Support & Maintenance",
+  "web_step4_desc": "Continuous support and regular maintenance to keep your website running smoothly.",
+
+  "web_hosting_title": "Hosting Plans for Every Business Need",
+
+  "web_plan1_title": "Basic Plan",
+  "web_plan1_price": "$99 / Year",
+   "web_plan1_feature1": "10GB Storage",
+  "web_plan1_feature2": "Free Domain",
+  "web_plan1_feature3": "Free SSL",
+  "web_plan1_desc": "Perfect for personal websites and small blogs",
+
+  "web_plan2_title": "Professional Plan",
+  "web_plan2_price": "$199 / Year",
+  "web_plan2_desc": "Ideal for startups and business websites",
+"web_plan2_feature1": "50GB Storage",
+  "web_plan2_feature2": "3 Domains",
+  "web_plan2_feature3": "Cloud Hosting",
+
+  "web_plan3_title": "Advanced Plan",
+  "web_plan3_price": "$399 / Year",
+  "web_plan3_desc": "Best for large businesses and advanced applications",
+  "web_plan3_feature1": "Unlimited Storage",
+  "web_plan3_feature2": "Unlimited Domains",
+  "web_plan3_feature3": "VPS Servers",
+  "web_features_title": "Why Choose Trend for Your Website?",
+  "web_features_desc": "We offer a set of advantages that ensure you receive the best service.",
+
+  "web_feature_responsive_title": "Responsive Design",
+  "web_feature_responsive_desc": "Websites that work perfectly on all devices.",
+
+  "web_feature_speed_title": "Fast Loading",
+  "web_feature_speed_desc": "Optimized website speed for better search engine performance.",
+
+  "web_feature_seo_title": "SEO Optimization",
+  "web_feature_seo_desc": "Your website is optimized to rank better on search engines.",
+
+  "web_cta_title": "Ready to Start Your Website Success Journey?",
+  "web_cta_desc": "Contact us today and get a free consultation for designing and hosting your website.",
+
+  "web_cta_button1": "Book a Free Consultation",
+  "web_cta_button2": "View Our Previous Work",
+
+  "web_support_text": "Our support team is ready to help you anytime."
   
 
 
