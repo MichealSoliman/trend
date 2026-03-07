@@ -427,9 +427,9 @@
   "content_quote_desc": "Great content is the foundation of successful marketing",
   "content_quote_text": "We write content that tells your brand story and builds trust",
 
-  "content_tag1": "Blog Articles",
-  "content_tag2": "Ad Copy",
-  "content_tag3": "Video Scripts",
+  "Content_creation_tag1": "Blog Articles",
+  "Content_creation_tag2": "Ad Copy",
+  "Content_creation_tag3": "Video Scripts",
   "content_tag4": "Product Descriptions",
 
   "content_stats_title": "Numbers That Reflect Our Content Quality",
@@ -457,7 +457,105 @@
   "content_cta_title": "Ready to Turn Content Into a Driving Force for Your Brand?",
   "content_cta_desc": "Contact us today for a customized content strategy",
   "content_cta_btn1": "Talk to Our Experts",
-  "content_cta_btn2": "View Our Work"
+  "content_cta_btn2": "View Our Work",
+
+
+
+
+
+
+
+
+   "ads_title": "Paid Advertising & Google Ads",
+  "ads_desc": "We manage strategic advertising campaigns across social media platforms and Google Ads to maximize ROI, increase sales, and reach your target audience.",
+
+  "ads_tag1": "Professional Paid Ads",
+  "ads_tag2": "Google Ads",
+  "ads_tag3": "Performance Analysis & Optimization",
+
+    "ads_future_title": "Why Paid Advertising is the Future",
+  "ads_future_desc": "In a world full of competition, paid advertising is the most effective way to reach your target audience at the right time and place.",
+
+  "ads_results_title": "Guaranteed & Measurable Results",
+  "ads_results_desc": "Pay only for actual results",
+  "ads_results_text": "You only pay when someone interested clicks your ad.",
+
+  "ads_benefits_title": "Benefits of Google Ads",
+  "ads_benefits_desc": "Discover why Google Ads is the best choice to reach new customers.",
+
+  "ads_benefit1_title": "Precise Targeting",
+  "ads_benefit1_desc": "Target users by interests, behavior, location, and keywords.",
+
+  "ads_benefit2_title": "Flexible Budget",
+  "ads_benefit2_desc": "Start small and scale your budget anytime.",
+
+  "ads_benefit3_title": "Instant Results",
+  "ads_benefit3_desc": "Results appear immediately after launching campaigns.",
+
+  "ads_benefit4_title": "Detailed Analytics",
+  "ads_benefit4_desc": "Track campaign performance with detailed reports.",
+
+  "ads_benefit5_title": "Wide Reach",
+  "ads_benefit5_desc": "Reach audiences across Google Search, YouTube, and Display Network.",
+
+  "ads_benefit6_title": "Security & Reliability",
+  "ads_benefit6_desc": "Google protects your campaigns from fraudulent clicks.",
+
+  "ads_process_title": "How We Run Successful Campaigns",
+
+  "ads_step1_title": "Strategic Analysis & Planning",
+  "ads_step1_desc": "We analyze your market and competitors.",
+
+  "ads_step2_title": "Keyword & Ad Setup",
+  "ads_step2_desc": "We select high-performing keywords and write compelling ads.",
+
+  "ads_step3_title": "Campaign Launch & Targeting",
+  "ads_step3_desc": "We launch campaigns using advanced targeting strategies.",
+
+  "ads_step4_title": "Monitoring & Optimization",
+  "ads_step4_desc": "Continuous optimization to improve results.",
+"ads_testimonial_text": "Thanks to Google Ads, our company achieved 300% sales growth within just 6 months.",
+  "ads_testimonial_author": "- Mohamed Ahmed, Marketing Manager at Al-Najah Company",
+  "ads_campaigns_title": "Types of Google Ads Campaigns",
+  "ads_campaigns_desc": "Different campaign types tailored to your goals.",
+
+  "ads_campaign1_title": "Search Ads",
+  "ads_campaign1_desc": "Appear on Google search results.",
+
+  "ads_campaign2_title": "Display Ads",
+  "ads_campaign2_desc": "Show ads across millions of websites.",
+
+  "ads_campaign3_title": "YouTube Ads",
+  "ads_campaign3_desc": "Reach a massive audience with video ads.",
+
+  "ads_why_title": "Why Choose Trend for Your Ads",
+  "ads_why_desc": "We have the expertise and certified specialists.",
+
+  "ads_reason1_title": "Google Certified Experts",
+  "ads_reason1_desc": "Our team is trained and certified by Google.",
+
+  "ads_reason2_title": "Transparent Reports",
+  "ads_reason2_desc": "Clear monthly reports on your campaigns.",
+
+  "ads_reason3_title": "Continuous Optimization",
+  "ads_reason3_desc": "We constantly improve campaign performance.",
+
+  "ads_cta_title": "Ready to Turn Visitors into Loyal Customers?",
+  "ads_cta_desc": "Contact us for a free Google Ads account analysis.",
+  "ads_cta_btn1": "Start Your Campaign Now",
+  "ads_cta_btn2": "View Case Studies",
+  "ads_cta_note": "Get a free audit of your current ad account.",
+  "ads_search_tag1": "Keywords",
+"ads_search_tag2": "Ad Copy",
+"ads_search_tag3": "Click Rate",
+
+"ads_display_tag1": "Multiple Websites",
+"ads_display_tag2": "Image / Video",
+"ads_display_tag3": "Brand Awareness",
+
+"ads_youtube_tag1": "Video",
+"ads_youtube_tag2": "Before / During Video",
+"ads_youtube_tag3": "High Engagement"
   
 
 
