@@ -555,7 +555,53 @@
 
 "ads_youtube_tag1": "Video",
 "ads_youtube_tag2": "Before / During Video",
-"ads_youtube_tag3": "High Engagement"
+"ads_youtube_tag3": "High Engagement",
+
+
+
+
+
+"social_media_title": "Social Media Management",
+  "social_media_description": "We professionally manage your social media accounts to increase engagement, build your brand, and achieve real and sustainable growth.",
+  "social_media_tag1": "Professional Account Management",
+  "social_media_tag2": "Daily Content Creation",
+  "social_media_tag3": "Performance Analysis & Optimization",
+
+    "social_strategy_title": "Integrated Digital Presence Strategy",
+  "social_strategy_desc": "We transform your social media accounts into engaging platforms through well-planned strategies tailored to each platform and audience.",
+
+  "social_strategy_feature1_title": "Precise Strategic Analysis",
+  "social_strategy_feature1_desc": "Comprehensive market and competitor analysis to accurately define your target audience",
+
+  "social_strategy_feature2_title": "Monitoring & Periodic Reports",
+  "social_strategy_feature2_desc": "Account performance analysis with detailed monthly reports",
+
+  "social_strategy_feature3_title": "Building an Engaged Community",
+  "social_strategy_feature3_desc": "Continuous interaction with followers and building strong relationships with your audience",
+
+  "social_content_title": "Creative Content That Drives Engagement",
+  "social_content_desc": "We produce unique content aligned with your brand identity to achieve the highest engagement and reach.",
+
+  "social_content_list1": "Professional Graphic Design for Posts",
+  "social_content_list2": "Compelling Marketing Copywriting",
+  "social_content_list3": "Short and Effective Video Production",
+  "social_content_list4": "Stories and Infographic Design",
+  "social_content_list5": "Paid Advertising Campaigns",
+
+  "social_analysis_title": "Performance Analysis & Continuous Improvement",
+  "social_analysis_desc": "We continuously track and analyze data to improve performance and maximize ROI.",
+
+  "social_report_title": "Detailed Monthly Reports",
+  "social_report_desc": "Comprehensive analysis of all account performance",
+
+  "social_report_text": "Our reports include engagement rate, reach, conversions, and follower growth with continuous improvement recommendations.",
+
+  "social_platforms_title": "Platforms We Cover",
+  "social_platforms_desc": "We help you build a strong presence across all major platforms",
+
+  "social_cta_title": "Ready to Grow Your Social Media Presence?",
+  "social_cta_desc": "Contact us now to get a customized social media management plan for your brand",
+  "social_cta_button": "Start Your Project Now"
   
 
 
