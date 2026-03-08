@@ -839,8 +839,75 @@
    "designs_section_title": "التصميمات",
   "designs_click_hint": "اضغط على أي تصميم لعرضه",
     "alaqisi_videos_section_title": "الريلز والفيديوهات",
-  "videos_click_hint": "اضغط لتشغيل الفيديو"
+  "videos_click_hint": "اضغط لتشغيل الفيديو",
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    "video_hero_title": "تصميم وإنتاج الفيديوهات",
+  "video_hero_description": "نقدم خدمات تصميم وإنتاج فيديوهات احترافية لشركة Egyptian Eagle لتأجير السيارات، تشمل تصوير الأسطول، إبراز مزايا السيارات، وإعداد محتوى تسويقي يعزز الهوية التجارية ويزيد من معدلات الحجز",
+  "video_tag_professional_shooting": "تصوير احترافي",
+  "video_tag_creative_editing": "مونتاج إبداعي",
+  "video_tag_marketing_videos": "فيديوهات تسويقية",
+    "eagle_fleet_img_alt": "أسطول Egyptian Eagle المركزي",
+  "eagle_click_zoom": "اضغط للتكبير",
+  "eagle_brand_name": "Egyptian Eagle",
+  "eagle_badge_trending": "تريند",
+  "eagle_section_title": "هوية تنطلق كالنسر",
+  "eagle_brand_strong": "Egyptian Eagle",
+  "eagle_intro_text": "ليست مجرد شركة تأجير سيارات، بل تجربة رفاهية وثقة. تعاونا معاً لنصنع",
+  "eagle_visual_identity": "هوية بصرية",
+  "eagle_intro_continuation": "تعبر عن القوة والتميز: أكثر من ٣٥ تصميماً ما بين بروفايل الشركة، منشورات تفاعلية، كتالوجات رقمية، وفيديوهات تسويقية تعرض أسطول السيارات الفاخرة بأسلوب سينمائي.",
+  "eagle_gallery_instruction": "في القسم أدناه تستطيع استعراض كل التصميمات ومقاطع الفيديو. اضغط على أي صورة أو فيديو لتكبيرها وتصفح المعرض كاملاً مع إمكانية التنقل بين الملفات.",
+  "eagle_stat_designs": "٢٥+ تصميم",
+  "eagle_stat_videos": "١٢ فيديو",
+  "eagle_stat_engagement": "+٤٠% تفاعل",
+
+    "designs_title": "التصميمات",
+  "eagle_stat_designs_click_hint": "اضغط على أي تصميم لعرضه",
+   "eagle_stat_videos_section_title": "الفيديوهات",
+  "eagle_stat_videos_play_hint": "اضغط لتشغيل الفيديو",
+
+
+
+
+
+
+
+
+    "engaz_hero_company_title": "شركة إنجاز للعقارات",
+  "engaz_hero_description": "قمنا بتنفيذ أعمال تسويق رقمي متكاملة لصالح <strong class=\"text-amber-700\">شركة إنجاز للعقارات</strong>، شملت تصميم منشورات احترافية، إدارة صفحات السوشيال ميديا، إعداد حملات إعلانية ممولة، وإنتاج محتوى يعكس قوة المشاريع العقارية ويزيد من معدلات الاستفسارات والمبيعات. فيما يلي أبرز تفاصيل المشروع.",
+  "hero_tag_real_estate": "تسويق عقاري",
+  "hero_tag_paid_campaigns": "حملات ممولة",
+  "hero_tag_social_media": "إدارة سوشيال ميديا",
+
+  "engaz_logo_alt": "انجاز العقارية",
+  "engaz_click_zoom": "اضغط للتكبير",
+  "engaz_company_badge": "شركة إنجاز للعقارات",
+  "engaz_campaign_badge": "حملة تسويقية",
+  "engaz_main_title": "عقارات مميزة · حضور رقمي قوي",
+  "engaz_company_name": "شركة إنجاز للعقارات",
+  "engaz_description_part1": "تقدم مجموعة متنوعة من المشروعات السكنية والتجارية بمواقع استراتيجية. عملنا على بناء هوية رقمية احترافية تعكس قوة العلامة التجارية وثقة العملاء. قمنا بتصميم أكثر من ٤٥ منشوراً احترافياً لعرض المشروعات، بالإضافة إلى إنتاج ٢٠ فيديو ترويجي وإعلاني تم نشرها عبر منصات التواصل الاجتماعي لزيادة التفاعل وجذب العملاء المحتملين.",
+  "engaz_description_part2": "في الأقسام أدناه يمكنك استعراض الأعمال المنفذة ومشاهدة النماذج الإعلانية. اضغط على أي تصميم أو فيديو لعرض التفاصيل الكاملة.",
+  "engaz_stat_designs": "٤٥+ تصميم",
+  "engaz_stat_videos": "٢٠ فيديو إعلاني",
+  "engaz_stat_campaigns": "حملات ممولة",
+  "engaz_designs_section_title": "التصميمات",
+  "engaz_designs_click_hint": "اضغط على أي تصميم لعرضه",
+     "engaz_videos_section_title": "الريلز والفيديوهات",
+  "videos_click_to_play": "اضغط لتشغيل الفيديو"
 
 
 
