@@ -741,7 +741,65 @@
   "web_cta_button1": "Book a Free Consultation",
   "web_cta_button2": "View Our Previous Work",
 
-  "web_support_text": "Our support team is ready to help you anytime."
+  "web_support_text": "Our support team is ready to help you anytime.",
+
+
+
+
+
+
+
+
+  "hero_main_title": "Al-Nour Marble & Granite · Nature's Elegance",
+  "hero_description": "We have designed and implemented a professional design for <strong class=\"text-primary\">Al-Nour Marble & Granite Company</strong>, specialized in supplying and installing the finest types of marble and granite for homes and commercial projects. We focused on highlighting the quality of materials, professionally showcasing previous works, and facilitating consultation and inspection requests to ensure a distinctive customer experience that reflects luxury and trust.",
+  "hero_tag_1": "Marble Supply",
+  "hero_tag_2": "Granite Installation",
+  "hero_tag_3": "Finishing Works",
+
+
+    "alnor_logo_alt": "Al-Noor Marble and Granite · Natural Luxury",
+  "alnor_click_to_zoom": "Click to Zoom",
+  "alnor_badge_company": "Al-Noor Marble and Granite",
+  "alnor_badge_service": "Supply and Installation",
+  "alnor_main_title": "Natural Luxury · High Standard Finishes",
+  "alnor_company_name": "Al-Noor Marble and Granite Company",
+  "alnor_description_part1": "specializes in supplying and installing the finest types of local and imported marble and granite for homes, villas, and major commercial projects. We have designed and developed a professional website that highlights the quality of materials and exquisite details, with a clear display of previous works to facilitate confident client selection.",
+  "alnor_description_part2": "In the gallery below, we showcase executed project models, available types of marble and granite, installation stages, and inspection request service, with a visual identity that reflects strength, durability, and luxury.",
+  "alnor_achievement_design": "Professional Design and Implementation",
+  "alnor_achievement_supply": "Supply for All Projects",
+  "alnor_achievement_responsive": "Compatible with All Devices",
+
+
+
+
+
+
+
+
+
+
+
+  "carstar_brand_name": "Car Star",
+  "carstar_description": "We executed professional digital marketing work for <strong class=\"text-primary\">Car Star</strong>, specializing in car sales and rentals. The work included designing and producing distinctive promotional videos tailored for social media platforms, to enhance reach and increase bookings and sales.",
+  "carstar_tag_promo_videos": "Promotional Videos",
+  "carstar_tag_facebook_instagram": "Facebook & Instagram",
+  "carstar_tag_tiktok": "TikTok",
+
+
+   "carstar_logo_alt": "car star",
+  "carstar_zoom_text": "Click to zoom",
+  "carstar_campaign_badge": "Advertising Campaign",
+  "carstar_main_title": "Strong Launch · Fast Digital Presence",
+  "carstar_brand_strong": "Car Star",
+  "carstar_description_part1": " is a company specialized in selling and renting cars at the best prices and latest models. We collaborated together to launch a professional digital marketing campaign that enhances reach and increases bookings and sales. We designed and produced a set of distinctive advertising videos tailored for ",
+  "carstar_social_platforms": "Facebook, Instagram and TikTok",
+  "carstar_description_part2": " platforms, with attractive visual content that highlights the power of offers and ease of booking.",
+  "carstar_feature_videos": "Professional Videos",
+  "carstar_feature_social": "Social Media Ads",
+  "carstar_feature_bookings": "Increased Bookings",
+
+    "videos_section_title": "<i class=\"fas fa-clapperboard ml-3 text-amber-500\"></i> Videos",
+  "videos_play_hint": "Click to play video"
   
 
 
