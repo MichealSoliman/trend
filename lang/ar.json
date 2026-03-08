@@ -808,7 +808,48 @@
   "carstar_feature_bookings": "زيادة الحجوزات",
 
     "videos_section_title": "<i class=\"fas fa-clapperboard ml-3 text-amber-500\"></i> الفيديوهات",
-  "videos_play_hint": "اضغط لتشغيل الفيديو"
+  "videos_play_hint": "اضغط لتشغيل الفيديو",
+
+
+
+
+
+
+
+  "Helwan_hero_main_title": "معرض الشرق الأقصى للأثاث - حلوان",
+  "Helwan_hero_description": "قمنا بتنفيذ حملة متكاملة لـ <strong class=\"text-amber-700\">معرض الشرق الأقصى للأثاث (حلوان)</strong>، شملت تصميم هوية بصرية، إنتاج ريلز وفيديوهات ترويجية على فيسبوك، وتصميم منشورات جذابة. فيما يلي نبذة عن الأعمال التي أنجزناها.",
+  "Helwan_hero_tag_1": "تصميم منشورات",
+  "Helwan_hero_tag_2": "إنتاج ريلز",
+  "Helwan_hero_tag_3": "فيديوهات فيسبوك",
+
+  "alaqisi_main_img_alt": "الشرق الأقصى للأثاث",
+  "alaqisi_zoom_text": "اضغط للتكبير",
+  "alaqisi_badge_name": "الشرق الأقصى للأثاث",
+  "alaqisi_badge_trend": "تريند",
+  "alaqisi_heading": "أثاث راقٍ · حضور رقمي مميز",
+  "alaqisi_desc_brand": "معرض الشرق الأقصى للأثاث",
+  "alaqisi_desc_part1": " بحلوان يقدم تشكيلات عصرية وكلاسيكية من الأثاث المنزلي والمكتبي. تعاونا معاً لبناء هوية بصرية تعكس جودة المنتجات ودفء الخشب. قمنا بتصميم أكثر من ٣٠ منشوراً لعرض القطع المميزة، بالإضافة إلى إنتاج ",
+  "alaqisi_desc_reels_text": "ريلز وفيديوهات احترافية",
+  "alaqisi_desc_part2": "",
+  "alaqisi_desc_part3": " نُشرت على فيسبوك، بهدف زيادة التفاعل وجذب الزبائن إلى المعرض.",
+  "alaqisi_desc_part4": " في الأقسام أدناه تستطيع استعراض التصميمات المنفذة ومشاهدة الفيديوهات. اضغط على أي صورة أو فيديو لتكبيرها والتنقل بين الأعمال.",
+  "alaqisi_achievement_designs": "٣٠+ تصميم",
+  "alaqisi_achievement_videos": "١٢ ريل / فيديو",
+  "alaqisi_achievement_campaign": "حملة فيسبوك",
+   "designs_section_title": "التصميمات",
+  "designs_click_hint": "اضغط على أي تصميم لعرضه",
+    "alaqisi_videos_section_title": "الريلز والفيديوهات",
+  "videos_click_hint": "اضغط لتشغيل الفيديو"
+
+
+
+
+
+
+
+
+
+  
 
   
 
