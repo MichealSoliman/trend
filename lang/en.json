@@ -895,10 +895,65 @@
   "engaz_stat_videos": "20 Advertising Videos",
   "engaz_stat_campaigns": "Funded Campaigns",
     "engaz_designs_section_title": "Designs",
-  "engaz_designs_click_hint": "Click on any design to view it",
+    "engaz_designs_click_hint": "Click on any design to view it",
 
     "engaz_videos_section_title": "Reels and Videos",
-  "engaz_videos_click_to_play": "Click to play video"
+  "engaz_videos_click_to_play": "Click to play video",
+
+
+
+
+
+    "masrat_hero_main_title": "Masarat Al-Ibdaa · Real Estate Consulting",
+  "hero_description_part1": "We designed and developed a professional website for",
+  "hero_company_name": "Masarat Al-Ibdaa Company",
+  "hero_description_part2": "specialized in providing real estate consulting and investment opportunity studies.",
+  "hero_tag_consulting": "Real Estate Consulting",
+  "hero_tag_investment": "Investment Studies",
+  "hero_tag_management": "Project Management",
+
+
+  "masrat_main_image_alt": "Water Corner - Online Store for Water Filters",
+  "masrat_click_to_expand": "Click to Expand",
+  "masrat_company_name": "Masarat Al-Ibdaa",
+  "masrat_real_estate_consulting": "Real Estate Consulting",
+  "masrat_main_heading": "Smart Consulting · Confident Investment Decisions",
+  "masrat_company_name_strong": "Masarat Al-Ibdaa",
+  "masrat_description_text": "is a company specialized in providing real estate consulting, studying investment opportunities, and project management. We designed and implemented a professional website that reflects the brand's strength and highlights real estate services in an organized and easy-to-navigate manner, with a user experience that enhances trust and facilitates communication with the consulting team.",
+  "masrat_gallery_description": "In the gallery below, we showcase the website interfaces, service pages, project displays and investment opportunities, and consultation request forms, with a professional visual identity that reflects credibility and expertise in the real estate market.",
+  "masrat_achievement_design": "Professional Design",
+  "masrat_achievement_analysis": "Investment Opportunity Analysis",
+  "masrat_achievement_responsive": "Compatible with All Devices",
+  "gallery_title": "Design Gallery",
+  "gallery_click_hint": "Click on any design to view it",
+
+
+
+
+
+
+
+
+
+    "albet_hero_main_title": "Al-Bayt Al-Naqi · Online Store",
+  "albet_hero_description": "We built a complete online store for the <strong class=\"text-water\">\"Al-Bayt Al-Naqi\"</strong> brand specializing in water filters. We designed a clean digital identity, a seamless shopping experience, and a distinctive product presentation. Below is an overview of the designs and key works.",
+  "hero_tag_online_store": "Online Store",
+  "hero_tag_product_interface": "Product Interface",
+  "hero_tag_pure_identity": "Pure Identity",
+
+  "albet_main_image_alt": "Al-Bait Al-Naqi - Filters Store",
+  "albet_zoom_text": "Click to Zoom",
+  "albet_brand_name": "Al-Bait Al-Naqi",
+  "albet_trend_label": "Trending",
+  "albet_main_title": "Unlimited Purity · Complete E-Commerce Store",
+  "albet_brand_name_strong": "Al-Bait Al-Naqi",
+  "albet_description_p1": "is a leading brand in residential and commercial water filters. We launched an online store that displays all products in an organized and smooth manner, with comfortable user interfaces and an easy shopping experience. We designed more than 30 main screens (home page, product pages, shopping cart, simplified dashboard) in addition to a clean visual identity that reflects purity and reliability.",
+  "albet_description_p2": "In the gallery below we showcase a collection of the most important designs: store interface, product cards, filter pages, and promotional designs. Click on any image to enlarge it and navigate between the works.",
+  "albet_achievement_screens": "30+ Screens",
+  "albet_achievement_store": "Complete Store",
+  "albet_achievement_identity": "Clean Identity",
+    "albet_gallery_title": "Design Gallery",
+  "albet_gallery_click_hint": "Click on any design to view it"
 
 
 
