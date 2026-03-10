@@ -982,7 +982,28 @@
   "stars_achievement_fullstore": "Complete Store",
   "stars_achievement_identity": "Clean Identity",
   "stars_gallery_title": "Design Gallery",
-  "stars_gallery_click_hint": "Click on any design to view it"
+  "stars_gallery_click_hint": "Click on any design to view it",
+
+    "galabia_stock_title": "Galabia Stock",
+  "galabia_stock_description": "We executed comprehensive digital marketing services for <strong class=\"text-primary\">Galabia Stock</strong>, specialized in selling elegant galabias and Islamic attire. The work included visual identity design, professional posts, and production of two distinctive promotional videos.",
+  "galabia_stock_tag1": "Visual Identity",
+  "galabia_stock_tag2": "Two Exclusive Videos",
+  "galabia_stock_tag3": "Islamic Attire",
+   "stoke_main_image_alt": "Stoke Jellabiya",
+  "stoke_zoom_text": "Click to zoom",
+  "stoke_badge_label": "Stoke Jellabiya",
+  "stoke_trend_badge": "Trending",
+  "stoke_main_title": "Authenticity and Elegance · Distinguished Islamic Presence",
+  "stoke_brand_name": "Stoke Jellabiya",
+  "stoke_description_part1": "is a leading destination for luxurious jellabiyas and modern Islamic wear. We collaborated to build a digital identity that reflects authentic values and refined taste. We designed a collection of professional posts to showcase the products, in addition to",
+  "stoke_videos_label": "two exclusive promotional videos",
+  "stoke_description_part2": "that were broadcasted on social media platforms, contributing to increased brand awareness and attracting a wider segment of Islamic fashion enthusiasts.",
+  "stoke_description_part3": "",
+  "stoke_stat_designs": "20+ Designs",
+  "stoke_stat_videos": "2 Exclusive Videos",
+  "stoke_stat_category": "Islamic Wear",  
+  "stoke_videos_section_title": "Videos",
+  "stoke_videos_play_instruction": "Click to play video"
 
 
 

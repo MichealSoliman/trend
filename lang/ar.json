@@ -989,7 +989,31 @@
   "stars_achievement_fullstore": "متجر كامل",
   "stars_achievement_identity": "هوية نظيفة",
     "stars_gallery_title": "معرض التصميمات",
-  "stars_gallery_click_hint": "اضغط على أي تصميم لعرضه"
+  "stars_gallery_click_hint": "اضغط على أي تصميم لعرضه",
+
+
+
+
+    "galabia_stock_title": "جلابية ستوك",
+  "galabia_stock_description": "قمنا بتنفيذ أعمال تسويق رقمي متكاملة لصالح <strong class=\"text-primary\">جلابية ستوك</strong>، المتخصصة في بيع الجلابيات والزي الإسلامي الأنيق. شمل العمل تصميم هوية بصرية، منشورات احترافية، وإنتاج فيديوهين ترويجيين مميزين.",
+  "galabia_stock_tag1": "هوية بصرية",
+  "galabia_stock_tag2": "فيديوين حصريين",
+  "galabia_stock_tag3": "زي إسلامي",
+  "stoke_main_image_alt": "جلابية ستوك",
+  "stoke_zoom_text": "اضغط للتكبير",
+  "stoke_badge_label": "جلابية ستوك",
+  "stoke_trend_badge": "تريند",
+  "stoke_main_title": "أصالة ورقي · حضور إسلامي مميز",
+  "stoke_brand_name": "جلابية ستوك",
+  "stoke_description_part1": "وجهة رائدة في تقديم الجلابيات الفاخرة والزي الإسلامي العصري. تعاونا معاً لبناء هوية رقمية تعكس القيم الأصيلة والذوق الرفيع. قمنا بتصميم مجموعة من المنشورات الاحترافية لعرض المنتجات، بالإضافة إلى",
+  "stoke_videos_label": "فيديوين ترويجيين",
+  "stoke_description_part2": "حصريين تم بثهما على منصات التواصل الاجتماعي، مما ساهم في زيادة الوعي بالعلامة وجذب شريحة أوسع من المهتمين بالأزياء الإسلامية.",
+  "stoke_description_part3": "",
+  "stoke_stat_designs": "٢٠+ تصميم",
+  "stoke_stat_videos": "٢ فيديو حصري",
+  "stoke_stat_category": "زي إسلامي",
+    "stoke_videos_section_title": "الفيديوهات",
+  "stoke_videos_play_instruction": "اضغط لتشغيل الفيديو"
 
 
 
