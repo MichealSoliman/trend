@@ -305,13 +305,27 @@ html {
                         class="block px-6 py-3 hover:bg-gray-50 text-gray-700 hover:text-primary transition-colors">مشاريعنا</a>
                 </li>
                 
-                <li class="px-6 py-3 flex gap-3">
-                    <button onclick="setLanguage('ar')" class="text-primary font-semibold">عربي</button>
-                    <button onclick="setLanguage('en')" class="text-primary font-semibold">English</button>
-                </li>
-                <li><a href="tel:01095576024" data-i18n="nav_contact"
+                                <li><a href="tel:01095576024" data-i18n="nav_contact"
                         class="block px-6 py-3 hover:bg-gray-50 text-primary font-semibold transition-colors">تواصل
                         معنا</a></li>
+                
+               <li class="px-6 py-3">
+  <div class="flex w-full bg-gray-100 rounded-lg overflow-hidden">
+    
+    <button 
+      onclick="setLanguage('ar')" 
+      class="w-1/2 py-2 text-center font-semibold text-primary hover:bg-primary hover:text-white transition">
+      عربي
+    </button>
+
+    <button 
+      onclick="setLanguage('en')" 
+      class="w-1/2 py-2 text-center font-semibold text-primary hover:bg-primary hover:text-white transition border-r border-gray-200">
+      English
+    </button>
+
+  </div>
+</li>
             </ul>
         </div>
     </nav>

@@ -1038,7 +1038,33 @@
   "water_corner_gallery_intro": "في المعرض أدناه نستعرض واجهات المتجر، صفحات المنتجات، تصميم بطاقات الفلاتر، وتجربة السلة والدفع، مع هوية بصرية تعكس الجودة والنقاء.",
   "water_corner_feature_design": "تصميم احترافي",
   "water_corner_feature_ordering": "نظام طلب متكامل",
-  "water_corner_feature_mobile": "متوافق مع الموبايل"
+  "water_corner_feature_mobile": "متوافق مع الموبايل",
+
+
+
+
+
+    "zeidan_group_title": "زيدان جروب",
+  "zeidan_description": "نفذنا إنتاج فيديوهات ترويجية احترافية لصالح <strong class=\"text-primary\">زيدان جروب للاستثمار العقاري والتشطيبات</strong> لعرض المشروعات وأعمال التشطيب بشكل احترافي يعزز الثقة ويزيد التفاعل.",
+  "tag_video_production": "إنتاج فيديو",
+  "tag_real_estate_marketing": "تسويق عقاري",
+  "tag_finishing": "تشطيبات",  "zidan_main_image_alt": "زيدان جروب للاستثمار العقاري والتشطيب",
+  "zidan_zoom_hint": "اضغط للتكبير",
+  "zidan_badge_company": "زيدان جروب",
+  "zidan_badge_investment": "استثمار عقاري",
+  "zidan_heading": "استثمار ذكي · تشطيبات بمعايير احترافية",
+  "zidan_company_name": "زيدان جروب للاستثمار العقاري والتشطيبات",
+  "zidan_description_part1": " واحدة من الشركات المميزة في مجال التطوير العقاري وتنفيذ أعمال التشطيب بأعلى معايير الجودة. تعاونّا مع الشركة لإبراز قوتها في السوق من خلال إنتاج محتوى مرئي احترافي يعكس الثقة والتميز. قمنا بتنفيذ مجموعة من ",
+  "zidan_promo_videos": "الفيديوهات الترويجية الاحترافية",
+  "zidan_description_part2": " التي تستعرض المشروعات وأعمال التشطيب والتفاصيل الهندسية بدقة عالية، مما ساهم في تعزيز الصورة الذهنية للشركة وزيادة التفاعل على منصات التواصل الاجتماعي.",
+  "zidan_tag_video": "إنتاج فيديو احترافي",
+  "zidan_tag_projects": "مشروعات عقارية",
+  "zidan_tag_finishing": "تشطيبات متكاملة",
+
+    "zidan_videos_section_title": "<i class=\"fas fa-clapperboard ml-3 text-amber-500\"></i> الفيديوهات",
+  "zidan_videos_play_instruction": "اضغط لتشغيل الفيديو"
+
+
 
 
 

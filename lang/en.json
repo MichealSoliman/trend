@@ -1034,7 +1034,36 @@
   "water_corner_feature_mobile": "Mobile Compatible",
 
     "water_gallery_title": "Design Gallery",
-  "water_gallery_click_hint": "Click on any design to view it"
+  "water_gallery_click_hint": "Click on any design to view it",
+
+
+
+
+
+
+
+    "zeidan_group_title": "Zeidan Group",
+  "zeidan_description": "We executed professional promotional video production for <strong class=\"text-primary\">Zeidan Group for Real Estate Investment and Finishing</strong> to showcase projects and finishing works in a professional manner that enhances trust and increases engagement.",
+  "tag_video_production": "Video Production",
+  "tag_real_estate_marketing": "Real Estate Marketing",
+  "tag_finishing": "Finishing",
+
+
+   "zidan_main_image_alt": "Zidan Group for Real Estate Investment and Finishing",
+  "zidan_zoom_hint": "Click to enlarge",
+  "zidan_badge_company": "Zidan Group",
+  "zidan_badge_investment": "Real Estate Investment",
+  "zidan_heading": "Smart Investment · Professional Finishing Standards",
+  "zidan_company_name": "Zidan Group for Real Estate Investment and Finishing",
+  "zidan_description_part1": " is one of the distinguished companies in the field of real estate development and execution of finishing works with the highest quality standards. We collaborated with the company to highlight its strength in the market through the production of professional visual content that reflects trust and excellence. We executed a set of ",
+  "zidan_promo_videos": "professional promotional videos",
+  "zidan_description_part2": " that showcase projects, finishing works, and engineering details with high precision, which contributed to enhancing the company's mental image and increasing engagement on social media platforms.",
+  "zidan_tag_video": "Professional Video Production",
+  "zidan_tag_projects": "Real Estate Projects",
+  "zidan_tag_finishing": "Complete Finishing",
+
+    "zidan_videos_section_title": "<i class=\"fas fa-clapperboard ml-3 text-amber-500\"></i> Videos",
+  "zidan_videos_play_instruction": "Click to play video"
   
 
 

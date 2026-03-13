@@ -275,14 +275,11 @@ html {
                         class="block px-6 py-3 hover:bg-gray-50 text-gray-700 hover:text-primary transition-colors">من
                         نحن</a></li>
                 <li>
-                    <a href="./projects.html" id="mobile-services-btn"
+                     <button id="mobile-services-btn" data-i18n="nav_services"
                         class="w-full text-right px-6 py-3 hover:bg-gray-50 text-gray-700 hover:text-primary transition-colors flex justify-between items-center">
-
-                        <span data-i18n="nav_services">خدماتنا</span>
-
+                        خدماتنا
                         <i class="fas fa-chevron-down text-xs"></i>
-
-                </a>
+                    </button>
                     <ul id="mobile-services-menu" class="hidden bg-gray-50">
                         <li><a href="./services/media-management.html" data-i18n="service_social"
                                 class="block px-10 py-2 hover:bg-gray-100 text-sm text-gray-600 hover:text-primary">إدارة
@@ -307,14 +304,28 @@ html {
                 <li><a href="./projects.html" data-i18n="nav_projects"
                         class="block px-6 py-3 hover:bg-gray-50 text-gray-700 hover:text-primary transition-colors">مشاريعنا</a>
                 </li>
-                
-                <li class="px-6 py-3 flex gap-3">
-                    <button onclick="setLanguage('ar')" class="text-primary font-semibold">عربي</button>
-                    <button onclick="setLanguage('en')" class="text-primary font-semibold">English</button>
-                </li>
-                <li><a href="tel:01095576024" data-i18n="nav_contact"
+                 <li><a href="tel:01095576024" data-i18n="nav_contact"
                         class="block px-6 py-3 hover:bg-gray-50 text-primary font-semibold transition-colors">تواصل
                         معنا</a></li>
+                
+               <li class="px-6 py-3">
+  <div class="flex w-full bg-gray-100 rounded-lg overflow-hidden">
+    
+    <button 
+      onclick="setLanguage('ar')" 
+      class="w-1/2 py-2 text-center font-semibold text-primary hover:bg-primary hover:text-white transition">
+      عربي
+    </button>
+
+    <button 
+      onclick="setLanguage('en')" 
+      class="w-1/2 py-2 text-center font-semibold text-primary hover:bg-primary hover:text-white transition border-r border-gray-200">
+      English
+    </button>
+
+  </div>
+</li>
+               
             </ul>
         </div>
     </nav>

@@ -592,13 +592,18 @@ html {
                     <li><a href="#" data-i18n="nav_home"
                             class="nav-link text-gray-700 hover:text-primary transition-colors duration-300 font-semibold">الرئيسية</a>
                     </li>
-
+                 <li><a href="./about.html" data-i18n="nav_about"
+                            class="nav-link text-gray-700 hover:text-primary transition-colors duration-300 font-semibold">من
+                            نحن</a></li>
                     <!-- Services Dropdown -->
                     <li class="relative">
-                        <a href="./services.html" data-i18n="nav_services" id="servicesBtn"
-                            class="nav-link text-gray-700 hover:text-primary transition-colors duration-300 font-semibold flex items-center">
-                            خدماتنا
-                            <i class="fas fa-chevron-down mr-2 text-xs"></i>
+                            <a href="./services.html" id="servicesBtn"
+                        class="nav-link text-gray-700 hover:text-primary transition-colors duration-300 font-semibold flex items-center gap-2">
+
+                        <span data-i18n="nav_services">خدماتنا</span>
+
+                        <i class="fas fa-chevron-down text-xs"></i>
+
                         </a>
 
                         <ul id="servicesMenu" class="fixed bg-white shadow-2xl rounded-lg py-3 w-64 hidden z-50"
@@ -635,9 +640,7 @@ html {
                     <li><a href="./projects.html" data-i18n="nav_projects"
                             class="nav-link text-gray-700 hover:text-primary transition-colors duration-300 font-semibold">مشاريعنا</a>
                     </li>
-                    <li><a href="./about.html" data-i18n="nav_about"
-                            class="nav-link text-gray-700 hover:text-primary transition-colors duration-300 font-semibold">من
-                            نحن</a></li>
+                   
                     <li class="flex items-center gap-2 border border-primary rounded-full px-3 py-1">
 
                         <button onclick="setLanguage('ar')" class="lang-option text-sm font-semibold hover:text-primary"
@@ -704,35 +707,31 @@ html {
                 <li><a href="./about.html" data-i18n="nav_about"
                         class="block px-6 py-3 hover:bg-gray-50 text-gray-700 hover:text-primary transition-colors">من
                         نحن</a></li>
-                <li class="px-6 py-3 flex gap-3">
-                    <button onclick="setLanguage('ar')" class="text-primary font-semibold">عربي</button>
-                    <button onclick="setLanguage('en')" class="text-primary font-semibold">English</button>
-                </li>
-                <li><a href="tel:01095576024" data-i18n="nav_contact"
+                                <li><a href="tel:01095576024" data-i18n="nav_contact"
                         class="block px-6 py-3 hover:bg-gray-50 text-primary font-semibold transition-colors">تواصل
                         معنا</a></li>
+                
+               <li class="px-6 py-3">
+  <div class="flex w-full bg-gray-100 rounded-lg overflow-hidden">
+    
+    <button 
+      onclick="setLanguage('ar')" 
+      class="w-1/2 py-2 text-center font-semibold text-primary hover:bg-primary hover:text-white transition">
+      عربي
+    </button>
+
+    <button 
+      onclick="setLanguage('en')" 
+      class="w-1/2 py-2 text-center font-semibold text-primary hover:bg-primary hover:text-white transition border-r border-gray-200">
+      English
+    </button>
+
+  </div>
+</li>
             </ul>
         </div>
     </nav>
-    <script>
-        const btn = document.getElementById("servicesBtn");
-        const menu = document.getElementById("servicesMenu");
-
-        btn.addEventListener("mouseenter", () => {
-            menu.classList.remove("hidden");
-        });
-
-        btn.addEventListener("mouseleave", () => {
-            setTimeout(() => {
-                if (!menu.matches(":hover")) menu.classList.add("hidden");
-            }, 100);
-        });
-
-        menu.addEventListener("mouseleave", () => {
-            menu.classList.add("hidden");
-        });
-
-    </script>
+   
     <!-- Hero Section -->
      
     <section id="home"
